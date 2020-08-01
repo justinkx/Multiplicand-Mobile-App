@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algrbraic Number Theory</title>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+  <p class="paragraph">
+    Algebraic number theory is the study of roots of polynomials with rational or integral
+    coefficients. These numbers lie in algebraic structures with many similar properties to those
+    of the integers. The historical motivation for the creation of the subject was solving certain
+    Diophantine equations, most notably Fermat's famous conjecture, which was eventually proved by
+    Wiles et al. in the 1990s:
+  </p>
+  <p class="paragraph">
+    If n is a positive integer \( \geq 3\), and \( x^{n}+y^{n} = z^{^n}\) for integers x,y,z ,
+    then xyz = 0.
+  </p>
+  <p class="paragraph">
+    The main idea is that an expression like \( z^{n} - y^{n}\) will not factor completely over
+    the rational numbers, but will factor into linear factors if the coefficients are allowed to
+    include the primitive \(n^{th}\) root of unity \(\zeta _{n}\).
+  </p>
+  <h2 class="subHeader">Algebraic Numbers and Algebraic Integers</h2>
+  <p class="paragraph">
+    A complex number \(\alpha \) is an algebraic number if it is a root of a monic polynomial with
+    rational coefficients. It is an algebraic integer if is a root of a monic polynomial with
+    integer coefficients.
+  </p>
+  <div class="note">
+    <ul class="note-list">
+      <li class="notes">
+        \(\sqrt{2}\) is an algebraic integer, as it is a root of the polynomial \(f(x) = x^{2} -
+        2\).
+      </li>
+      <li class="notes">
+        \(3\sqrt{\frac{1}{2}}\) is an algebraic number, as it is a root of the polynomial \(f(x) =
+        x^{3} - \frac{1}{2}\). It is not an algebraic integer, although this is not immediately
+        obvious.
+      </li>
+      <li class="notes">
+        The primitive \(n^{th}\) root of unity \(\zeta _{n} = e^{\frac{2\pi i}{n}} =
+        cos\frac{2\pi}{n}+ i sin\frac{2\pi}{n}\) is an algebraic integer.
+      </li>
+    </ul>
+  </div>
+  <p class="paragraph">
+    Algebraic number theory deals with the algebraic aspects of these numbers, forgetting that
+    they are real or complex numbers (or more precisely forgetting where they are located amongst
+    other real or complex numbers). What matters is the algebraic relations that these numbers
+    satisfy.
+  </p>
+  <h2 class="subHeader">
+    Minimal Polynomial
+  </h2>
+  <p class="paragraph">
+    Any algebraic number (or algebraic integer) \(\alpha \) is a root of many polynomials with
+    rational (or integral) coefficients; for instance, \sqrt{2} is also a root of \(x^{4} -
+    5x^{2}+6\). But there is one polynomial that is, in a sense, the polynomial of which \(\alpha
+    \) is a root. <br />
+    <b>The minimal polynomial of an algebraic number \(\alpha \) is the monic polynomial with
+      rational coefficients of minimal degree of which \(\alpha \) is a root.</b>
+  </p>
+  <div class="theorem">
+    <p>
+      Let \(\alpha \) be an algebraic number and let \(f(x)\) be its minimal polynomial. Then the
+      following are true:
+    </p>
+    <ol>
+      <li>If \(g(a) = 0\) and \(g(x)\) has rational coefficients, then \(f(x) \mid g(x)\)</li>
+      <li>
+        \(f(x)\) is irreducible, i.e. it cannot be factored as the product of two polynomials with
+        rational coefficients of smaller degree: \(f(x) = a(x)b(x)\) with \(deg(a)\), \(deg(b)\) < \(deg(f)\). </li>
+      <li>
+        If \(g(\alpha) = 0, g(x)\) is monic with rational coefficients, and \(g(x)\) is
+        irreducible, then \(g(x) = f(x)\).
+      </li>
+      <li>
+        \(f\) has integer coefficients if and only if \(\alpha \) is an algebraic integer.
+      </li>
+    </ol>
+  </div>
+  <h2 class="subHeader">Unique Factorization</h2>
+  <p class="paragraph">
+    A nice property of \(\mathbb Z\) is the fundamental theorem of arithmetic that every integer
+    factors essentially uniquely as the product of primes. It would be quite useful if this
+    property extended to rings like \(\mathbb{Z}\begin{bmatrix} \sqrt{d} \end{bmatrix}\)
+  </p>
+  <h2 class="subHeader">
+    Rings and Ideals in Algebraic Number Theory
+  </h2>
+  <p class="paragraph">
+    The sets \(\mathbb Z \begin{bmatrix} \alpha \end{bmatrix} \) considered above are special
+    cases of a general algebraic object called a ring. A ring is a set equipped with two
+    operations, addition and multiplication, satisfying various natural properties (commutativity,
+    distributivity, etc.). Rings with division algorithms are called Euclidean rings. As discussed
+    above, Euclidean rings have some form of unique factorization into irreducibles.
+  </p>
+  <p class="paragraph">
+    It turns out that unique factorization can be recovered in some weaker sense for the rings
+    \(\mathbb Z \begin{bmatrix} \alpha \end{bmatrix} \) which are not Euclidean, by passing to
+    ideals. These were introduced in the \(19^{th}\) th century by Ernst Kummer, a number theorist
+    who worked on Fermat's conjecture.
+  </p>
+  <div class="theorem">
+    <p>
+      An ideal \(\beta_1,\beta_2,\ldots,\beta_k\) in \(R = \mathbb{Z}\begin{bmatrix} \alpha
+      \end{bmatrix}\) is the set <br />
+      <b>
+        { \({\beta _{1}r_{1} + .... + \beta _{k}r_{k} : r_{i}\in R}\) }
+      </b>
+    </p>
+    <br />
+    <p>
+      The ideal is said to be generated by \(\beta_1,\beta_2,\ldots,\beta_k\) <br />
+      Note that an ideal is closed under addition and "swallows up" under multiplication: if
+      \(\alpha \in I\) and \(r \in R\). (These two properties are used for a more general
+      definition of an ideal for a general ring, but this down-to-earth definition is equivalent
+      to the general one for the rings considered here.)
+    </p>
+  </div>
+  <h2 class="subHeader">Major Results</h2>
+  <h3 class="result">1. Finiteness of the class group</h3>
+  <p class="paragraph">
+    One of the classical results in algebraic number theory is that the ideal class group of an
+    algebraic number field K is finite. This is a consequence of Minkowski's theorem since there
+    are only finitely many Integral ideals with norm less than a fixed positive integer. The order
+    of the class group is called the class number, and is often denoted by the letter h.
+  </p>
+  <h3 class="result">2. Dirichlet's unit theorem</h3>
+  <p class="paragraph">
+    Dirichlet's unit theorem provides a description of the structure of the multiplicative group
+    of units \(O^{x}\) of the ring of integers \(O\). Specifically, it states that \(O^{x}\) is
+    isomorphic to \(G\times Z^{r}\), where G is the finite cyclic group consisting of all the
+    roots of unity in \(O\), and \( r = r_{1} + r_{2} - 1\). In other words, \(O^{x}\) is a
+    finitely generated abelian group of rank \( r = r_{1} + r_{2} - 1\) whose torsion consists of
+    the roots of unity in O.
+  </p>
+  <h3 class="result">
+    Reciprocity laws
+  </h3>
+  <p class="paragraph">
+    In terms of the Legendre symbol, the law of quadratic reciprocity for positive odd primes
+    states <br />
+    <br />
+    \(\left({\frac {p}{q}}\right)\left({\frac {q}{p}}\right)=(-1)^{{\frac {p-1}{2}}{\frac
+    {q-1}{2}}}.\)
+  </p>
+  <p class="paragraph">
+    A reciprocity law is a generalization of the law of quadratic reciprocity. There are several
+    different ways to express reciprocity laws. The early reciprocity laws found in the 19th
+    century were usually expressed in terms of a power residue symbol (p/q) generalizing the
+    quadratic reciprocity symbol, that describes when a prime number is an nth power residue
+    modulo another prime, and gave a relation between (p/q) and (q/p). Hilbert reformulated the
+    reciprocity laws as saying that a product over p of Hilbert symbols (a,b/p), taking values in
+    roots of unity, is equal to 1. Artin's reformulated reciprocity law states that the Artin
+    symbol from ideals (or ideles) to elements of a Galois group is trivial on a certain subgroup.
+    Several more recent generalizations express reciprocity laws using cohomology of groups or
+    representations of adelic groups or algebraic K-groups, and their relationship with the
+    original quadratic reciprocity law can be hard to see.
+  </p>
+  <h3 class="result">
+    Class number formula
+  </h3>
+  <p class="paragraph">
+    The class number formula relates many important invariants of a number field to a special
+    value of its Dedekind zeta function.
+  </p>
+  <p class="paragraph">
+    \( \zeta_{K}(s)\) converges absolutely for \(Re(s) > 1\) 1 and extends to a meromorphic
+    function defined for all complex s with only one simple pole at \(s=1\) with residue:
+    <br /><br />
+    <b>\({\displaystyle \lim _{s\to 1}(s-1)\zeta _{K}(s)={\frac {2^{r_{1}}\cdot (2\pi
+      )^{r_{2}}\cdot \operatorname {Reg} _{K}\cdot h_{K}}{w_{K}\cdot {\sqrt {|D_{K}|}}}}}\)</b>
+  </p>
+</body>
+<style>
+  body {
+    padding: 20px;
+    background-color: white;
+    margin: 0px;
+    font-family: sans-serif;
+  }
+
+  .header {
+    text-align: center;
+    color: rgb(180, 9, 152);
+    margin-bottom: 20px;
+  }
+
+  .subHeader {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: indigo;
+  }
+
+  .paragraph {
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  .logGraph {
+    height: 250px;
+    width: 100%;
+    max-width: 450px;
+  }
+
+  figcaption {
+    color: gray;
+  }
+
+  .note {
+    width: 90%;
+    max-height: 30vh;
+    border: 0.5px solid rgb(224, 224, 224);
+    overflow: scroll;
+    border-radius: 5px;
+    background: #fff;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+      0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+      0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+    padding: 10px;
+  }
+
+  .note-list {
+    width: 100%;
+  }
+
+  .notes {
+    margin: 0px;
+    padding-bottom: 8px;
+    color: rgb(17, 17, 248);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .theorem {
+    width: 90%;
+    display: block;
+    border: 1px solid rgb(245, 214, 131);
+    background-color: rgb(245, 214, 131);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0px;
+    color: black;
+    border-left: 5px solid red;
+  }
+
+  .result {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(32, 0, 75);
+  }
+</style>
+
+</html>

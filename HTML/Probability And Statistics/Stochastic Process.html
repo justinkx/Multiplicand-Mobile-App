@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stochastic Process</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <p class="paragraph">
+      In ​probability theory​ and related fields, a <b>​stochastic​</b> or ​<b
+        >random process​</b
+      >
+      is a ​mathematical object usually defined as a ​family​ of ​random
+      variables​. Historically, the random variables were associated with or
+      indexed by a set of numbers, usually viewed as points in time, giving the
+      interpretation of a stochastic process representing numerical values of
+      some system ​randomly​ changing over ​time​, such as the growth of a
+      ​bacterial​ population, an ​electrical current​ fluctuating due to
+      ​thermal noise​, or the movement of a ​gas​ ​molecule​.
+    </p>
+    <p class="paragraph">
+      Stochastic processes are widely used as ​mathematical models​ of systems
+      and phenomena that appear to vary in a random manner. They have
+      applications in many disciplines including ​sciences​ such as ​biology​,​
+      ​chemistry​,​ ​ecology​,​ ​neuroscience​,​ and ​physics​ as well as
+      ​technology​ and ​engineering​ fields such as ​image processing​, ​signal
+      processing , Information Theory ​computer science​,​ ​cryptography​ and
+      telecommunications​.​ Furthermore, seemingly random changes in ​financial
+      markets​ have motivated the extensive use of stochastic processes in
+      ​finance​.​
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        Applications and the study of phenomena have in turn inspired the
+        proposal of new stochastic processes. Examples of such stochastic
+        processes include the ​Wiener process​ or Brownian motion processused by
+        <b>Louis Bachelier</b> and the ​Poisson process​, used by ​A. K. Erlang​
+        to study the number of phone calls occurring in a certain period of
+        time.​ These two stochastic processes are considered the most important
+        and central in the theory ​ of stochastic processes,​ and were
+        discovered repeatedly and independently, both before and after Bachelier
+        and Erlang, in different settings and countries.​
+      </p>
+    </div>
+    <p class="paragraph">
+      But often these two terms are used when the random variables are indexed
+      by the ​integers​ or an ​interval​ of the ​real line​.​ If the random
+      variables are indexed by the ​Cartesian plane​ or some higher-dimensional
+      ​Euclidean​ space​, then the collection of random variables is usually
+      called a ​random field​ instead.​ The values of a stochastic process are
+      not always numbers and can be vectors or other mathematical objects.​
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        Based on their mathematical properties, stochastic processes can be
+        grouped into various ​ categories, which include ​<b>random walks</b>​,​
+        <b>​martingales​</b>,​ ​<b>Markov processes</b>​,​ <b>​Lévy process</b>,
+        <b>​​Gaussian processes</b>​,​ <b>random fields</b>,​ ​<b
+          >renewal processes</b
+        >​, and ​<b>branching processes</b>. The study of stochastic processes
+        uses mathematical knowledge and techniques from ​ probability​,
+        ​calculus​, ​linear algebra​, ​set theory​, and ​topology​ as well as
+        branches of mathematical analysis​ such as ​real analysis​, ​measure
+        theory​, ​Fourier analysis​, and ​functional​ analysis​.​ The theory of
+        <b>stochastic process</b> is considered to be an important contribution
+        to mathematics​ and it continues to be an active topic of research for
+        both theoretical reasons and applications
+      </p>
+    </div>
+    <p class="paragraph">
+      A <b>stochastic</b> or <b>random process</b> can be defined as a
+      collection of random variables that is indexed by some mathematical set,
+      meaning that each random variable of the <b>stochastic process</b> is
+      uniquely associated with an element in the set. The set used to index the
+      random variables is called the index set​. Historically, the index set was
+      some ​subset​ of the ​real line​, such as the ​natural numbers​,​ giving
+      the index set the interpretation of time.​ Each random variable in the
+      collection takes values from the same ​mathematical space​ known as the
+      ​state space​. This state space can be, for example, the integers, the
+      real line or \({\displaystyle n}\)-dimensional Euclidean space.
+    </p>
+    <p class="paragraph">
+      An ​increment​ is the amount that a <b>stochastic process</b> changes
+      between two index values, often interpreted as two points in time.​ A
+      stochastic process can have many ​outcomes​, due to its randomness, and a
+      single outcome of a <b>stochastic process</b> is called, among other
+      names, a ​sample function​ or ​realization​.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        A <b>stochastic process</b> is defined as a collection of random
+        variables defined on a common ​probability space \({\displaystyle
+        (\Omega ,{\mathcal {F}},P)}\) , where \({\displaystyle \Omega }\) is a
+        ​sample space​, \({\displaystyle {\mathcal {F}}}\) is a \({\displaystyle
+        \sigma }\)-​algebra​, and \({\displaystyle P}\) is a ​probability
+        measure​; and the random variables, indexed by some set \({\displaystyle
+        T}\), all take values in the same mathematical space \({\displaystyle
+        S}\), which must be ​measurable​ with respect to some \({\displaystyle
+        \sigma }\) -algebra \({\displaystyle \Sigma }\)
+      </p>
+      <p class="paragraph">
+        In other words, for a given probability space or a given probability
+        space \({\displaystyle (\Omega ,{\mathcal {F}},P)}\) \((\Omega
+        ,{\mathcal {F}},P)\) and a measurable space \({\displaystyle (S,\Sigma
+        )}(S,\Sigma )\), a <b>stochastic process</b> is a collection of
+        \({\displaystyle S}\) -valued random variables, which can be written
+        as:<br />
+        \({\displaystyle \{X(t):t\in T\}.}\) Historically, in many problems from
+        the natural sciences a point \({\displaystyle t\in T}\) in T had the
+        meaning of time, so \({\displaystyle X(t)}\) is a random variable
+        representing a value observed at time \({\displaystyle t}\) . A
+        <b>stochastic process</b> can also be written as \({\displaystyle
+        \{X(t,\omega ):t\in T\}}\) to reflect that it is actually a function of
+        two variables, \({\displaystyle t\in T}\) and \({\displaystyle \omega
+        \in \Omega }\). There are other ways to consider a stochastic process,
+        with the above definition being considered the traditional one.
+      </p>
+    </div>
+    <p class="paragraph">
+      The law of a stochastic process or a random variable is also called the
+      <b>​probability law</b> ​, <b>​probability distribution</b>​, or the
+      <b>​distribution​</b>.​
+    </p>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

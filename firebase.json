@@ -1,0 +1,11 @@
+{
+  "react-native": {
+    "in_app_messaging_auto_collection_enabled": false,
+    "messaging_android_headless_task_timeout": 30000,
+    "messaging_android_notification_channel_id": "high-priority",
+    "messaging_android_notification_color": "@color/hotpink"
+  },
+  "functions": {
+    "predeploy": ["npm --prefix \"$RESOURCE_DIR\" run lint"]
+  }
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Differential Calculus Introduction</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      In mathematics, <b>differential calculus</b> is a subfield of calculus
+      that studies the rates at which quantities change.It is one of the two
+      traditional divisions of calculus, the other being integral calculus—the
+      study of the area beneath a curve. The derivative of a function at a
+      chosen input value describes the rate of change of the function near that
+      input value. The process of finding a derivative is called
+      differentiation. Geometrically, the derivative at a point is the slope of
+      the tangent line to the graph of the function at that point, provided that
+      the derivative exists and is defined at that point.
+    </p>
+    <h2 class="subHeader">
+      Derivative
+    </h2>
+    <figure>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Tangent-calculus.svg/600px-Tangent-calculus.svg.png"
+      />
+      <figcaption>
+        The tangent line at \((x,f(x))\)
+      </figcaption>
+    </figure>
+    <p class="paragraph">
+      To find the derivative of a function \(y = f(x)\) we use the slope
+      formula.This relationship can be written as \(y = f(x)\). If f(x) is the
+      equation for a straight line (called a linear equation), then there are
+      two real numbers m and b such that\(y = mx + b\). In this "slope-intercept
+      form", the term m is called the slope and can be determined from the
+      formula: <br /><br />
+      \(m={\frac {{\text{change in }}y}{{\text{change in }}x}}={\frac {\Delta
+      y}{\Delta x}},\) <br /><br />
+      where the symbol \(Δ\) is an abbreviation for "change in". It follows that
+      \(Δy = m Δx\).
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        A closely related notion is the differential of a function. When x and y
+        are real variables, the derivative of f at x is the slope of the tangent
+        line to the graph of f at x. Because the source and target of f are
+        one-dimensional, the derivative of f is a real number. If x and y are
+        vectors, then the best linear approximation to the graph of f depends on
+        how f changes in several directions at once.
+      </p>
+      <figure>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tangent_function_animation.gif"
+        />
+        <figcaption>
+          The derivative at different points of a differentiable function
+        </figcaption>
+      </figure>
+    </div>
+    <h2 class="subHeader">
+      First Principle of Differentiation
+    </h2>
+    <p class="paragraph">
+      Let \(f(x)\) be a real function in its domain. A function defined such
+      that <br /><br />
+      \(\lim_{x\rightarrow 0}[\frac{f(x+h)-f(x)}{h}]\) <br /><br />
+      if it exists is said to be derivative of the function f(x). This is known
+      as the first principle of the derivative. The first principle of a
+      derivative is also called the Delta Method.
+    </p>
+    <div class="theorem">
+      <h4>Proof:</h4>
+      <p class="paragraph">
+        Let y = f(x) be a function and let \(A=(x , f(x))\) and \(B= (x+h ,
+        f(x+h))\) be close to each other on the graph of the function.Let the
+        line \(f(x)\) intersect the line \(x + h\) at a point C.
+      </p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/First_principles_differentiation_demo.svg/900px-First_principles_differentiation_demo.svg.png"
+      />
+      <p class="paragraph">
+        We know that \(f'(x) = \lim_{x\rightarrow 0}[\frac{f(x+h)-f(x)}{h}]\)
+        <br /><br />
+        In the triangle ABC, we can say that the ratio whose limit we are taking
+        is equal to tan(BAC). That is the slope of the chord AB. Thus in the
+        limiting process as h->0, point B tends to A and so we get <br />
+        \(f'(x) = \lim_{h\rightarrow 0}[\frac{f(x+h)-f(x)}{h}]\) \(=\) \(f'(x) =
+        \lim_{B\rightarrow A}[\frac{BC}{AC}]\) <br />
+        which means that the chord AB tends to the tangent at A for the curve
+        \(y = f(x)\). Hence, we get \(f'(x) = tan \alpha\) where \(\alpha\) =
+        angle made by the tangent at A on the X-axs. For a function \(F\), we
+        can define the derivative at every point. It the derivative exists at
+        all points it becomes a new function known as \(f‘\).
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+    figcaption {
+      color: black;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

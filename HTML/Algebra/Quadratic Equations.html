@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quadratic Equations</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      A <b>Quadratic</b> is a polynomial whose highest exponent is 2. \(ax^{2} +
+      bx + c\). The coefficient of \(x^{2}\) is called the leading coeffieient.
+      where x represents an unknown, and a, b, and c represent known numbers,
+      where a ≠ 0.
+    </p>
+    <p class="paragraph">
+      If a = 0, then the equation is linear, not quadratic, as there is no
+      \(ax^{2}\) term. The numbers a, b, and c are the coefficients of the
+      equation and may be distinguished by calling them, respectively, the
+      quadratic coefficient, the linear coefficient and the constant or free
+      term.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        The values of x that satisfy the equation are called solutions of the
+        equation, and roots or zeros of the expression on its left-hand side. A
+        quadratic equation has at most two solutions. If there is no real
+        solution, there are two complex solutions. If there is only one
+        solution, one says that it is a double root. A quadratic equation always
+        has two roots, if complex roots are included and a double root is
+        counted for two. A quadratic equation can be factored into an equivalent
+        equation <br />
+        \({\displaystyle ax^{2}+bx+c=a(x-r)(x-s)=0}\)
+      </p>
+    </div>
+    <h2 class="subHeader">
+      Solving the quadratic equation
+    </h2>
+    <p class="paragraph">
+      A quadratic equation with real or complex coefficients has two solutions,
+      called roots. These two solutions may or may not be distinct, and they may
+      or may not be real.
+    </p>
+    <h3>1. Factoring by Inspection</h3>
+    <p class="paragraph">
+      t may be possible to express a quadratic equation ax2 + bx + c = 0 as a
+      product (px + q)(rx + s) = 0. In some cases, it is possible, by simple
+      inspection, to determine values of p, q, r, and s that make the two forms
+      equivalent to one another. If the quadratic equation is written in the
+      second form, then the "Zero Factor Property" states that the quadratic
+      equation is satisfied if px + q = 0 or rx + s = 0. Solving these two
+      linear equations provides the roots of the quadratic.
+    </p>
+    <div class="summary">
+      If one is given a quadratic equation in the form x2 + bx + c = 0, the
+      sought factorization has the form (x + q)(x + s), and one has to find two
+      numbers q and s that add up to b and whose product is c (this is sometimes
+      called <b>Vieta's rule</b> and is related to Vieta's formulas).
+    </div>
+    <figure style="text-align: center;">
+      <img
+        style="width: 300px; height: 250px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Polynomialdeg2.svg/300px-Polynomialdeg2.svg.png"
+      />
+      <figcaption>
+        For the quadratic function y = x2 − x − 2, the points where the graph
+        crosses the x-axis, x = −1 and x = 2, are the solutions of the quadratic
+        equation x2 − x − 2 = 0.
+      </figcaption>
+    </figure>
+    <h3>2. Completing the Square</h3>
+    <p class="paragraph">
+      The process of completing the square makes use of the algebraic identity
+      \(x^{2}+2hx+h^{2}=(x+h)^{2},\) <br />
+      which represents a well-defined algorithm that can be used to solve any
+      quadratic equation. Starting with a quadratic equation in standard form,
+      ax2 + bx + c = 0
+    </p>
+    <ul class="ul">
+      <li>
+        Divide each side by a, the coefficient of the squared term.
+      </li>
+      <li>Subtract the constant term c/a from both sides.</li>
+      <li>
+        Add the square of one-half of b/a, the coefficient of x, to both sides.
+        This "completes the square", converting the left side into a perfect
+        square.
+      </li>
+      <li>
+        Write the left side as a square and simplify the right side if
+        necessary.
+      </li>
+      <li>
+        Produce two linear equations by equating the square root of the left
+        side with the positive and negative square roots of the right side.
+      </li>
+      <li>Solve each of the two linear equations.</li>
+    </ul>
+    <h3>3. Quadratic formula</h3>
+    <p class="paragraph">
+      Completing the square can be used to derive a general formula for solving
+      quadratic equations, called the quadratic formula.t can easily be seen, by
+      polynomial expansion, that the following equation is equivalent to the
+      quadratic equation: <br /><br />
+      \(\left(x+{\frac {b}{2a}}\right)^{2}={\frac {b^{2}-4ac}{4a^{2}}}.\)
+      <br /><br />
+      Taking the square root of both sides, and isolating x, gives: <br /><br />
+      \({\displaystyle x={\frac {-b\pm {\sqrt {b^{2}-4ac}}}{2a}}.}\)
+    </p>
+    <h2 class="subHeader">Applications</h2>
+    <p class="paragraph">
+      The golden ratio is found as the positive solution of the quadratic
+      equation \(x^{2}-x-1=0.\) The equations of the circle and the other conic
+      sections—ellipses, parabolas, and hyperbolas—are quadratic equations in
+      two variables.
+    </p>
+    <p class="paragraph">
+      Given the cosine or sine of an angle, finding the cosine or sine of the
+      angle that is half as large involves solving a quadratic equation.
+    </p>
+    <p class="paragraph">
+      The process of simplifying expressions involving the square root of an
+      expression involving the square root of another expression involves
+      finding the two solutions of a quadratic equation.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        The equation given by Fuss' theorem, giving the relation among the
+        radius of a bicentric quadrilateral's inscribed circle, the radius of
+        its circumscribed circle, and the distance between the centers of those
+        circles, can be expressed as a quadratic equation for which the distance
+        between the two circles' centers in terms of their radii is one of the
+        solutions. The other solution of the same equation in terms of the
+        relevant radii gives the distance between the circumscribed circle's
+        center and the center of the excircle of an ex-tangential quadrilateral.
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+    h1,
+    h2,
+    h3 {
+      color: black;
+    }
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

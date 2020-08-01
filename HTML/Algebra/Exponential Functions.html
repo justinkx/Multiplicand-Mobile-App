@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exponential Functions</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      An <b>exponential function</b> with base b is defined by f (x) = abx where
+      a ≠0, b > 0 , b ≠1, and x is any real number. The base, b, is constant and
+      the exponent, x, is a variable.
+    </p>
+    <figure>
+      <img
+        src="https://mathbitsnotebook.com/Algebra1/FunctionGraphs/expgrapha.jpg"
+      />
+      <figcaption>a = 1, b = 2</figcaption>
+    </figure>
+    <div class="theorem">
+      <p class="paragraph">
+        Most exponential graphs will have this same arcing shape.
+      </p>
+      <p class="paragraph">
+        This graph does not have a constant rate of change, but it has constant
+        ratios. It is growing by common factors over equal intervals.
+      </p>
+    </div>
+    <h2 class="subHeader">Features</h2>
+    <ul class="ul">
+      <li>
+        The domain is all Real numbers.
+      </li>
+      <li>The range is all positive real numbers (not zero).</li>
+      <li>
+        Graph has a y-intercept at (0,1). Remember any number to the zero power
+        is 1.
+      </li>
+      <li>
+        When b > 1, the graph increases. The greater the base, b, the faster the
+        graph rises from left to right.
+      </li>
+      <li>
+        When 0 < b < 1, the graph decreases.
+      </li>
+      <li>
+        Has an asymptote (a line that the graph gets very, very close to, but
+        never crosses or touches). For this graph the asymptote is the x-axis (y
+        = 0).
+      </li>
+    </ul>
+    <p class="paragraph">
+      <b>Exponential functions</b> grow by common factors over equal intervals.
+      As such, <b>exponential functions</b> are used to model a wide range of
+      real-life situations (such as populations, bacteria, radioactive
+      substances, temperatures, bank accounts, credit payments, compound
+      interest, electricity, medicine, tournaments, etc.).
+    </p>
+    <p class="paragraph">
+      Any quantity that grows (or decays) by a fixed percent at regular
+      intervals is said to possess exponential growth or exponential decay.
+    </p>
+    <figure>
+      <img
+        src="https://mathbitsnotebook.com/Algebra1/FunctionGraphs/expgrowth.jpg"
+      />
+      <figcaption>
+        In exponential growth, the quantity increases, slowly at first, and then
+        very rapidly. The rate of change increases over time. The rate of growth
+        becomes faster as time passes. This rapid growth is what is meant by the
+        expression "increases exponentially".
+      </figcaption>
+    </figure>
+    <figure>
+      <img
+        src="https://mathbitsnotebook.com/Algebra1/FunctionGraphs/expdecay2.jpg"
+      />
+      <figcaption>
+        In exponential decay, the quantity decreases very rapidly at first, and
+        then more slowly. The rate of change decreases over time. The rate of
+        decay becomes slower as time passes.
+      </figcaption>
+    </figure>
+    <h2 class="subHeader">
+      Translations of Exponential Graphs
+    </h2>
+    <p class="paragraph">
+      A <b>horizontal translation</b> may affect the increasing / decreasing (if
+      multiplied by a negative), the left hand / right hand behavior of the
+      graph, and the y-intercept, but it won't change the location of the
+      horizontal asymptote.<br /><br />
+      A <b>vertical translation</b> may affect the increasing / decreasing (if
+      multiplied by a negative), the y-intercept, and the location of the
+      horizontal asymptote. It will not change whether the graph goes without
+      bound or is asymptotic (although it may change where it is asymptotic) to
+      the left or right.
+    </p>
+    <h2 class="subHeader">
+      The natural base e
+    </h2>
+    <p class="paragraph">
+      As x increases without bound, the quantity \((1 + \frac{1}{x})^{x}\) will
+      approach the transcendental number \(e\). <br />
+      \(e=\lim _{x\to \infty }\left(1+{\frac {1}{x}}\right)^{x} \approx 2.7182\)
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        The limit notation shown is from calculus. The limit notation is a way
+        of asking what happens to the expression as x approaches the value
+        shown. The limit is the dividing line between calculus and algebra.
+        Calculus is algebra with the concept of limit. People always have this
+        dread of calculus that I can't understand. The calculus itself is easy.
+        The reason people don't do well in calculus is not because of the
+        calculus, but because of they are poor at algebra.
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summary Of Number Theory</title>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+  <div class="summary">
+    <ul>
+      <li>
+        \(i^{\circ} = 1, i^{1} = i = \sqrt{-1}, i^{2} = -1, i^{3} = -i, i^{4} = 1\)
+      </li>
+      <li>
+        If \(z = a+ib\), then conjugate of z is \(\bar{Z} = a - ib\)
+      </li>
+      <li>
+        If \(z = a+ib\), then modulus of Z is \(\left | Z \right | = \sqrt{a^{2} + b^{2}}\)
+      </li>
+      <li>
+        If \(z = a+ib\), then \(Re(z)= \frac{z+\bar{z}}{2}, Im(z) = \frac{z-\bar{z}}{2i}\)
+      </li>
+      <li>
+        \(z.\bar{z} = \) \(\left | z \right |^{2}\)
+      </li>
+      <li>
+        \(\bar{\bar{z}} = z\)
+      </li>
+      <li>
+        \(\left | z_{1}.z_{2} \right | = \left | z_{1} \right |.\left | z_{2} \right |\)
+      </li>
+      <li>
+        \(\left | \frac{z_{1}}{z_{2}} \right | = \frac{ \left | z_{1} \right |}{ \left | z_{1}
+        \right |}\)
+      </li>
+    </ul>
+  </div>
+  <figure>
+    <h3>Argand Diagram</h3>
+
+    <img class="diagram"
+      src="//upload.wikimedia.org/wikipedia/commons/thumb/6/69/Complex_conjugate_picture.svg/220px-Complex_conjugate_picture.svg.png" />
+    <figcaption>
+      Geometric representation of z and its conjugate z̅ in the complex plane. The distance along
+      the light blue line from the origin to the point z is the modulus or absolute value of z.
+      The angle φ is the argument of z.
+    </figcaption>
+  </figure>
+  <div class="summary">
+    <ul>
+      <li>
+        Triangular Inequality: \(\left | z_1 \pm z_2 \right | \leq \left | z_1 \right | + \left |
+        z_2 \right |\)
+      </li>
+      <li>
+        Properties of addition and multiplication of complex numbers:
+      </li>
+      <li>
+        Polar form: \(z = x + iy = r(cos\theta +isin\theta) = re^{i\theta}\), where \(r = \left |
+        z \right |, \theta = tan^{-1}(\frac{y}{x}), -\pi < \theta \leq \pi\) </li>
+      <li>
+        Laplace De-Moivre's Formula: \((\cos \theta+i\sin
+        \theta)^{n}=\cos(n\theta)+i\sin(n\theta)\,\), \((\cos \theta+i\sin
+        \theta)^{-n}=\cos(n\theta)-i\sin(n\theta)\,\) where \(n\) is any real number
+      </li>
+      <li>
+        \(\left | z \right |\): It is the distance of \(z\) in the <b>argand plane</b> from the
+        origin.
+      </li>
+      <li>
+        \(\left | z_1 - z_2 \right |\): It is the distance between the complex numbers \(z_1\) and
+        \(z_2\) in the <b>argand plane</b>.
+      </li>
+      <li>
+        \(\left | z - a \right | = r\) : It is the equation of the circle with centre at the
+        complex number \('a'\) and radius \('r'\) in the <b>argand plane</b>.
+      </li>
+      <li>
+        \(\bar{z}\) is the <b>reflection</b> of \(z\) in the <b>argand plane</b>, about the real
+        line
+      </li>
+    </ul>
+  </div>
+  <div class="table">
+    <table>
+      <tr>
+        <th>Property</th>
+        <th>Addition</th>
+        <th>Multiplication</th>
+      </tr>
+      <tr>
+        <td>
+          Closure Property
+        </td>
+        <td>
+          \(z_1 + z_2\) is also a complex number
+        </td>
+        <td>
+          \(z_1 . z_2\) is also a complex number
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Commutative Property
+        </td>
+        <td>
+          \(z_1+z_2 = z_2+z_1\)
+        </td>
+        <td>
+          \(z_1.z_2 = z_2.z_1\)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Associative Property
+        </td>
+        <td>
+          \((z_1+z_2)+z_3 = z_1+(z_2+z_3)\)
+        </td>
+        <td>
+          \((z_1.z_2).z_3 = z_1.(z_2.z_3)\)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Identity Property
+        </td>
+        <td>\(\exists 0 \epsilon C\) s.t \(z+0 = z\) , 0 is <b>additive identity</b></td>
+        <td>\(\exists 0 \epsilon C\) s.t \(z.1 = z\) , 1 is <b>multiplicative identity</b></td>
+      </tr>
+      <tr>
+        <td>
+          Inverse Property
+        </td>
+        <td>
+          \(\vee z\in C, \exists-z \) s.t \(z+(-z) = 0\)
+        </td>
+        <td>
+          \(\vee z\in C, \exists.z^{-1}\in C \) s.t \(z(z^{-1}) = 0, z\neq 0\)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Distributive Property
+        </td>
+        <td colspan="2">
+          \(z_1.(z_2+z_3) = z_1.z_2 + z_1.z_3\) &nbsp; multiplication is distributive over
+          addition
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="summary">
+    <ul>
+      <li>
+        Cube root of unity : \(\sqrt[3]{1} = 1 , \omega , \omega ^{2}\) <br />
+        Where \(\omega = \frac{-1+i\sqrt{3}}{2}, 1+\omega + \omega^{2} = 0, \omega^{3} = 1\)
+      </li>
+      <li>
+        \(\therefore \omega + \omega^{2} : -1, 1 + \omega = -\omega^{2}, 1+\omega^{2} = -\omega\)
+      </li>
+      <li>
+        Polar form of \(cos0 + isin0\) <br />
+        \(i = cos(\frac{\pi}{2}) + isin(\frac{\pi}{2})\) <br />
+        \(-1 = cos(\pi) + isin(\pi)\) <br />
+        \(-i = cos(\frac{-\pi}{4}) + isin(\frac{-\pi}{4})\)
+      </li>
+    </ul>
+  </div>
+</body>
+<style>
+  body {
+    padding: 20px;
+    background-color: white;
+    margin: 0px;
+    font-family: sans-serif;
+  }
+
+  .header {
+    text-align: center;
+    color: rgb(180, 9, 152);
+    margin-bottom: 20px;
+  }
+
+  .subHeader {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: indigo;
+  }
+
+  .paragraph {
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  .summary {
+    background-color: #58427c;
+    background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+    padding: 15px;
+    margin: 25px 0px;
+    border-radius: 6px;
+    border-left: 5px solid #ff5722;
+  }
+
+  .summary ul {
+    padding-inline-start: 20px;
+    margin-block-end: 5px;
+    margin-block-start: 5px;
+  }
+
+  .summary li {
+    color: white;
+    padding-bottom: 8px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .diagram {
+    width: 300px;
+  }
+
+  .table {
+    margin: 5px;
+    max-width: 100%;
+    overflow: scroll;
+  }
+
+  .table table {
+    border-collapse: collapse;
+  }
+
+  .table td,
+  th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  .table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #ff00d4;
+    color: white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+  }
+</style>
+
+</html>

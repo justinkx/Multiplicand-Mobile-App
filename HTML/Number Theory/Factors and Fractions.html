@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factors and Fractions</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      <b>Number theory</b> has interested and motivated mathematicians for
+      centuries. It is a branch of mathematics that deals with topics such as
+      even and odd numbers, prime and composite numbers, divisibility, greatest
+      common factor (GCF) and least common multiple (LCM), and terminating and
+      repeating decimals. These topics lay the foundation for the development of
+      fraction concepts.
+    </p>
+    <p class="paragraph">
+      Two very useful concepts to understand when working with fractions are the
+      greatest common factor (GCF) and the least common multiple (LCM). The GCF
+      for two or more numbers is the greatest number that divides evenly into
+      those numbers. For example, the GCF for 72 and 54 is 18, since 18 is the
+      greatest number that divides evenly into both numbers without a remainder.
+      There are several ways to find the GCF of two numbers.
+    </p>
+    <figure>
+      <img
+        style="height: 60px; width: 200px;"
+        src="https://firebasestorage.googleapis.com/v0/b/multiplicate-app.appspot.com/o/Assets%2Fimage6-30.gif?alt=media&token=4b0eb8ba-c4c5-4212-adff-7e3f515ec4eb"
+      />
+      <figcaption>
+        prime factorization of the numbers and circle the common primes
+      </figcaption>
+    </figure>
+    <div class="theorem">
+      <p class="paragraph">
+        Thus, the GCF of 54 and 72 is 2 x 3 x 3, or 18. Another way to find the
+        GCF for two numbers is to divide both numbers by their common factors
+        successively until there are no more common factors. The product of all
+        the common factors you divided by is the GCF. See the example below.
+      </p>
+    </div>
+    <figure>
+      <img
+        style="height: 100px; width: 250px;"
+        src="https://firebasestorage.googleapis.com/v0/b/multiplicate-app.appspot.com/o/Assets%2Fimage7-31.gif?alt=media&token=2181b92b-25bd-42c7-bee0-9f48226d05c2"
+      />
+    </figure>
+    <p class="paragraph">
+      Since 3 and 4 have no common factor other than 1, the GCF for 72 and 54 is
+      2 x 3 x 3, or 18. One of the most common uses for the GCF is in the
+      simplification of fractions by dividing the numerator and denominator by
+      their GCF. Let's look at the fraction \(\frac{54}{72}\) We found the GCF
+      to be 18. Dividing both the numerator 54 and the denominator 72 by 18
+      gives us \(\frac{54\div 18}{72\div 18 }\) , or \(\frac{3}{4}\) when
+      simplified.
+    </p>
+    <p class="paragraph">
+      The LCM of two or more numbers is the least nonzero number that those
+      numbers will divide. For example, the LCM of 18 and 24 is 72, since that
+      is the least nonzero number into which 18 and 24 will divide evenly. There
+      are several ways to find the LCM of two or more numbers. One way is to
+      write the prime factorizations of the numbers and multiply the greatest
+      powers of the prime numbers that appear in any of the numbers. Let's begin
+      finding the LCM for 18 and 24, by writing the prime factorizations of the
+      two numbers.
+    </p>
+    <p class="paragraph">
+      18 = 2 x 3² and 24 = 3 x 2³ The greatest power of 2 that appears is 2³ and
+      the greatest power of 3 is 3². Thus the LCM of 18 and 24 is 2³ x 3², or
+      72.
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        Another way to find the LCM is to list the multiples of each number
+        until you find the first multiple that appears in each list. Applying
+        this method to find the LCM of 18 and 24, we see that the multiples of
+        18 are 18, 36, 54, 72, 90, and so on, and the multiples of 24 are 24,
+        48, 72, 96, and so on, so the LCM of 18 and 24 is 72. One of the primary
+        uses for the LCM is in adding and subtracting fractions with unlike
+        denominators. One way to add or subtract those fractions is to find the
+        least common denominator (LCD), which is the LCM of the denominators.
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Introduction To Calculu</title>
+	<script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+	<p class="paragraph">
+		Calculus, a branch of Mathematics, developed by Newton and Leibniz, deals with the study of the rate of change.
+		Calculus
+		Math is generally used in Mathematical models to obtain optimal solutions. It helps us to understand the changes
+		between
+		the values which are related by a function. Calculus Math mainly focused on some important topics such as
+		differentiation, integration, limits, functions, and so on.
+	</p>
+	<p class="paragraph">
+		Calculus Mathematics is broadly classified into two different such as:
+	</p>
+	<ul>
+		<li>
+			Differential Calculus
+		</li>
+		<li>
+			Integral Calculus
+		</li>
+	</ul>
+	<h2 class="subHeader">
+		Basic Calculus
+	</h2>
+	<p class="paragraph">
+		Basic Calculus is the study of differentiation and integration. Both concepts are based on the idea of limits
+		and
+		functions. Some concepts like continuity, exponents are the foundation of the advanced calculus. Basic calculus
+		explains
+		about the two different types of calculus called “Differential Calculus” and “Integral Calculus”. Differential
+		Calculus
+		helps to find the rate of change of a quantity whereas integral calculus helps to find the quantity when the
+		rate of
+		change is known.
+	</p>
+	<div class="theorem">
+		<h3>Derivative by first principle</h3>
+		<p>
+			Derivative by first principle refers to using algebra to find a general expression for the slope of a curve.
+			It is also
+			known as the delta method. The derivative is a measure of the instantaneous rate of change, which is equal
+			to
+		</p>
+		<b>\(f'(x) = \lim_{h\rightarrow 0} \frac{ f(x+h) - f(x) } { h }\)</b>
+		<p>
+			A derivative is simply a measure of the rate of change. It can be the rate of change of distance with
+			respect to time or
+			the temperature with respect to distance. We want to measure the rate of change of a function \(y=f(x)\)
+			with respect to its variable \(x\).
+		</p>
+		<figure>
+			<img class="first_principle"
+				src="https://ds055uzetaobb.cloudfront.net/uploads/4wXT0laiFv-urioumzyt8-derivative-by-first-principle.gif">
+			<figcaption>
+
+			</figcaption>
+		</figure>
+	</div>
+	<div class="theorem">
+		<h3>Fundamental theorem</h3>
+		<p>
+			The fundamental theorem of calculus states that differentiation and integration are inverse operations. More
+			precisely,
+			it relates the values of antiderivatives to definite integrals. Because it is usually easier to compute an
+			antiderivative than to apply the definition of a definite integral, the fundamental theorem of calculus
+			provides a
+			practical way of computing definite integrals. It can also be interpreted as a precise statement of the fact
+			that
+			differentiation is the inverse of integration.
+		</p>
+		<p>
+			The fundamental theorem of calculus states: If a function f is continuous on the interval \(\left [ a,b
+			\right ]\) and if \(F\) is a function whose derivative is \(f\) on the interval \((a, b)\), then
+		</p>
+		<p>
+			<b>\(\int_{a}^{b} f(x)\,dx = F(b) - F(a)\)</b>
+		</p>
+		<p>
+			Furthermore, for every \(x\) in the interval \((a, b)\),
+		</p>
+		<p>
+			<b>
+				\(\frac{d}{dx}\int_a^x f(t)\, dt = f(x)\)
+			</b>
+		</p>
+	</div>
+	<h2 class="subHeader">
+		Applications
+	</h2>
+	<div class="summary">
+		<p class="paragraph">
+			Calculus is used in every branch of the physical sciences, actuarial science, computer science, statistics,
+			engineering,
+			economics, business, medicine, demography, and in other fields wherever a problem can be mathematically
+			modeled
+			and an
+			optimal solution is desired. It allows one to go from (non-constant) rates of change to the total change or
+			vice
+			versa,
+			and many times in studying a problem we know one and are trying to find the other.
+		</p>
+		<p class="paragraph">
+			Physics makes particular use of calculus; all concepts in classical mechanics and electromagnetism are
+			related
+			through
+			calculus. The mass of an object of known density, the moment of inertia of objects, as well as the total
+			energy
+			of an
+			object within a conservative field can be found by the use of calculus. An example of the use of calculus in
+			mechanics
+			is Newton's second law of motion: historically stated it expressly uses the term "change of motion" which
+			implies the
+			derivative saying The change of momentum of a body is equal to the resultant force acting on the body and is
+			in
+			the same
+			direction. Commonly expressed today as Force = Mass × acceleration, it implies differential calculus because
+			acceleration is the time derivative of velocity or second time derivative of trajectory or spatial position.
+			Starting
+			from knowing how an object is accelerating, we use calculus to derive its path.
+		</p>
+		<p class="paragraph">
+			In the realm of medicine, calculus can be used to find the optimal branching angle of a blood vessel so as
+			to
+			maximize
+			flow. From the decay laws for a particular drug's elimination from the body, it is used to derive dosing
+			laws.
+			In
+			nuclear medicine, it is used to build models of radiation transport in targeted tumor therapies.
+
+			In economics, calculus allows for the determination of maximal profit by providing a way to easily calculate
+			both
+			marginal cost and marginal revenue.
+		</p>
+	</div>
+
+</body>
+<style>
+	body {
+		padding: 20px;
+		background-color: white;
+		margin: 0px;
+		font-family: sans-serif;
+	}
+
+	.header {
+		text-align: center;
+		color: rgb(180, 9, 152);
+		margin-bottom: 20px;
+	}
+
+	.subHeader {
+		font-size: 20px;
+		font-weight: bold;
+		text-align: left;
+		color: indigo;
+	}
+
+	.first_principle {
+		width: 100%;
+		height: 200px;
+	}
+
+	.paragraph {
+		color: black;
+		margin-bottom: 10px;
+	}
+
+	.logGraph {
+		height: 250px;
+		width: 100%;
+		max-width: 450px;
+	}
+
+	.note {
+		width: 90%;
+		max-height: 30vh;
+		border: 0.5px solid rgb(224, 224, 224);
+		overflow: scroll;
+		border-radius: 5px;
+		background: #fff;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+			0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+			0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+		padding: 10px;
+	}
+
+	.note-list {
+		width: 100%;
+	}
+
+	figcaption {
+		color: rgb(252, 52, 52);
+		font-size: 12px;
+	}
+
+	.notes {
+		margin: 0px;
+		padding-bottom: 8px;
+		color: rgb(17, 17, 248);
+	}
+
+	::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 4px;
+		-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+	}
+
+	.theorem {
+		width: 90%;
+		display: block;
+		border: 1px solid rgb(245, 214, 131);
+		background-color: rgb(245, 214, 131);
+		padding: 10px;
+		border-radius: 5px;
+		margin: 20px 0px;
+		color: black;
+		border-left: 5px solid red;
+	}
+
+	.result {
+		font-size: 16px;
+		font-weight: bold;
+		color: rgb(32, 0, 75);
+	}
+
+	.image {
+		max-width: 90vw;
+		max-height: 35vh;
+	}
+
+	.summary {
+		background-color: #58427c;
+		background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+		padding: 15px;
+		margin: 25px 0px;
+		border-radius: 6px;
+		border-left: 6px solid #fd02be;
+	}
+
+	.summary .paragraph {
+		color: white;
+		font-style: italic;
+		line-height: 22px;
+	}
+</style>
+
+</html>

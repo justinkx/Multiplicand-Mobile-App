@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gauss–Markov process</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      A Gauss–Markov process is a stochastic process with zero mean and whose
+      autocorrelation function is written as \({\textbf {R}}_{{x}}(\tau )=\sigma
+      ^{{2}}e^{{-\beta |\tau |}}.\,\) where 1/τ is the time constant of the
+      process and σ2 its variance. The power spectral density function of P is
+      given by \({\textbf {S}}_{{x}}(j\omega )={\frac {2\sigma ^{{2}}\beta
+      }{\omega ^{{2}}+\beta ^{{2}}}}.\,\)
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        Every Gauss–Markov process X(t) possesses the three following
+        properties:
+      </p>
+      <ul>
+        <li>
+          If h(t) is a non-zero scalar function of t, then Z(t) = h(t)X(t) is
+          also a Gauss–Markov process
+        </li>
+        <li>
+          If f(t) is a non-decreasing scalar function of t, then Z(t) = X(f(t))
+          is also a Gauss–Markov process
+        </li>
+        <li>
+          If the process is non-degenerate and mean-square continuous, then
+          there exists a non-zero scalar function h(t) and a strictly increasing
+          scalar function f(t) such that X(t) = h(t)W(f(t)), where W(t) is the
+          standard Wiener process
+        </li>
+      </ul>
+    </div>
+    <figure>
+      <img
+        style="height: 70px; width: 300px;"
+        src="https://user-images.githubusercontent.com/28846043/87881019-075e5200-ca14-11ea-9465-69ba4d289094.png"
+      />
+      <figcaption>
+        Graphical model illustrating an AR(2) process.
+      </figcaption>
+    </figure>
+    <p class="paragraph">
+      Moving from the discrete time to the continuous time setting, the question
+      arises as to how generalize the <b>Markov</b> notion used in the
+      discrete-time AR process to define a continuoous-time AR process. It turns
+      out that the correct generalization uses the idea of having not only the
+      function value but also p of its derivatives at time t giving rise to the
+      stochastic differential equation (SDE).
+    </p>
+  </body>
+
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

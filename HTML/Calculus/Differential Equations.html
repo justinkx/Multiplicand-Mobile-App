@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Differential Equations</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <p class="paragraph">
+      In mathematics, a <b>differential equation</b> is an equation that relates
+      one or more functions and their derivatives.In applications, the functions
+      generally represent physical quantities, the derivatives represent their
+      rates of change, and the <b>differential equation</b> defines a
+      relationship between the two.<br /><br />
+      <b
+        >A differential equation is any equation which contains derivatives,
+        either ordinary derivatives or partial derivatives.
+      </b>
+      Such relations are common, therefore differential equations play a
+      prominent role in many disciplines including engineering, physics,
+      economics, and biology.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        In classical mechanics, the motion of a body is described by its
+        position and velocity as the time value varies. Newton's laws allow
+        these variables to be expressed dynamically (given the position,
+        velocity, acceleration and various forces acting on the body) as a
+        differential equation for the unknown position of the body as a function
+        of time. <br /><br />
+        In some cases, this differential equation (called an equation of motion)
+        may be solved explicitly.
+      </p>
+    </div>
+    <h2 class="subHeader">
+      Order
+    </h2>
+    <p class="paragraph">
+      The order of a differential equation is the largest derivative present in
+      the differential equation. In the differential equation [\(m\frac{dv}{dt}
+      = F(t,v)\)] is a first order differential equation. And,<br />
+      \(sin(y)\frac{d^{2}y}{dx^{2}} = (1-y)\frac{dy}{dx} + y^{2}e^{-5y}\) is a
+      second order differential equation.
+      <br /><br />
+      The order does not depend on whether or not you’ve got ordinary or partial
+      derivatives in the differential equation.
+    </p>
+    <h2 class="subHeader">
+      Types Of Differential Equations
+    </h2>
+    <p class="paragraph">
+      Differential equations can be divided into several types. Apart from
+      describing the properties of the equation itself, these classes of
+      differential equations can help inform the choice of approach to a
+      solution.
+    </p>
+    <h3>Ordinary differential equations</h3>
+    <p class="paragraph">
+      An <b>ordinary differential equation</b> (ODE) is an equation containing
+      an unknown function of one real or complex variable \(x\), its
+      derivatives, and some given functions of \(x\). The unknown function is
+      generally represented by a variable (often denoted \(y\)), which,
+      therefore, depends on \(x\). Thus \(x\) is often called the independent
+      variable of the equation. The term "ordinary" is used in contrast with the
+      term partial differential equation, which may be with respect to more than
+      one independent variable.
+    </p>
+    <div class="theorem">
+      Linear differential equations are the differential equations that are
+      linear in the unknown function and its derivatives. Their theory is well
+      developed, and in many cases one may express their solutions in terms of
+      integrals.
+      <p class="paragraph">
+        Most ODEs that are encountered in physics are linear. Therefore, most
+        special functions may be defined as solutions of linear differential
+        equations
+      </p>
+    </div>
+    <h3>Partial differential equations</h3>
+    <p class="paragraph">
+      A <b>partial differential equation</b> (PDE) is a differential equation
+      that contains unknown multivariable functions and their partial
+      derivatives. (This is in contrast to ordinary differential equations,
+      which deal with functions of a single variable and their derivatives.)
+      PDEs are used to formulate problems involving functions of several
+      variables, and are either solved in closed form, or used to create a
+      relevant computer model.
+    </p>
+    <div class="theorem">
+      PDEs can be used to describe a wide variety of phenomena in nature such as
+      sound, heat, electrostatics, electrodynamics, fluid flow, elasticity, or
+      quantum mechanics. These seemingly distinct physical phenomena can be
+      formalized similarly in terms of PDEs.<br /><br />
+      Just as ordinary differential equations often model one-dimensional
+      dynamical systems, partial differential equations often model
+      multidimensional systems. Stochastic partial differential equations
+      generalize partial differential equations for modeling randomness.
+    </div>
+    <h3>Non-linear differential equations</h3>
+    <p class="paragraph">
+      A <b>non-linear differential equation</b> is a differential equation that
+      is not a linear equation in the unknown function and its derivatives (the
+      linearity or non-linearity in the arguments of the function are not
+      considered ).<br />
+      There are very few methods of solving nonlinear differential equations
+      exactly; those that are known typically depend on the equation having
+      particular symmetries. Nonlinear differential equations can exhibit very
+      complicated behavior over extended time intervals, characteristic of
+      chaos.
+    </p>
+    <div class="theorem">
+      Linear differential equations frequently appear as approximations to
+      nonlinear equations. These approximations are only valid under restricted
+      conditions. For example, the harmonic oscillator equation is an
+      approximation to the nonlinear pendulum equation that is valid for small
+      amplitude oscillations
+    </div>
+    <div class="summary">
+      <p class="paragraph">
+        Solving differential equations is not like solving algebraic equations.
+        Not only are their solutions often unclear, but whether solutions are
+        unique or exist at all are also notable subjects of interest. For first
+        order initial value problems, the Peano existence theorem gives one set
+        of circumstances in which a solution exists.
+      </p>
+      <p class="paragraph">
+        Given any point \((a,b)\) in the xy-plane, define some rectangular
+        region \(Z\), such that \(Z=[l,m]\times [n,p]\) and \((a,b)\) is in the
+        interior of \(Z\).If we are given a differential equation
+        \({\displaystyle {\frac {dy}{dx}}=g(x,y)}\) and the condition that
+        \(y=b\) and \(x=a\), then there is locally a solution to this problem if
+        \(g(x,y)\) and \(\frac {\partial g}{\partial x}\) are both continuous on
+        \(Z\)
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linear Algebra</title>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+  <p class="paragraph">
+    Linear algebra is a branch of mathematics, but the truth of it is that linear algebra is the
+    mathematics of data. Matrices and vectors are the language of data. Linear algebra is about
+    linear combinations. That is, using arithmetic on columns of numbers called vectors and arrays
+    of numbers called matrices, to create new columns and arrays of numbers. Linear algebra is the
+    study of lines and planes, vector spaces and mappings that are required for linear transforms.
+  </p>
+  <figure>
+    <img
+      src="//upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Linear_subspaces_with_shading.svg/250px-Linear_subspaces_with_shading.svg.png" />
+    <figcaption>
+      In the three-dimensional Euclidean space, these three planes represent solutions of linear
+      equations and their intersection represents the set of common solutions: in this case, a
+      unique point. The blue line is the common solution of a pair of linear equations.
+    </figcaption>
+  </figure>
+  <p class="paragraph">
+    Equations such as \({\displaystyle a_{1}x_{1}+\cdots +a_{n}x_{n}=b,}\) and linear maps such as
+    \({\displaystyle (x_{1},\ldots ,x_{n})\mapsto a_{1}x_{1}+\ldots +a_{n}x_{n},}\) and their
+    representations in vector spaces and through matrices. Equations like this are linear in that
+    they describe a line on a two-dimensional graph. The line comes from plugging in different
+    values into the unknown x to find out what the equation or model does to the value of b.
+  </p>
+
+  <h2 class="subHeader">
+    Numerical Linear Algebra
+  </h2>
+  <p class="paragraph">
+    The application of linear algebra in computers is often called numerical linear algebra.It is
+    more than just the implementation of linear algebra operations in code libraries; it also
+    includes the careful handling of the problems of applied mathematics, such as working with the
+    limited floating point precision of digital computers.
+  </p>
+  <div class="summary">
+    <span>Three popular open source numerical linear algebra libraries that implement these functions
+      are:</span>
+    <ul>
+      <li>
+        Linear Algebra Package, or LAPACK.
+      </li>
+      <li>
+        Basic Linear Algebra Subprograms, or BLAS (a standard for linear algebra libraries).
+      </li>
+      <li>
+        Automatically Tuned Linear Algebra Software, or ATLAS.
+      </li>
+    </ul>
+  </div>
+  <h2 class="subHeader">
+    Linear Systems
+  </h2>
+  <p class="paragraph">
+    A finite set of linear equations in a finite set of variables, for example, \({\displaystyle
+    x_{1},x_{2},...,x_{n}}\) or \({\displaystyle x,y,...,z}\) is called a system of linear
+    equations or a linear system.
+  </p>
+  <p class="paragraph">
+    Systems of linear equations form a fundamental part of linear algebra. Historically, linear
+    algebra and matrix theory has been developed for solving such systems. In the modern
+    presentation of linear algebra through vector spaces and matrices, many problems may be
+    interpreted in terms of linear systems.
+  </p>
+  <div class="theorem">
+    <p>
+      For a Linear System: <br />
+      \({\displaystyle
+      {\begin{alignedat}{7}2x&&\;+\;&&y&&\;-\;&&z&&\;=\;&&8\\-3x&&\;-\;&&y&&\;+\;&&2z&&\;=\;&&-11\\-2x&&\;+\;&&y&&\;+\;&&2z&&\;=\;&&-3\end{alignedat}}\qquad
+      }\) <br />
+      The associated Matrix be : <br />
+      \({\displaystyle
+      M\left[{\begin{array}{rrr}2&1&-1\\-3&-1&2\\-2&1&2\end{array}}\right]{\text{.}}}\)
+      <br />
+      And it's vector be: <br />
+      \({\displaystyle v={\begin{bmatrix}8\\-11\\-3\end{bmatrix}}.}\)
+    </p>
+  </div>
+  <h2 class="subHeader">
+    Applications of Linear Algebra
+  </h2>
+  <p class="paragraph">
+    As linear algebra is the mathematics of data, the tools of linear algebra are used in many
+    domains.
+  </p>
+  <ul>
+    <li>Matrices in Engineering, such as a line of springs.</li>
+    <li>Graphs and Networks, such as analyzing networks.</li>
+    <li>Markov Matrices, Population, and Economics, such as population growth.</li>
+    <li>Linear Programming, the simplex optimization method.</li>
+    <li>Fourier Series: Linear Algebra for functions, used widely in signal processing.</li>
+    <li>Linear Algebra for statistics and probability, such as least squares for regression.</li>
+    <li>Computer Graphics, such as the various translation, rescaling and rotation of images.</li>
+  </ul>
+</body>
+<style>
+  body {
+    padding: 20px;
+    background-color: white;
+    margin: 0px;
+    font-family: sans-serif;
+  }
+
+  .header {
+    text-align: center;
+    color: rgb(180, 9, 152);
+    margin-bottom: 20px;
+  }
+
+  .subHeader {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: indigo;
+  }
+
+  .paragraph {
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  .theorem {
+    width: 90%;
+    display: block;
+    border: 1px solid rgb(245, 214, 131);
+    background-color: rgb(245, 214, 131);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0px;
+    color: black;
+    border-left: 5px solid red;
+  }
+
+  .theorem p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0px;
+  }
+
+  .summary {
+    background-color: #58427c;
+    background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+    padding: 15px;
+    margin: 25px 0px;
+    border-radius: 6px;
+    border-left: 5px solid #ff5722;
+  }
+
+  .summary span {
+    color: white;
+    font-weight: bold;
+  }
+
+  .summary ul {
+    padding-inline-start: 20px;
+    margin-block-end: 5px;
+    margin-block-start: 5px;
+  }
+
+  .summary li {
+    color: white;
+    padding-bottom: 8px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .diagram {
+    width: 300px;
+  }
+
+  figcaption {
+    color: gray;
+    font-size: 12px;
+  }
+</style>
+
+</html>

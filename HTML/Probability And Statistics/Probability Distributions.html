@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Probability Distributions</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      To define <b>probability distributions</b> for the simplest cases, it is
+      necessary to distinguish between discrete​ and ​continuous​ ​random
+      variables​. In the discrete case, it is sufficient to specify a
+      probability mass function \({\displaystyle p}\) assigning a probability to
+      each possible outcome: for example, when throwing a fair ​die​, each of
+      the six values 1 to 6 has the probability 1/6. The probability of an
+      ​event​ is then defined to be the sum of the probabilities of the outcomes
+      that satisfy the event; for example, the probability of the event "the
+      dice rolls an even value" is \({\displaystyle
+      p(2)+p(4)+p(6)=1/6+1/6+1/6=1/2.}\)
+    </p>
+    <div class="theorem">
+      In contrast, when a random variable takes values from a continuum then
+      typically, any individual outcome has probability zero and only events
+      that include infinitely many outcomes, such as intervals, can have
+      positive probability. For example, the probability that a given object
+      weighs exactly​ 500 g is zero, because the probability of measuring
+      exactly 500 g tends to zero as the accuracy of our measuring instruments
+      increases. Nevertheless, in quality control one might demand that the
+      probability of a "500 g" package containing between 490 g and 510 g should
+      be no less than 98%, and this demand is less sensitive to the accuracy of
+      measurement instruments
+    </div>
+    <p class="paragraph">
+      <b>Continuous probability distributions</b> can be described in several
+      ways. The ​probability density function​ describes the ​infinitesimal​
+      probability of any given value, and the probability that the outcome lies
+      in a given interval can be computed by ​integrating​ the probability
+      density function over that interval. The probability that the possible
+      values lie in some fixed interval can be related to the way sums converge
+      to an integral; therefore, continuous probability is based on the
+      definition of an integral.
+    </p>
+    <figure>
+      <img
+        src="https://user-images.githubusercontent.com/28846043/87880155-0249d480-ca0d-11ea-882a-bb48468f4258.jpg"
+      />
+      <figcaption>
+        On the left is the probability density function. On the right is the
+        cumulative distribution function, which is the area under the
+        probability density curve.
+      </figcaption>
+    </figure>
+    <div class="summary">
+      <p class="paragraph">
+        The ​<b>cumulative distribution function​</b> describes the probability
+        that the random variable is no larger than a given value; the
+        probability that the outcome lies in a given interval can be computed by
+        taking the difference between the values of the cumulative distribution
+        function at the endpoints of the interval. The cumulative distribution
+        function is the ​antiderivative​ of the probability density function
+        provided that the latter function exists. The cumulative distribution
+        function is the area under the ​probability density function​ from minus
+        infinity \({\displaystyle \infty }\) to \({\displaystyle x}\)
+      </p>
+      <figure>
+        <img
+          src="https://user-images.githubusercontent.com/28846043/87880197-52c13200-ca0d-11ea-8643-047fed37a419.png"
+        />
+      </figure>
+    </div>
+    <p class="paragraph">
+      The ​<b>probability density function​ (pdf)</b> of the ​normal
+      distribution​, also called Gaussian or "bell curve", the most important
+      continuous random distribution. As notated on the figure, the
+      probabilities of intervals of values correspond to the area under the
+      curve.
+    </p>
+    <h2 class="subHeader">Discrete probability distribution</h2>
+    <p class="paragraph">
+      A ​discrete probability distribution​ is a probability distribution that
+      can take on a countable number of values.​ For the probabilities to add up
+      to 1, they have to decline to zero fast enough. For example, if
+      \({\displaystyle \operatorname {P} (X=n)={\tfrac {1}{2^{n}}}}\) or ​n​ =
+      1, 2, ..., the sum of probabilities would be 1/2 + 1/4 + 1/8 + ... = 1.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        Well-known discrete probability distributions used in statistical
+        modeling include the ​Poisson distribution​, the ​Bernoulli
+        distribution​, the ​binomial distribution​, the ​geometric
+        distribution​, and the negative binomial distribution​.​ Additionally,
+        the ​discrete uniform distribution​ is commonly used in computer
+        programs that make equal-probability random selections between a number
+        of choices. When a ​sample​ (a set of observations) is drawn from a
+        larger population, the sample points have an empirical distribution​
+        that is discrete and that provides information about the population
+        distribution.
+      </p>
+    </div>
+    <h2 class="subHeader">
+      Continuous probability distribution
+    </h2>
+    <p class="paragraph">
+      A <b>​continuous probability distribution</b> ​ is a probability
+      distribution with a cumulative distribution function that is ​absolutely
+      continuous​. Equivalently, it is a probability distribution on the ​real
+      numbers that is ​absolutely continuous​ with respect to ​Lebesgue
+      measure​. Such distributions can be represented by their ​probability
+      density functions​. <br />
+      If the distribution of ​X​ is continuous, then ​X​ is called a ​continuous
+      random variable​. There are many examples of continuous probability
+      distributions: ​normal​, ​uniform​, ​chi-squared​, and ​others​.
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        Formally, if ​X​ is a continuous random variable, then it has a
+        ​probability density function​ ​ƒ(​ ​x)​ , and therefore its probability
+        of falling into a given interval, say [​a,​ ​b​], is given by the
+        integral \({\displaystyle \operatorname {P} [a\leq X\leq b]=\int
+        _{a}^{b}f(x)\,dx} \) <br />
+        In particular, the probability for ​X​ to take any single value ​a​
+        (that is ​a​ ≤ ​X​ ≤ ​a)​ is zero, because an integral​ with coinciding
+        upper and lower limits is always equal to zero.
+      </p>
+      <p class="paragraph">
+        These distributions are the ones \({\displaystyle \mu }\) such that
+        \({\displaystyle \mu \{x\}\,=\,0}\) for all \({\displaystyle \,x}\).
+        This definition includes the (absolutely) continuous distributions
+        defined above, but it also includes ​singular distributions​, which are
+        neither absolutely continuous nor discrete nor a mixture of those, and
+        do not have a density.
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

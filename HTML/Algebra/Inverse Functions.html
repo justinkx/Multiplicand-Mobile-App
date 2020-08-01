@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inverse Functions</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <p class="paragraph">
+      <b>Inverse functions</b>, in the most general sense, are functions that
+      "reverse" each other. For example, if \(f\) takes \(a\) to \(b\), then the
+      inverse, \(f^{-1}\), must take \(b\) to \(a\).
+    </p>
+    <figure>
+      <img
+        style="width: 250px; height: 300px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Inverse_Function.png"
+      />
+      <figcaption>
+        A function \(f\) and its inverse \(f^{-1}\)
+      </figcaption>
+    </figure>
+    <div class="theorem">
+      <p class="paragraph">
+        Let \(f\) be a function whose domain is the set \(F\), and whose
+        codomain is the set \(Y\). Then \(f\) is invertible if there exists a
+        function g with domain \(F\) and image \(X\), with the property:
+        <br />
+        \(f(x)=y\,\,\Leftrightarrow \,\,g(y)=x\). <br />
+        If \(f\) is invertible, the function \(g\) is unique, which means that
+        there is exactly one function \(g\) satisfying this property (no more,
+        no less). That function \(g\) is then called the inverse of \(f\), and
+        is usually denoted as \(f^{-1}\)
+      </p>
+    </div>
+    <p class="paragraph">
+      A function says that for every x, there is exactly one y. That is, y
+      values can be duplicated but x values can not be repeated. If the function
+      has an inverse that is also a function, then there can only be one y for
+      every x. A one-to-one function, is a function in which for every x there
+      is exactly one y and for every y, there is exactly one x. A one-to-one
+      function has an inverse that is also a function.
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        There are functions which have inverses that are not functions. There
+        are also inverses for relations. For the most part, we disregard these,
+        and deal only with functions whose inverses are also functions. If the
+        inverse of a function is also a function, then the inverse relation must
+        pass a vertical line test.<br /><br />
+        Since all the x-coordinates and y-coordinates are switched when finding
+        the inverse, saying that the inverse must pass a vertical line test is
+        the same as saying the original function must pass a horizontal line
+        test. If a function passes both the vertical line test (so that it is a
+        function in the first place) and the horizontal line test (so that its
+        inverse is a function), then the function is one-to-one and has an
+        inverse function.
+      </p>
+    </div>
+    <h2 class="subHeader">
+      Properties
+    </h2>
+    <p class="paragraph">
+      <b>Uniqueness</b>
+      If an inverse function exists for a given function \(f\), then it is
+      unique.This follows since the inverse function must be the converse
+      relation, which is completely determined by \(f\).
+    </p>
+    <p class="paragraph">
+      <b>Symmetry : </b>
+      There is a symmetry between a function and its inverse. Specifically, if
+      \(f\) is an invertible function with domain \(X\) and range \(Y\), then
+      its inverse \(f^{-1}\) has domain \(Y\) and range \(X\), and the inverse
+      of \(f^{-1}\) is the original function f.
+    </p>
+    <p class="paragraph">
+      <b>Self-Inverses</b>
+      Single-variable calculus is primarily concerned with functions that map
+      real numbers to real numbers. Such functions are often defined through
+      formulas, such as: \(f(x)=(2x+8)^{3}\)
+    </p>
+    <h2 class="subHeader">
+      Partial Inverses
+    </h2>
+    <p class="paragraph">
+      Even if a function f is not one-to-one, it may be possible to define a
+      partial inverse of f by restricting the domain.<br />
+      \(f(x)=x^{2}\) is not one-to-one, since \(x2 = (−x)2\). However, the
+      function becomes one-to-one if we restrict to the domain \(x ≥ 0\), in
+      which case \(f^{-1}(y)={\sqrt {y}}.\)
+    </p>
+    <figure style="text-align: center;">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Inverse_square_graph.svg/220px-Inverse_square_graph.svg.png"
+        style="width: 330px; height: 280px;"
+      />
+      <figcaption>
+        The square root of x is a partial inverse to \(f(x) = x^{2}\).
+      </figcaption>
+    </figure>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

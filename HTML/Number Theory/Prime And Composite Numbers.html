@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime And Composite Numbers</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      A <b>prime number</b> (or a prime) is a natural number greater than 1 that
+      is not a product of two smaller natural numbers. A natural number greater
+      than 1 that is not prime is called a composite number. For example, 5 is
+      prime because the only ways of writing it as a product, 1 × 5 or 5 × 1,
+      involve 5 itself. However, 4 is composite because it is a product (2 × 2)
+      in which both numbers are smaller than 4. Primes are central in number
+      theory because of the fundamental theorem of arithmetic: every natural
+      number greater than 1 is either a prime itself or can be factorized as a
+      product of primes that is unique up to their order.
+    </p>
+    <p class="paragraph">
+      The property of being prime is called <b>primality</b>. A simple but slow
+      method of checking the primality of a given number n, called trial
+      division, tests whether n is a multiple of any integer between 2 and
+      \(\sqrt{n}\). Faster algorithms include the
+      <b>Miller–Rabin primality test</b>, which is fast but has a small chance
+      of error, and the AKS primality test, which always produces the correct
+      answer in polynomial time but is too slow to be practical. Particularly
+      fast methods are available for numbers of special forms, such as Mersenne
+      numbers. As of December 2018 the largest known prime number has 24,862,048
+      decimal digits.
+    </p>
+    <figure>
+      <img
+        style="width: 250px; height: 300px;"
+        src="https://user-images.githubusercontent.com/28846043/87765104-0ae7b280-c835-11ea-81a8-aab0b2eea4f3.png"
+      />
+      <figcaption>
+        Composite numbers can be arranged into rectangles but prime numbers
+        cannot
+      </figcaption>
+    </figure>
+    <div class="theorem">
+      <ul>
+        <li>
+          There are infinitely many primes, as demonstrated by Euclid around 300
+          BC. No known simple formula separates prime numbers from composite
+          numbers. However, the distribution of primes within the natural
+          numbers in the large can be statistically modelled. The first result
+          in that direction is the prime number theorem, proven at the end of
+          the 19th century, which says that the probability of a randomly chosen
+          number being prime is inversely proportional to its number of digits,
+          that is, to its logarithm.
+        </li>
+        <li>
+          Several historical questions regarding prime numbers are still
+          unsolved. These include Goldbach's conjecture, that every even integer
+          greater than 2 can be expressed as the sum of two primes, and the twin
+          prime conjecture, that there are infinitely many pairs of primes
+          having just one even number between them. Such questions spurred the
+          development of various branches of number theory, focusing on analytic
+          or algebraic aspects of numbers.
+        </li>
+        <li>
+          Primes are used in several routines in information technology, such as
+          public-key cryptography, which relies on the difficulty of factoring
+          large numbers into their prime factors. In abstract algebra, objects
+          that behave in a generalized way like prime numbers include prime
+          elements and prime ideals.
+        </li>
+      </ul>
+    </div>
+    <h2 class="subHeader">
+      Definition and Examples
+    </h2>
+    <p class="paragraph">
+      A natural number (1, 2, 3, 4, 5, 6, etc.) is called a prime number (or a
+      prime) if it is greater than 1 and cannot be written as the product of two
+      smaller natural numbers. The numbers greater than 1 that are not prime are
+      called composite numbers. In other words, n is prime if n items cannot be
+      divided up into smaller equal-size groups of more than one item, or if it
+      is not possible to arrange n dots into a rectangular grid that is more
+      than one dot wide and more than one dot high.
+    </p>
+    <p class="paragraph">
+      For example, among the numbers 1 through 6, the numbers 2, 3, and 5 are
+      the prime numbers, as there are no other numbers that divide them evenly
+      (without a remainder). 1 is not prime, as it is specifically excluded in
+      the definition. 4 = 2 × 2 and 6 = 2 × 3 are both composite.
+    </p>
+    <figure>
+      <img
+        style="width: 350px; height: 300px;"
+        src="https://user-images.githubusercontent.com/28846043/87765957-14bde580-c836-11ea-8650-4ac696bf5d94.png"
+      />
+      <figcaption>
+        Demonstration, with Cuisenaire rods, that 7 is prime, because none of 2,
+        3, 4, 5, or 6 divide it evenly
+      </figcaption>
+    </figure>
+    <div class="summary">
+      <p class="paragraph">
+        The divisors of a natural number n are the natural numbers that divide n
+        evenly. Every natural number has both 1 and itself as a divisor. If it
+        has any other divisor, it cannot be prime. This idea leads to a
+        different but equivalent definition of the primes: they are the numbers
+        with exactly two positive divisors, 1 and the number itself. Yet another
+        way to express the same thing is that a number n is prime if it is
+        greater than one and if none of the numbers 2,3,…,n−1 divides n evenly.
+      </p>
+      <p class="paragraph">
+        The first 25 prime numbers (all the prime numbers less than 100) are: 2,
+        3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
+        73, 79, 83, 89, 97 (sequence A000040 in the OEIS). No even number n
+        greater than 2 is prime because any such number can be expressed as the
+        product 2×n/2. Therefore, every prime number other than 2 is an odd
+        number, and is called an odd prime. Similarly, when written in the usual
+        decimal system, all prime numbers larger than 5 end in 1, 3, 7, or 9.
+        The numbers that end with other digits are all composite: decimal
+        numbers that end in 0, 2, 4, 6, or 8 are even, and decimal numbers that
+        end in 0 or 5 are divisible by 5.
+      </p>
+    </div>
+    <h2 class="subHeader">
+      Composite number
+    </h2>
+    <p class="paragraph">
+      A <b>composite number</b> is a positive integer that can be formed by
+      multiplying two smaller positive integers. Equivalently, it is a positive
+      integer that has at least one divisor other than 1 and itself.Every
+      positive integer is composite, prime, or the unit 1, so the composite
+      numbers are exactly the numbers that are not prime and not a unit.
+    </p>
+    <figure>
+      <img
+        style="width: 300px; height: 100px;"
+        src="https://user-images.githubusercontent.com/28846043/87766349-a7f71b00-c836-11ea-9bf4-252cfe914f84.png"
+      />
+      <figcaption>
+        Demonstration, with Cuisenaire rods, of the divisors of the composite
+        number 10
+      </figcaption>
+    </figure>
+    <p class="paragraph">
+      For example, the integer 14 is a composite number because it is the
+      product of the two smaller integers 2 × 7. Likewise, the integers 2 and 3
+      are not composite numbers because each of them can only be divided by one
+      and itself.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        The composite numbers up to 150 are 4, 6, 8, 9, 10, 12, 14, 15, 16, 18,
+        20, 21, 22, 24, 25, 26, 27, 28, 30, 32, 33, 34, 35, 36, 38, 39, 40, 42,
+        44, 45, 46, 48, 49, 50, 51, 52, 54, 55, 56, 57, 58, 60, 62, 63, 64, 65,
+        66, 68, 69, 70, 72, 74, 75, 76, 77, 78, 80, 81, 82, 84, 85, 86, 87, 88,
+        90, 91, 92, 93, 94, 95, 96, 98, 99, 100, 102, 104, 105, 106, 108, 110,
+        111, 112, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125,
+        126, 128, 129, 130, 132, 133, 134, 135, 136, 138, 140, 141, 142, 143,
+        144, 145, 146, 147, 148, 150.
+      </p>
+    </div>
+    <figure>
+      <img
+        style="width: 300px; height: 400px;"
+        src="https://user-images.githubusercontent.com/28846043/87765104-0ae7b280-c835-11ea-81a8-aab0b2eea4f3.png"
+      />
+      <figcaption>
+        Comparison of prime and composite numbers
+      </figcaption>
+    </figure>
+    <div class="theorem">
+      Every composite number can be written as the product of two or more (not
+      necessarily distinct) primes.For example, the composite number 299 can be
+      written as 13 × 23, and the composite number 360 can be written as 23 × 32
+      × 5; furthermore, this representation is unique up to the order of the
+      factors. This fact is called the fundamental theorem of arithmetic. There
+      are several known primality tests that can determine whether a number is
+      prime or composite, without necessarily revealing the factorization of a
+      composite input.
+    </div>
+    <h2 class="subHeader">Types</h2>
+    <p class="paragraph">
+      One way to classify composite numbers is by counting the number of prime
+      factors. A composite number with two prime factors is a semiprime or
+      2-almost prime (the factors need not be distinct, hence squares of primes
+      are included). A composite number with three distinct prime factors is a
+      sphenic number. In some applications, it is necessary to differentiate
+      between composite numbers with an odd number of distinct prime factors and
+      those with an even number of distinct prime factors. For the latter
+      \(\varphi(n) = -1^{2x}=1\)
+    </p>
+    <p class="paragraph">
+      (where \(\varphi\) is the Möbius function and x is half the total of prime
+      factors), while for the former
+    </p>
+    <p class="paragraph">
+      \(\varphi(n) = -1^{2x+1}=-1\)
+    </p>
+    <p class="paragraph">
+      However, for prime numbers, the function also returns −1 and \(\varphi(n)
+      = 1\). For a number n with one or more repeated prime factors, and
+      \(\varphi(n) = 0\).<br />
+      If all the prime factors of a number are repeated it is called a powerful
+      number (All perfect powers are powerful numbers). If none of its prime
+      factors are repeated, it is called squarefree. (All prime numbers and 1
+      are squarefree.)
+    </p>
+    <figure>
+      <img
+        style="width: 350px; height: 300px;"
+        src="https://user-images.githubusercontent.com/28846043/87788115-6c6e4800-c85a-11ea-8c29-e913a787b68e.png"
+      />
+      <figcaption>
+        Euler diagram of abundant, primitive abundant, highly abundant,
+        superabundant, colossally abundant, highly composite, superior highly
+        composite, weird and perfect numbers under 100 in relation to deficient
+        and composite numbers
+      </figcaption>
+    </figure>
+    <div class="summary">
+      <p class="paragraph">
+        Another way to classify composite numbers is by counting the number of
+        divisors. All composite numbers have at least three divisors. In the
+        case of squares of primes, those divisors are (\(1, p, p^{2}\)). A
+        number n that has more divisors than any x < n is a highly composite
+        number (though the first two such numbers are 1 and 2).<br /><br />
+        <b>Composite numbers</b> have also been called "rectangular numbers" ,
+        but that name can also refer to the pronic numbers, numbers that are the
+        product of two consecutive integers. Yet another way to classify
+        composite numbers is to determine whether all prime factors are either
+        all below or all above some fixed (prime) number. Such numbers are
+        called smooth numbers and rough numbers, respectively.
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

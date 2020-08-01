@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indefinite Integrals</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      In calculus, an <b>antiderivative</b> or <b>indefinite integral</b> of a
+      function \(f\) is a differentiable function F whose derivative is equal to
+      the original function \(f\). This can be stated symbolically as
+      \({\displaystyle F'=f}\). The process of solving for antiderivatives is
+      called antidifferentiation (or <b>indefinite integration</b>) and its
+      opposite operation is called differentiation, which is the process of
+      finding a derivative.
+    </p>
+    <p class="paragraph">
+      Antiderivatives are related to definite integrals through the fundamental
+      theorem of calculus: the definite integral of a function over an interval
+      is equal to the difference between the values of an antiderivative
+      evaluated at the endpoints of the interval.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        Given a function, \(f(x)\), anti-derivative of \(f(x)\) is any function
+        \(F(x)\) such that : <br />
+        \(F'(x) = f(x)\) <br />
+        \(F(x)\) is any anti-derivative of \(f(x)\) then the most general
+        anti-derivative of \(f(x)\) is called indefinite integral and denoted,
+        <br />
+        \(\int f(x)dx = F(x) + c ,\) \(c\) is any constant
+      </p>
+    </div>
+    <h2 class="subHeader">
+      Properties
+    </h2>
+    <ul class="ul">
+      <li>
+        \(\int k.f(x)dx\) \(=\) \(k.\int f(x)dx\) where \(k\) is any number. So,
+        we can factor multiplicative constants out of indefinite integrals.
+      </li>
+      <li>
+        \(\int -f(x)dx\) \(=\) \(-\int f(x)dx\) This is really the first
+        property with \(k= -1\)
+      </li>
+      <li>
+        \(\int f(x) \pm g(x) dx = \int f(x) dx \pm \int g(x)dx\). In other
+        words, the integral of a sum or difference of functions is the sum or
+        difference of the individual integrals. This rule can be extended to as
+        many functions as we need.
+      </li>
+      <li>
+        When integrating multiple times, certain additional techniques can be
+        used, see for instance double integrals and polar coordinates, the
+        Jacobian and the Stokes' theorem
+      </li>
+    </ul>
+    <h2 class="subHeader">
+      Techniques of integration
+    </h2>
+    <p class="paragraph">
+      Finding antiderivatives of elementary functions is often considerably
+      harder than finding their derivatives. For some elementary functions, it
+      is impossible to find an antiderivative in terms of other elementary
+      functions. See the articles on elementary functions and nonelementary
+      integral for further information.
+    </p>
+    <ol class="ul">
+      <li>
+        The linearity of integration breaks complicated integrals into simpler
+        ones
+      </li>
+      <li>
+        Integration by substitution, often combined with trigonometric
+        identities or the natural logarithm
+      </li>
+      <li>
+        Integration by parts to integrate products of functions
+      </li>
+      <li>
+        Inverse function integration, a formula that expresses the
+        antiderivative of the inverse \(f^{-1}\) of an invertible and continuous
+        function \(f\) in terms of the antiderivative of \(f\) and of
+        \(f^{-1}\).
+      </li>
+      <li>
+        The method of partial fractions in integration allows us to integrate
+        all rational functions (fractions of two polynomials)
+      </li>
+    </ol>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

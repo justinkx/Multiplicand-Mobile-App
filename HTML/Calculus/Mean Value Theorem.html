@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Derivative</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      In mathematics, the <b>mean value theorem</b> states, roughly, that for a
+      given planar arc between two endpoints, there is at least one point at
+      which the tangent to the arc is parallel to the secant through its
+      endpoints.<br /><br />
+      The mean value theorem , also known as
+      <b>Lagrange's mean value theorem</b>
+      (LMVT), provides a formal framework for a fairly intuitive statement
+      relating change in a function to the behavior of its derivative. The
+      theorem states that the derivative of a continuous and differentiable
+      function must attain the function's average rate of change (in a given
+      interval).<br /><br />
+      <b
+        >This theorem is used to prove statements about a function on an
+        interval starting from local hypotheses about derivatives at points of
+        the interval.</b
+      >
+    </p>
+    <figure>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Mvt2.svg/520px-Mvt2.svg.png"
+      />
+      <figcaption>
+        For any function that is continuous on \([a,b]\) and differentiable on
+        \((a,b)\) there exists some \(c\) in the interval \((a,b)\) such that
+        the secant joining the endpoints of the interval \([a,b]\) is parallel
+        to the tangent at \(c\)
+      </figcaption>
+    </figure>
+    <div class="theorem">
+      <p class="paragraph">Suppose that a function \(f\) is</p>
+      <ol class="ul">
+        <li>
+          Continuous on the closed interval \([a,b]\), and
+        </li>
+        <li>
+          differentiable on the open interval \((a,b)\)
+        </li>
+      </ol>
+      <p class="paragraph">
+        Then, there is a numbe \(c\) such that \(a < c < b\) and \(f'(c) =
+        \frac{f(b)-f(a)}{b-a}\)
+      </p>
+      <p>
+        The mean value theorem actually lies at the heart of the proof of the
+        fundamental theorem of calculus, and is itself based ultimately on
+        properties of the real numbers
+      </p>
+    </div>
+    <div class="summary">
+      <h3>Proof</h3>
+      <p class="paragraph">
+        The expression \({\displaystyle {\frac {f(b)-f(a)}{(b-a)}}}\) gives the
+        slope of the line joining the points \((a,f(a))\) and \({\displaystyle
+        (b,f(b))}\) , which is a chord of the graph of \(f\) , while \(f'(x)\)
+        gives the slope of the tangent to the curve at the point \((x,f(x))\) .
+        Thus the mean value theorem says that given any chord of a smooth curve,
+        we can find a point lying between the end-points of the chord such that
+        the tangent at that point is parallel to the chord. The following proof
+        illustrates this idea.
+      </p>
+      <p class="paragraph">
+        Define \(g(x)=f(x)-rx\) , where {\displaystyle r}r is a constant. Since
+        \(f\) is continuous on \([a,b]\) and differentiable on \((a,b)\) , the
+        same is true for \(g\) . We now want to choose \(r\) so that \(g\)
+        satisfies the conditions of Rolle's theorem. Namely
+        <br /><br />
+        \(g(a)\) \(=\) \(g(b)\iff f(a)-ra\) \(=\) \(f(b)-rb\iff r(b-a) \) \(=\)
+        \(f(b)-f(a)\iff r \) \(=\) \({\frac {f(b)-f(a)}{b-a}}\cdot\)
+      </p>
+      <p class="paragraph">
+        By Rolle's theorem, since \(g\) is differentiable and \(g(a)=g(b)\) ,
+        there is some \(c\) in \((a,b)\) for which \(g'(c)=0\) , and it follows
+        from the equality \(g(x)=f(x)-rx\) that, <br /><br />
+        \({\displaystyle
+        {\begin{aligned}&g'(x)=f'(x)-r\\&g'(c)=0\\&g'(c)=f'(c)-r=0\\&\Rightarrow
+        f'(c)=r={\frac {f(b)-f(a)}{b-a}}\end{aligned}}}\)
+      </p>
+      <ul class="ul">
+        <li>
+          Only continuity of \(f\), not differentiability, is needed at the
+          endpoints of the interval \(I\). No hypothesis of continuity needs to
+          be stated if \(I\) is an open interval, since the existence of a
+          derivative at a point implies the continuity at this point.
+        </li>
+        <li>
+          The differentiability of f can be relaxed to one-sided
+          differentiability
+        </li>
+      </ul>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Integration By Parts</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <p class="paragraph">
+      In calculus, and more generally in mathematical analysis,
+      <b>integration by parts</b> or partial integration is a process that finds
+      the integral of a product of functions in terms of the integral of the
+      product of their derivative and antiderivative. <br /><br />
+      It is frequently used to transform the antiderivative of a product of
+      functions into an antiderivative for which a solution can be more easily
+      found. The rule can be thought of as an integral version of the product
+      rule of differentiation.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        If \(u=u(x)\) and \(du=u'(x)dx\) while \(v=v(x)\) and \(dv=v'(x)dx\),
+        then the integration by parts formula states that <br /><br />
+        \(\int _{a}^{b}u(x)v'(x)dx\) \(=\) \(\Big [ u(x)v(x){\Big
+        ]}_{a}^{b}-\int _{a}^{b}u'(x)v(x)dx\) \(=\) \(u(b)v(b)-u(a)v(a)\)
+        \(-\int _{a}^{b}u'(x)v(x)dx\)
+      </p>
+      <p class="paragraph">
+        More compactly, <br />
+        \({\displaystyle \int u\,dv\ =\ uv-\int vdu.}\)
+      </p>
+    </div>
+    <h2 class="subHeader">
+      Product of two functions
+    </h2>
+    <div class="summary">
+      <p class="paragraph">
+        The theorem can be derived as follows. For two continuously
+        differentiable functions \(u(x) \) and \(v(x)\), the product rule
+        states: <br /><br />
+        \({\Big (}u(x)v(x){\Big )}'\) \(=\) \(v(x)u'(x)+u(x)v'(x)\)
+      </p>
+      <p class="paragraph">
+        Integrating both sides with respect to x, <br /><br />
+        \(\int {\Big (}u(x)v(x){\Big )}'\,dx\) \(=\) \(\int u'(x)v(x)\,dx\)
+        \(+\int u(x)v'(x)\,dx\)
+      </p>
+      <p class="paragraph">
+        and noting that an indefinite integral is an antiderivative gives
+        <br /><br />
+        \(u(x)v(x) \) \(=\) \(\int u'(x)v(x)\,dx\) \(+\int u(x)v'(x)\,dx\)
+      </p>
+      <p class="paragraph">
+        where we neglect writing the constant of integration. This yields the
+        formula for <b>integration by parts</b>: <br /><br />
+        \(\int u(x)v'(x)\,dx\) = \(u(x)v(x)-\int u'(x)v(x)\,dx\)
+      </p>
+      <p class="paragraph">
+        or in terms of the differentials \( du=u'(x)\,dx\), \(dv=v'(x)\,dx,\)
+        <br /><br />
+        \( \int u(x)\,dv = \) \(u(x)v(x)-\int v(x)\,du\)
+      </p>
+      <p class="paragraph">
+        This is to be understood as an equality of functions with an unspecified
+        constant added to each side. Taking the difference of each side between
+        two values \(x = a\) and \(x = b\) and applying the fundamental theorem
+        of calculus gives the definite integral version:
+      </p>
+      <p class="paragraph">
+        \(\int _{a}^{b}u(x)v'(x)\,dx\) \(=\) \(u(b)v(b)-u(a)v(a)-\) \(\int
+        _{a}^{b}u'(x)v(x)\,dx\)
+      </p>
+    </div>
+    <h2 class="subHeader">Applications</h2>
+    <h3>Finding antiderivatives</h3>
+    <p class="paragraph">
+      Integration by parts is a heuristic rather than a purely mechanical
+      process for solving integrals; given a single function to integrate, the
+      typical strategy is to carefully separate this single function into a
+      product of two functions \(u(x)v(x)\) such that the residual integral from
+      the integration by parts formula is easier to evaluate than the single
+      function.
+    </p>
+    <div class="theorem">
+      <h3>
+        LIATE rule
+      </h3>
+      <p class="paragraph">
+        A rule of thumb has been proposed, consisting of choosing as u the
+        function that comes first in the following list:
+      </p>
+      <ul class="ul">
+        <li><b>L – </b>logarithmic functions: \(\ln(x),\ \log _{b}(x)\)</li>
+        <li>
+          <b>I - </b>inverse trigonometric functions: \(\arctan(x),\
+          \operatorname {arcsec}(x)\)
+        </li>
+        <li><b>A - </b>algebraic functions:\(x^{2},\ 3x^{50}\)</li>
+        <li><b>T - </b> trigonometric functions: ,\(\sin(x)\), \(\tan (x)\)</li>
+        <li><b>E - </b>exponential functions: \(e^{x}\) , \(19^{x}\)</li>
+      </ul>
+    </div>
+    <h3>Use in harmonic analysis</h3>
+    <p class="paragraph">
+      Integration by parts is often used in harmonic analysis, particularly
+      Fourier analysis, to show that quickly oscillating integrals with
+      sufficiently smooth integrands decay quickly. The most common example of
+      this is its use in showing that the decay of function's Fourier transform
+      depends on the smoothness of that function, as described below.
+    </p>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arithmetic Mean and Average</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <p class="paragraph">
+      The <b>​arithmetic mean</b>​ or simply the mean or ​average​ when the
+      context is clear, is the sum of a collection of numbers divided by the
+      count of numbers in the collection. The collection is often a set of
+      results of an experiment or an observational study, or frequently a set of
+      results from a survey. The term "<b>​arithmetic mean</b>" is preferred in
+      some contexts in mathematics and statistics because it helps distinguish
+      it from other means, such as the geometric mean and the harmonic mean.
+    </p>
+    <p class="paragraph">
+      The arithmetic mean is used frequently in many diverse fields such as
+      economics, anthropology, and history, and it is used in almost every
+      academic field to some extent. For example, per capita income is the
+      arithmetic average income of a nation's population.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        The arithmetic mean is the most commonly used and readily understood
+        measure of central tendency in a ​data set​. In statistics, the term
+        ​average​ refers to any of the measures of central tendency. The
+        arithmetic mean of a set of observed data is defined as being equal to
+        the sum of the numerical values of each and every observation divided by
+        the total number of observations. Symbolically, if we have a data set
+        consisting of the values \({\displaystyle a_{1},a_{2},\ldots ,a_{n}}\),
+        then the arithmetic mean \({\displaystyle A}\) is defined by the
+        formula: <br />
+        \({\displaystyle A={\frac {1}{n}}\sum _{i=1}^{n}a_{i}={\frac
+        {a_{1}+a_{2}+\cdots +a_{n}}{n}}}\)
+      </p>
+    </div>
+    <figure style="margin: 40px 0px;">
+      <img
+        style="width: 300px; height: 340px;"
+        src="https://media.geeksforgeeks.org/wp-content/uploads/1-min-1.png"
+      />
+      <figcaption style="text-align: center;">
+        Arithmetic Mean formula
+      </figcaption>
+    </figure>
+    <p class="paragraph">
+      If the data set is a statistical population (i.e., consists of every
+      possible observation and not just a subset of them), then the mean of that
+      population is called the population mean. If the data set is a statistical
+      sample (a subset of the population), we call the statistic resulting from
+      this calculation a <b>sample mean​</b>.
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        The arithmetic mean can be similarly defined for vectors in multiple
+        dimensions, not only scalar values; this is often referred to as a
+        centroid. More generally, because the arithmetic mean is a convex
+        combination (coefficients sum to 1), it can be defined on a convex
+        space, not only a vector space.
+        <br /><br />
+        The arithmetic mean is often denoted by a bar, for example as
+        in:\({\displaystyle {\bar {x}}}\)
+      </p>
+    </div>
+    <h2 class="subHeader">Points To Remember</h2>
+    <ul class="ul">
+      <li>
+        The mean of n numbers x1, x2, . . ., xn is x. If each observation is
+        increased by p, the mean of the new observations is (x + p).
+      </li>
+      <li>
+        The mean of n numbers x1, x2, . . ., xn is x. If each observation is
+        decreased by p, the mean of the new observations is (x - p).
+      </li>
+      <li>
+        The mean of n numbers x1, x2, . . ., xn is x. If each observation is
+        multiplied by a nonzero number p, the mean of the new observations is
+        px.
+      </li>
+      <li>
+        The mean of n numbers x1, x2, . . ., xn is x. If each observation is
+        divided by a nonzero number p, the mean of the new observations is
+        (x/p).
+      </li>
+    </ul>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+    .ul {
+      color: black;
+    }
+    .ul > li {
+      margin-bottom: 10px;
+    }
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

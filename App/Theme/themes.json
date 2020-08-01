@@ -1,0 +1,34 @@
+[
+  {
+    "key": "Light Mode",
+    "backgroundColor": "#25026E",
+    "color": "#FFFFFF",
+    "title": "#000000",
+    "navIcon": "#8b71affa",
+    "drawerGradientLeft": "#8b71affa",
+    "drawerGradientRight": "#3a2850",
+    "quoteCardEnd": "#8e24aa",
+    "quoteCardStart": "#B91372",
+    "subCategory": "#3a2850",
+    "mathematicians": "#9c27b0",
+    "header": "#7E0279",
+    "drawerItemLeft": "#310E68",
+    "drawerItemRight": "#923CB5"
+  },
+  {
+    "key": "Dark Mode",
+    "backgroundColor": "#2C3E50",
+    "title": "black",
+    "color": "white",
+    "navIcon": "#9a9a9a",
+    "drawerGradientLeft": "#170E13",
+    "drawerGradientRight": "#7A7ADB",
+    "quoteCardEnd": "#090947",
+    "quoteCardStart": "#274060",
+    "subCategory": "#eaedf1",
+    "mathematicians": "#2B4162",
+    "header": "#000000",
+    "drawerItemLeft": "#434343",
+    "drawerItemRight": "#2C3E50"
+  }
+]

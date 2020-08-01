@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Variables , Discrete Random Variables</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      In probability and statistics, a <b>​random variable</b>​, ​random
+      quantity​, ​aleatory variable​, or ​stochastic variable​ is described
+      informally as a variable whose value depends on an outcomes of a random
+      phenomenon. The formal mathematical treatment of random variables is a
+      topic in probability theory. In that context, a random variable is
+      understood as a measurable function defined on a probability space that
+      maps from the sample space to the <b>real numbers</b>.
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        A random variable's possible values might represent the possible
+        outcomes of a yet-to-be-performed experiment, or the possible outcomes
+        of a past experiment whose already-existing value is uncertain (for
+        example, because of imprecise measurements or quantum uncertainity. They
+        may also conceptually represent either the results of an "objectively"
+        random process (such as rolling a die) or the "subjective" randomness
+        that results from incomplete knowledge of a quantity.<br /><br />
+        The meaning of the probabilities assigned to the potential values of a
+        random variable is not part of probability theory itself but is instead
+        related to philosophical arguments over the interpretation of
+        probability. The mathematics works the same regardless of the particular
+        interpretation in use.
+      </p>
+    </div>
+    <p class="paragraph">
+      As a function, a random variable is required to be measurable, which
+      allows for probabilities to be assigned to sets of its potential values.
+      It is common that the outcomes depend on some physical variables that are
+      not predictable. For example, when tossing a fair coin, the final outcome
+      of heads or tails depends on the uncertain physical conditions. Which
+      outcome will be observed is not certain. The coin could get caught in a
+      crack in the floor, but such a possibility is excluded from consideration.
+    </p>
+    <figure>
+      <img
+        style="width: 300px; height: 200px;"
+        src="https://www.mathsisfun.com/data/images/random-variable-1.svg"
+      />
+      <figcaption>Random Variable</figcaption>
+    </figure>
+    <p class="paragraph">
+      Random variables can be discrete, that is, taking any of a specified
+      finite or countable list of values (having a countable range), endowed
+      with a probability mass function characteristic of the random variable's
+      probability distribution; or continuous, taking any numerical value in an
+      interval or collection of intervals (having an uncountable range), via a
+      probability density function that is characteristic of the random
+      variable's probability distribution.<br /><br />
+      \({\displaystyle X\colon \Omega \to E}\) from a set of possible ​outcomes
+      \({\displaystyle \Omega }\) to a ​measurable space \({\displaystyle E}\).
+      <br /><br />
+      The technical axiomatic definition requires \({\displaystyle \Omega }\) to
+      be a sample space of a ​probability triple \({\displaystyle (\Omega
+      ,{\mathcal {F}},\operatorname {P} )}\). The probability that
+      \({\displaystyle X}\) takes on a value in a measurable set
+      \({\displaystyle S\subseteq E}\) is written as \({\displaystyle
+      \operatorname {P} (X\in S)=\operatorname {P} (\{\omega \in \Omega \mid
+      X(\omega )\in S\})} \) <br /><br />
+      In many cases, \({\displaystyle X}\) is ​real-valued​, i.e.
+      \({\displaystyle E=\mathbb {R} }\). . In some contexts, the term ​random
+      element​ is used to denote a random variable not of this form. When the
+      ​image​ (or range) of \({\displaystyle X}\) is ​countable​, the random
+      variable is called a <b>​discrete random variable​</b>
+      and its distribution is a ​discrete probability distribution​, i.e. can be
+      described by a ​probability mass function​ that assigns a probability to
+      each value in the image of \({\displaystyle X}\).
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        If the image is uncountably infinite then \({\displaystyle X}\) is
+        called a ​continuous random variable​. In the special case that it is
+        absolutely continuous, its distribution can be described by a
+        <b>probability density</b> function​, which assigns probabilities to
+        intervals; in particular, each individual point must necessarily have
+        probability zero for an absolutely [4]​ continuous random variable. Not
+        all continuous random variables are absolutely continuous,​ for example
+        a ​mixture distribution​. Such random variables cannot be described by a
+        <b>probability density</b> or a probability mass function.
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+    figure {
+      margin: 30px 0px;
+    }
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

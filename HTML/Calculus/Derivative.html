@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Derivative</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      The <b>derivative</b> of a function of a real variable measures the
+      sensitivity to change of the function value (output value) with respect to
+      a change in its argument (input value). Derivatives are a fundamental tool
+      of calculus. For example, the derivative of the position of a moving
+      object with respect to time is the object's velocity: this measures how
+      quickly the position of the object changes when time advances.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        The derivative of a function of a single variable at a chosen input
+        value, when it exists, is the slope of the tangent line to the graph of
+        the function at that point. The tangent line is the best linear
+        approximation of the function near that input value. For this reason,
+        the derivative is often described as the "instantaneous rate of change",
+        the ratio of the instantaneous change in the dependent variable to that
+        of the independent variable.
+      </p>
+    </div>
+    <h2 class="subHeader">
+      Differentiation
+    </h2>
+    <p class="paragraph">
+      <b>Differentiation</b> is the action of computing a derivative. The
+      derivative of a function \(y = f(x)\) of a variable x is a measure of the
+      rate at which the value \(y\) of the function changes with respect to the
+      change of the variable \(x\). It is called the derivative of f with
+      respect to \(x\). If \(x\) and \(y\) are real numbers, and if the graph of
+      \(f\) is plotted against \(x\), the derivative is the slope of this graph
+      at each point.
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        When \(y\) is a linear function of \(x\), meaning that the graph of
+        \(y\) is a line. In this case,\(y = f(x) = mx + b\), for real numbers
+        \(m\) and \(b\), and the slope m is given by \(m={\frac {{\text{change
+        in }}y}{{\text{change in }}x}}={\frac {\Delta y}{\Delta x}},\)
+      </p>
+      <figure>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Wiki_slope_in_2d.svg/500px-Wiki_slope_in_2d.svg.png"
+        />
+        <figcaption>
+          Slope of a linear function: \(m={\frac {\Delta y}{\Delta x}}\)
+        </figcaption>
+      </figure>
+    </div>
+    <h3>The derivative as a function</h3>
+    <p class="paragraph">
+      Let \(f\) be a function that has a derivative at every point in its
+      domain. We can then define a function that maps every point \(x\) to the
+      value of the derivative of \(f\) at \(x\). This function is written \(f′\)
+      and is called the derivative function or the derivative of \(f\).
+    </p>
+    <figure>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tangent_function_animation.gif"
+      />
+      <figcaption>
+        The derivative at different points of a differentiable function. In this
+        case, the derivative is equal to: \({\displaystyle \sin
+        \left(x^{2}\right)+2x^{2}\cos \left(x^{2}\right)}\)
+      </figcaption>
+    </figure>
+    <div class="theorem">
+      <h4>Higher derivatives</h4>
+      <p class="paragraph">
+        Let f be a differentiable function, and let \(f ′\) be its derivative.
+        The derivative of \(f ′\) (if it has one) is written \(f ′′\) and is
+        called the second derivative of \(f\). Similarly, the derivative of the
+        second derivative, if it exists, is written \(f ′′′\) and is called the
+        third derivative of \(f\). Continuing this process, one can define, if
+        it exists, the \(n\) th derivative as the derivative of the \((n-1)\) th
+        derivative. These repeated derivatives are called higher-order
+        derivatives. The nth derivative is also called the
+        <b>derivative of order n</b>.
+      </p>
+      <p class="paragraph">
+        The derivatives of a function f at a point x provide polynomial
+        approximations to that function near x. For example, if f is twice
+        differentiable, then <br /><br />
+        \(f(x+h)\) \(\approx\) \(f(x)+f'(x)h+{\tfrac {1}{2}}f''(x)h^{2}\)
+        <br /><br />
+        in the sense that <br /><br />
+        \(\lim _{h\to 0}{\frac {f(x+h)-f(x)-f'(x)h-{\frac
+        {1}{2}}f''(x)h^{2}}{h^{2}}}\) \(=0\)
+      </p>
+    </div>
+    <h3 class="subHeader">Rules for combined functions</h3>
+    <ul class="ul">
+      <li>
+        <b>Constant rule:</b> if \(f(x)\) is constant, then \({\displaystyle
+        f'(x)=0.}\)
+      </li>
+      <li>
+        <b>Sum rule:</b> \({\displaystyle (\alpha f+\beta g)'=\alpha f'+\beta
+        g'}\) for all functions f and g and all real numbers \(\alpha\) and
+        \(\beta\) .
+      </li>
+      <li>
+        <b>Product rule:</b> \({\displaystyle (fg)'=f'g+fg'}\) for all functions
+        \(f\) and \(g\). As a special case, this rule includes the fact
+        \((\alpha f)'=\alpha f'\) whenever \(\alpha\) is a constant, because
+        \(\alpha 'f=0\cdot f=0\) by the constant rule.
+      </li>
+      <li>
+        <b>Quotient rule:</b> \(\left({\frac {f}{g}}\right)'={\frac
+        {f'g-fg'}{g^{2}}}\) for all functions f and g at all inputs where g ≠ 0.
+      </li>
+      <li>
+        <b>Chain rule:</b> for composite functions: If \(f(x)=h(g(x))\) then
+        \({\displaystyle f'(x)=h'(g(x))\cdot g'(x).}\)
+      </li>
+    </ul>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

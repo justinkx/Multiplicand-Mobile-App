@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Important Concepts In Geometry</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+    <p class="paragraph">
+        "Geometry is a branch of mathematics concerned with questions of shape, size, relative
+        position of figures, and the properties of space.A mathematician who works in the field of
+        geometry is called a geometer."
+    </p>
+    <h2 class="subHeader">
+        Axioms
+    </h2>
+    <div class="theorem">
+        <p>
+            An axiom or postulate is a statement that is taken to be true, to serve as a premise or
+            starting point for further reasoning and arguments. In the field of mathematical logic, a
+            clear distinction is made between two notions of axioms: logical and non-logical.
+        </p>
+        <p>
+            Euclid took an abstract approach to geometry in his Elements, one of the most influential
+            books ever written.Euclid introduced certain axioms, or postulates, expressing primary or
+            self-evident properties of points, lines, and planes.He proceeded to rigorously deduce other
+            properties by mathematical reasoning. The characteristic feature of Euclid's approach to
+            geometry was its rigor, and it has come to be known as axiomatic or synthetic geometry. At
+            the start of the 19th century, the discovery of non-Euclidean geometries by Nikolai
+            Ivanovich Lobachevsky (1792–1856), János Bolyai (1802–1860), Carl Friedrich Gauss
+            (1777–1855) and others led to a revival of interest in this discipline, and in the 20th
+            century, David Hilbert (1862–1943) employed axiomatic reasoning in an attempt to provide a
+            modern foundation of geometry.
+        </p>
+    </div>
+    <h2 class="subHeader">Points</h2>
+    <div class="theorem">
+        <p>
+            Points are considered fundamental objects in Euclidean geometry. They have been defined in a
+            variety of ways, including Euclid's definition as 'that which has no part' and through the
+            use of algebra or nested sets. In many areas of geometry, such as analytic geometry,
+            differential geometry, and topology, all objects are considered to be built up from points.
+            However, there has been some study of geometry without reference to points
+        </p>
+        <p>
+            There are several inequivalent definitions of dimension in mathematics. In all of the common
+            definitions, a point is 0-dimensional.
+        </p>
+        <ul>
+            <li>
+                <b>Vector space dimension</b><br />
+                <p>
+                    The dimension of a vector space is the maximum size of a linearly independent subset. In
+                    a vector space consisting of a single point (which must be the zero vector 0), there is
+                    no linearly independent subset. The zero vector is not itself linearly independent,
+                    because there is a non trivial linear combination making it zero: \({\displaystyle
+                    1\cdot \mathbf {0} =\mathbf {0} }\)
+                </p>
+            </li>
+            <li>
+                <b>Topological dimension</b><br />
+                <p>
+                    The topological dimension of a topological space X is defined to be the minimum value of
+                    n, such that every finite open cover \( {\displaystyle {\mathcal {A}}}{\mathcal {A}}\)
+                    of \(X\) admits a finite open cover \({\displaystyle {\mathcal {B}}}{\mathcal {B}}\) of
+                    X which refines \({\displaystyle {\mathcal {A}}}{\mathcal {A}}\) in which no point is
+                    included in more than \(n+1\) elements. If no such minimal n exists, the space is said
+                    to be of infinite covering dimension. A point is zero-dimensional with respect to the
+                    covering dimension because every open cover of the space has a refinement consisting of
+                    a single open set.
+                </p>
+            </li>
+            <li>
+                <b>Hausdorff dimension</b><br />
+                <p>
+                    Let X be a metric space. If \(S ⊂ X\) and \(d ∈ [0, ∞)\), the d-dimensional Hausdorff
+                    content of \(S \) is the infimum of the set of numbers \(δ ≥ 0\) such that there is some
+                    (indexed) collection of balls \({\displaystyle \{B(x_{i},r_{i}):i\in I\}}\)\(
+                    \{B(x_i,r_i):i\in I\}\) covering \(S \) with \(ri > 0\) for each \(i ∈ I\) that
+                    satisfies <br />
+                    \({\displaystyle \sum _{i\in I}r_{i}^{d}
+                    <\delta }\sum_{i\in I} r_i^d<\delta \).<br />
+                    The Hausdorff dimension of \(X\) is defined by
+                    \(\operatorname{dim}_{\operatorname{H}}(X):= \) \(\inf\{d\ge 0: C_H^d(X)=0\}.\). A point
+                    has Hausdorff dimension 0 because it can be covered by a single ball of arbitrarily
+                    small radius.
+                </p>
+            </li>
+        </ul>
+    </div>
+    <h2 class="subHeader">Lines</h2>
+    <div class="theorem">
+        <p>
+            Euclid described a line as "breadthless length" which "lies equally with respect to the
+            points on itself".In modern mathematics, given the multitude of geometries, the concept of a
+            line is closely tied to the way the geometry is described.<br />
+            For instance, in analytic geometry, a line in the plane is often defined as the set of
+            points whose coordinates satisfy a given linear equation, but in a more abstract setting,
+            such as incidence geometry, a line may be an independent object, distinct from the set of
+            points which lie on it.In differential geometry, a geodesic is a generalization of the
+            notion of a line to curved spaces
+        </p>
+        <figure>
+            <img class="image"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/FuncionLineal01.svg/290px-FuncionLineal01.svg.png" />
+            <figcaption>
+                The red and blue lines on this graph have the same slope (gradient); the red and green
+                lines have the same y-intercept (cross the y-axis at the same place).
+            </figcaption>
+        </figure>
+        <p>
+            Lines in a Cartesian plane or, more generally, in affine coordinates, can be described
+            algebraically by linear equations. In two dimensions, the equation for non-vertical lines is
+            often given in the slope-intercept form:<br />
+            <b>\({\displaystyle y=mx+b}\)</b><br />
+            where:<br />
+        <ul>
+            <li>
+                <b>m</b> is the slope or gradient of the line.
+            </li>
+            <li>
+                <b>b</b> is the y-intercept of the line.
+            </li>
+            <li>
+                <b>x</b> is the independent variable of the function \(y = f(x)\).
+            </li>
+        </ul>
+        </p>
+        <p>
+            In three dimensions, lines can not be described by a single linear equation, so they are
+            frequently described by parametric equations:<br />
+            <b>\({\displaystyle x=x_{0}+at}\)</b><br />
+            <b>\({\displaystyle y=y_{0}+bt}\)</b><br />
+            <b>\({\displaystyle z=z_{0}+ct}\)</b><br />
+            where:<br />
+        <ul>
+            <li><b>x, y, and z</b> are all functions of the independent variable t which ranges over the
+                real numbers.</li>
+            <li><b>(x0, y0, z0)</b> is any point on the line.</li>
+            <li><b>a, b, and c</b> are related to the slope of the line, such that the vector (a, b, c) is
+                parallel to the line.</li>
+        </ul>
+
+        </p>
+    </div>
+    <h2 class="subHeader">Planes</h2>
+    <div class="theorem">
+        <p>
+            A plane is a flat, two-dimensional surface that extends infinitely far.
+            Planes are used in every area of geometry. For instance, planes can be studied as a topological surface
+            without reference to distances or angles.<br>
+            In a Euclidean space of any number of dimensions, a plane is uniquely determined by any of the following:
+        </p>
+        <ul>
+            <li>
+                Three non-collinear points (points not on a single line).
+
+            </li>
+            <li>
+                A line and a point not on that line.
+            </li>
+            <li>
+                Two parallel lines.
+            </li>
+        </ul>
+        <figure>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Intersecting_planes.svg/220px-Intersecting_planes.svg.png">
+            <figcaption>Two intersecting planes in three-dimensional space</figcaption>
+        </figure>
+        <b>Properties</b>
+        <ul>
+            <li>Two distinct planes are either parallel or they intersect in a line.</li>
+            <li>A line is either parallel to a plane, intersects it at a single point, or is contained in the plane.
+            </li>
+            <li>Two distinct lines perpendicular to the same plane must be parallel to each other.</li>
+            <li>Two distinct planes perpendicular to the same line must be parallel to each other.</li>
+        </ul>
+    </div>
+    <h2 class="subHeader">Angles</h2>
+    <div class="theorem">
+        <p>Euclid defines a plane angle as the inclination to each other, in a plane, of two lines which meet each
+            other, and do not lie straight with respect to each other.[46] In modern terms, an angle is the figure
+            formed by two rays, called the sides of the angle, sharing a common endpoint, called the vertex of the angle
+        </p>
+        <figure>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Two_rays_and_one_vertex.png/220px-Two_rays_and_one_vertex.png">
+            <figcaption>An angle formed by two rays emanating from a vertex.</figcaption>
+        </figure>
+        <p>There is some common terminology for angles, whose measure is always non-negative</p>
+        <ul>
+            <li>An angle equal to 0° or not turned is called a zero angle.</li>
+            <li>Angles smaller than a right angle (less than 90°) are called acute angles ("acute" meaning "sharp").
+            </li>
+            <li>An angle equal to \(\frac{1}{4}\) turn (\(90^{\circ}\) or \(\frac{\pi }{2}\)raidians) is called a right
+                angle. Two lines that form a right angle are said to be normal, orthogonal, or perpendicular.</li>
+            <li>Angles larger than a right angle and smaller than a straight angle (between 90° and 180°) are called
+                obtuse angles
+                ("obtuse" meaning "blunt").</li>
+            <li>An angle equal to \(\frac{1}{2}\)
+                turn (180° or π radians) is called a straight angle.</li>
+            <li>Angles larger than a straight angle but less than 1 turn (between 180° and 360°) are called reflex
+                angles.</li>
+            <li>An angle equal to 1 turn (360° or 2π radians) is called a full angle, complete angle, round angle or a
+                perigon.</li>
+            <li>Angles that are not right angles or a multiple of a right angle are called oblique angles.</li>
+
+        </ul>
+    </div>
+    <h2 class="subHeader">Curves</h2>
+    <div class="theorem">
+        <p>
+            A curve is a 1-dimensional object that may be straight (like a line) or not; curves in 2-dimensional space
+            are called
+            plane curves and those in 3-dimensional space are called space curves.
+        </p>
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Parabola.svg/220px-Parabola.svg.png">
+            <figcaption>
+                A parabola, one of the simplest curves, after (straight) lines
+            </figcaption>
+        </figure>
+        <p>
+            A plane curve is a curve for which \({\displaystyle X}\) is the Euclidean plane—these are the examples
+            first
+            encountered—or
+            in some cases the projective plane. A space curve is a curve for which \({\displaystyle X}\) is at least
+            three-dimensional;
+            a skew curve is a space curve which lies in no plane. These definitions of plane, space and skew curves
+            apply also to
+            real algebraic curves, although the above definition of a curve does not apply (a real algebraic curve may
+            be
+            disconnected).
+        </p>
+    </div>
+    <h2 class="subHeader">
+        Surfaces
+    </h2>
+    <div class="theorem">
+        <p>
+            In mathematics, a surface is a generalization of a plane, which is not necessarily flat – that is, the
+            curvature is not
+            necessarily zero. This is analogous to a curve generalizing a straight line. There are many more precise
+            definitions,
+            depending on the context and the mathematical tools that are used to analyze the surface.
+        </p>
+        <figure>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Sphere_wireframe.svg/190px-Sphere_wireframe.svg.png">
+            <figcaption>
+                A sphere is a surface that can be defined parametrically (by x = r sin θ cos φ, y = r sin θ sin φ, z = r
+                cos θ) or
+                implicitly (by x2 + y2 + z2 − r2 = 0.)
+            </figcaption>
+        </figure>
+        <p>
+            Often, a surface is defined by equations that are satisfied by the coordinates of its points. This is the
+            case of the
+            graph of a continuous function of two variables. The set of the zeros of a function of three variables is a
+            surface,
+            which is called an implicit surface. If the defining three-variate function is a polynomial, the surface is
+            an
+            algebraic surface. For example, the unit sphere is an algebraic surface, as it may be defined by the
+            implicit equation: <br>
+            <b>\({\displaystyle x^{2}+y^{2}+z^{2}-1=0.}\)</b>
+        </p>
+    </div>
+    <h2 class="subHeader">
+        Length, area, and volume
+    </h2>
+    <div class="theorem">
+        <p>Length, area, and volume describe the size or extant of an object in one dimension, two dimension, and three
+            dimensions
+            respectively.In Euclidean geometry and analytic geometry, the length of a line segment can often be
+            calculated by the Pythagorean
+            theorem</p>
+        <p>
+            Area and volume can be defined as fundamental quantities separate from length, or they can be described and
+            calculated
+            in terms of lengths in a plane or 3-dimensional space.Mathematicians have found many explicit formulas for
+            area and formulas for volume of various geometric objects. In
+            calculus, area and volume can be defined in terms of integrals, such as the Riemann integral.
+        </p>
+    </div>
+</body>
+<style>
+    body {
+        padding: 20px;
+        background-color: white;
+        margin: 0px;
+        font-family: sans-serif;
+    }
+
+    .header {
+        text-align: center;
+        color: rgb(180, 9, 152);
+        margin-bottom: 20px;
+    }
+
+    .subHeader {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: left;
+        color: indigo;
+    }
+
+    .paragraph {
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    .logGraph {
+        height: 250px;
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .note {
+        width: 90%;
+        max-height: 30vh;
+        border: 0.5px solid rgb(224, 224, 224);
+        overflow: scroll;
+        border-radius: 5px;
+        background: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+            0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+            0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+        padding: 10px;
+    }
+
+    .note-list {
+        width: 100%;
+    }
+
+    figcaption {
+        color: rgb(252, 52, 52);
+        font-size: 12px;
+    }
+
+    .notes {
+        margin: 0px;
+        padding-bottom: 8px;
+        color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+        width: 90%;
+        display: block;
+        border: 1px solid rgb(245, 214, 131);
+        background-color: rgb(245, 214, 131);
+        padding: 10px;
+        border-radius: 5px;
+        margin: 20px 0px;
+        color: black;
+        border-left: 5px solid red;
+    }
+
+    .result {
+        font-size: 16px;
+        font-weight: bold;
+        color: rgb(32, 0, 75);
+    }
+
+    .image {
+        max-width: 90vw;
+        max-height: 35vh;
+    }
+</style>
+
+</html>

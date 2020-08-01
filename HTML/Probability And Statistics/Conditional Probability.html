@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional Probability</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      In ​probability theory​, <b>​conditional probability​</b> is a measure of
+      the ​probability​ of an ​event​ occurring ​ given that another event has
+      (by assumption, presumption, assertion or evidence) occurred
+    </p>
+    <p class="paragraph">
+      If the event of interest is ​A​ and the event ​B​ is known or assumed to
+      have occurred, "the conditional probability of ​A​ given ​B​", or "the
+      probability of ​A​ under the condition ​B​", is usually written as P(​A​ |
+      ​B​),or sometimes <b>\(P_{B}A\) or P(​A​ / ​B​)</b> . For example, the
+      probability that any given person has a cough on <b>B</b>​ any given day
+      may be only 5%. But if we know or assume that the person is sick, then
+      they are much more likely to be coughing. The conditional probability that
+      someone unwell is coughing might be 75%, then: P(Cough) = 5%; P(Cough |
+      Sick) = 75%.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        The concept of conditional probability is one of the most fundamental
+        and one of the most important in probability theory.But conditional
+        probabilities can be quite slippery and require careful interpretation.
+        For example, there need not be a causal relationship between ​A​ and
+        ​B​, and they don't have to occur simultaneously.
+      </p>
+    </div>
+    <p class="paragraph">
+      P(​A​ | ​B)​ may or may not be equal to P(​A​) (the unconditional
+      probability of ​A​). If P(​A​ | ​B​) = P(​A​), then events ​A​ and ​B​ are
+      said to be ​"independent"​: in such a case, knowledge about either event
+      does not give ​information​ on the other. P(​A​ | ​B​) (the conditional
+      probability of A given B) typically differs from P(​B​ | ​A)​ . For
+      example, if a person has ​dengue​, they might have a 90% chance of testing
+      positive for dengue. In this case what is being measured is that if event
+      ​B​ ("having dengue") has occurred, the probability of ​A​ (​test is
+      positive​) given that ​B​ (​having dengue)​ occurred is 90%: that is,
+      P(​A​ | ​B​) = 90%.<br /><br />
+      Alternatively, if a person tests positive for dengue they may have only a
+      15% chance of actually having this rare disease because the ​false
+      positive​ rate for the test may be high. In this case what is being
+      measured is the probability of the event ​B​ (​having dengue​) given that
+      the event ​A​ (​test is positive​) has occurred: P(​B​ | ​A​) = 15%.
+      Falsely equating the two probabilities causes various errors of reasoning
+      such as the ​base rate fallacy​. Conditional probabilities can be reversed
+      using <b>Bayes' theorem​</b>.
+    </p>
+    <h3 class="subHeader">
+        Conditioning on an event
+    </h3>
+    <p class="paragraph">
+        <b>Kolmogorov definition:</b> <br>
+        <p class="paragraph">
+            Given two ​events​ ​A​ and ​B​, from the ​sigma-field​ of a probability space, with the ​unconditional probability​ of B
+            (that is, of the event ​B​ occurring) being greater than zero, ​P(​ ​B)​ > 0, the conditional probability of ​A​ given
+            ​B​ is defined as the ​quotient​ of the probability of the joint of events ​A​ and ​B​, and
+            the ​probability​ of ​B:​ <br>
+            \({\displaystyle P(A\mid B)={\frac {P(A\cap B)}{P(B)}},}\) where <br>
+            \({\displaystyle P(A\cap B)}\) is the probability that both events ​A​ and ​B​ occur. This may be visualized as restricting the sample space to
+            situations in which ​B​ occurs. The logic behind this equation is that if the possible outcomes for ​A​ and ​B​ are
+            restricted to those in which ​B​ occurs, this set serves as the new sample space. <br>
+            We just denote the quantity \({\displaystyle {\frac {P(A\cap B)}{P(B)}}}\) as 
+            \({\displaystyle P(A\mid B)}\) and call it the conditional probability of ​A​ given ​B​.
+            <br><br>
+            \({\displaystyle P(A\cap B)=P(A\mid B)P(B)}\)
+            <br>
+            Although mathematically equivalent, this may be preferred philosophically; under major ​probability interpretations​
+            such as the <b>​subjective theory</b>​, conditional probability is considered a primitive entity. Further, this "multiplication
+            axiom" introduces a symmetry with the summation axiom for ​mutually
+            exclusive events​:​ <br>
+            \({\displaystyle P(A\cup B)=P(A)+P(B)-{{P(A\cap B)}}}\)
+            <br><br>
+            Conditional probability can be defined as the probability of a conditional event
+            \({\displaystyle A_{B}}\). It can be shown that
+           \({\displaystyle P(A_{B})={\frac {P(A\cap B)}{P(B)}}}\) which meets the Kolmogorov definition of conditional probability. Note that the equation
+           \({\displaystyle P(A_{B})=P(A\cap B)/P(B)}\) is a theoretical result and not a definition. The definition via conditional events can be understood directly in terms
+          of the ​Kolmogorov axioms​ and is particularly
+          close to the Kolmogorov ​interpretation of probability​ in terms of experimental data. For example, conditional events
+          can be repeated themselves leading to a generalized notion of conditional event \({\displaystyle A_{B(n)}}\) It can be shown​ that the sequence 
+          \({\displaystyle (A_{B(n)})_{n\geq 1}}\) which yields a ​strong law of large numbers​ for conditional probability: \({\displaystyle P\left(\lim _{n\to \infty }{\overline {A}}_{B}^{n}=P(A\mid
+          B)\right)=100\%}\)
+        </p>
+    </p>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

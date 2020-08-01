@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logarithm</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <h1 class="header">Logarithm</h1>
+    <p class="paragraph">
+      In mathematics, the logarithm is the inverse function to exponentiation.
+      That means the logarithm of a given number x is the exponent to which
+      another fixed number, the base b, must be raised, to produce that number
+      x. In the simplest case, the logarithm counts the number of occurrences of
+      the same factor in repeated multiplication.
+    </p>
+    <p class="paragraph">
+      The logarithm of the number N to the base 'a' Is the exponent indicating
+      the power to which the base 'a' must be raised to obtain the number N.
+      This number is designated as \( log_{a} N\)
+    </p>
+    <p class="paragraph"></p>
+    <figure>
+      <img
+        class="logGraph"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Binary_logarithm_plot_with_ticks.svg/800px-Binary_logarithm_plot_with_ticks.svg.png"
+      />
+      <figcaption>
+        The graph of the logarithm base 2 crosses the x-axis at x = 1 and passes
+        through the points (2, 1), (4, 2), and (8, 3), depicting, e.g., \(
+        log_{2} 8\) = 3 and 23 = 8
+      </figcaption>
+    </figure>
+    <h2 class="subHeader">Product, quotient, power, and root</h2>
+    <p class="paragraph">
+      The logarithm of a product is the sum of the logarithms of the numbers
+      being multiplied; the logarithm of the ratio of two numbers is the
+      difference of the logarithms. The logarithm of the p-th power of a number
+      is p times the logarithm of the number itself; the logarithm of a p-th
+      root is the logarithm of the number divided by p. The following table
+      lists these identities with examples. Each of the identities can be
+      derived after substitution of the logarithm definitions \(\displaystyle
+      x=b^{\log _{b}x}\) or \(\displaystyle y=b^{\log _{b}y} \) in the left hand
+      sides
+    </p>
+    <div class="table-div">
+      <table class="wikitable">
+        <tbody>
+          <tr>
+            <th></th>
+            <th>Formula</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td class="item">Product</td>
+            <td>\( {\displaystyle \log _{b}(xy)=\log _{b}x+\log _{b}y} \)</td>
+            <td>
+              \({\displaystyle \log _{3}243=\log _{3}(9\cdot 27)=\log _{3}9+\log
+              _{3}27=2+3=5}\)
+            </td>
+          </tr>
+          <tr>
+            <td class="item">Quotient</td>
+            <td>
+              \({\displaystyle \log _{b}\!{\frac {x}{y}}=\log _{b}x-\log
+              _{b}y}\)
+            </td>
+            <td>
+              \({\displaystyle \log _{2}16=\log _{2}\!{\frac {64}{4}}=\log
+              _{2}64-\log _{2}4=6-2=4}\)
+            </td>
+          </tr>
+          <tr>
+            <td class="item">Power</td>
+            <td>\({\displaystyle \log _{b}\left(x^{p}\right)=p\log _{b}x}\)</td>
+            <td>
+              \({\displaystyle \log _{2}64=\log _{2}\left(2^{6}\right)=6\log
+              _{2}2=6}\)
+            </td>
+          </tr>
+          <tr>
+            <td class="item">Root</td>
+            <td>
+              \({\displaystyle \log _{b}{\sqrt[{p}]{x}}={\frac {\log
+              _{b}x}{p}}}\)
+            </td>
+            <td>
+              \({\displaystyle \log _{10}{\sqrt {1000}}={\frac {1}{2}}\log
+              _{10}1000={\frac {3}{2}}=1.5}\)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Points To Remember</h3>
+    <ul>
+      <li>
+        \(log_{a} N = x\), read as log of N to the base \(a \Leftrightarrow a =
+        N\) If a = 10 then we write log N or \(log_{10} N\) and if a = e we
+        write In N or \(log_{e} N\) (Natural log)
+      </li>
+      <li>
+        Necessary conditions :\(N > 0; a > 0; a \neq 1\)
+      </li>
+      <li>
+        \( log_{a} 1 = 0\)
+      </li>
+      <li>
+        \( log_{a} a = 1\)
+      </li>
+      <li>
+        \(log_{\frac{1}{a}}a = -1\)
+      </li>
+      <li>
+        The formula for the logarithm of a power says in particular that for any
+        number x, \({\displaystyle \log _{b}\left(b^{x}\right)=x\log _{b}b=x.}\)
+      </li>
+    </ul>
+    <h2 class="subHeader">
+      Natural logarithm
+    </h2>
+    <p class="paragraph">
+      The natural logarithm of a number is its logarithm to the base of the
+      mathematical constant \(e\), where \(e\) is an irrational and
+      transcendental number approximately equal to \(2.718281828459\)
+    </p>
+    <figure>
+      <img
+        style="width: 100%; height: 150px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Log.svg/600px-Log.svg.png"
+      />
+      <figcaption>
+        Graph of the natural logarithm function. The function slowly grows to
+        positive infinity as x increases and slowly goes to negative infinity as
+        x approaches 0
+      </figcaption>
+    </figure>
+    <div class="theorem">
+      <p class="paragraph">
+        The natural logarithm can be defined for any positive real number \(a\)
+        as the area under the curve \(y = 1/x\) from \(1\) to a (the area being
+        taken as negative when \(a < 1\)).
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+    }
+    figcaption {
+      font-size: 12px;
+      color: black;
+      text-align: center;
+    }
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      color: black;
+    }
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+    figcaption {
+      color: gray;
+    }
+    .wikitable {
+      background-color: white;
+      color: #202122;
+      margin: 0 auto;
+      border: 1px solid #a2a9b1;
+      border-collapse: collapse;
+    }
+    .item {
+      color: black;
+      font-weight: bold;
+    }
+    td {
+      border: 1px solid #a2a9b1;
+      padding: 0.2em 0.4em;
+    }
+    th {
+      border: 1px solid #a2a9b1;
+      padding: 0.2em 0.4em;
+      background-color: rgb(202, 183, 183);
+    }
+    .table-div {
+      width: calc(100vw - 50px);
+      overflow-x: scroll;
+    }
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

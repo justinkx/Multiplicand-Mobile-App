@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eulers Theorem</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      <b>Leonhard Euler</b>, (born April 15, 1707, Basel, Switzerland—died
+      September 18, 1783, St. Petersburg, Russia), Swiss mathematician and
+      physicist, one of the founders of pure mathematics. He not only made
+      decisive and formative contributions to the subjects of geometry,
+      calculus, mechanics, and number theory.
+    </p>
+    <figure>
+      <img
+        style="height: 260px; padding: 0px 30px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Leonhard_Euler.jpg/440px-Leonhard_Euler.jpg"
+      />
+      <figcaption style="text-align: cemnter;">
+        Leonhard Euler(15 April 1707 – 18 September 1783)
+      </figcaption>
+    </figure>
+    <div class="theorem">
+      <p class="paragraph">
+        Euler’s formula, Either of two important mathematical theorems of
+        Leonhard Euler. The first is a topological invariance relating the
+        number of faces, vertices, and edges of any polyhedron. It is written F
+        + V = E + 2, where F is the number of faces, V the number of vertices,
+        and E the number of edges. A cube, for example, has 6 faces, 8 vertices,
+        and 12 edges, and satisfies this formula.
+      </p>
+    </div>
+    <div class="subHeader">
+      Euler Characteristic
+    </div>
+    <p class="paragraph">
+      So, F+V−E can equal 2, or 1, and maybe other values, so the more general
+      formula is \(F+V-E = \chi\), where \(\chi\) is called the
+      <b>Euler Characteristic</b>. And the Euler Characteristic can also be less
+      than zero.
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        The second formula, used in trigonometry, says \(e^{ix} = cosx + isinx\)
+        where \(e\) is the base of the natural logarithm and \(i\) is the square
+        root of −1. When \(x\) is equal to \(\pi\) or \(2\pi\), the formula
+        yields two elegant expressions relating \(\pi,e\) and \(i\): \(e^{i\pi}
+        = -1\) and \(e^{2i\pi} = 1\).
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

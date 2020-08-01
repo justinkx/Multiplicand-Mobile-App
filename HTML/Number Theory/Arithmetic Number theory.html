@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arithmetic Number Theory</title>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+  <p class="paragraph">
+    Number theory is the branch of mathematics that studies integers, which are all the whole
+    numbers on either side of the number line. Number theory looks at specific properties of
+    integers and seeks patterns in the ways different types of numbers are distributed or related
+    to each other.
+  </p>
+  <div class="complex_numbers">
+    <ul class="tree">
+      <li>
+        <span>Complex Numbers (C)</span>
+        <ul>
+          <li>
+            <span>Real Numbers (R)</span>
+            <ul>
+              <li>
+                <span>Rational Numbers (Q)</span>
+                <ul>
+                  <li>
+                    <span>Integers
+                      <p class="example">
+                        -2, -1, 0, 1,2 ..
+                      </p>
+                    </span>
+                    <ul>
+                      <li>
+                        <span>Even Numbers (E)
+                          <p class="example">
+                            .., -4,-2,0,2,4 ..
+                          </p>
+                        </span>
+                      </li>
+                      <li>
+                        <span>Odd Numbers (O)
+                          <p class="example">
+                            .., -5,-3,-1,1,3 ..
+                          </p>
+                        </span>
+                      </li>
+                      <li>
+                        <span>Whole Numbers (W)
+                          <p class="example">
+                            0,1,2,3 ..
+                          </p>
+                        </span>
+                        <ul>
+                          <li>
+                            <span>Natural Numbers (N)
+                              <p class="example">
+                                1,2,3,4 ..
+                              </p>
+                            </span>
+                          </li>
+                          <li>
+                            <span>Zero </span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span>Negative Integers
+                          <p class="example">
+                            -1,-2,-3..
+                          </p>
+                        </span>
+                      </li>
+                      <li>
+                        <span>Zero </span>
+                      </li>
+                      <li>
+                        <span>Prime Numbers
+                          <p class="example">
+                            \( {\displaystyle \pm }2, {\displaystyle \pm }3, {\displaystyle \pm
+                            }5\) ...
+                          </p>
+                        </span>
+                      </li>
+                      <li>
+                        <span>Units
+                          <p class="example">
+                            1 and -1
+                          </p>
+                        </span>
+                      </li>
+                      <li>
+                        <span>Composite Numbers
+                          <p class="example">
+                            \( {\displaystyle \pm }4, {\displaystyle \pm }6, {\displaystyle \pm
+                            }8\) ...
+                          </p>
+                        </span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span>Fractions</span></li>
+                </ul>
+              </li>
+              <li>
+                <span>Irrational Numbers <br />
+                  <p class="example">
+                    \(\sqrt{2}, \sqrt{3}, \pi , e ...\) etc
+                  </p>
+                </span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span>Imaginary Numbers</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <p class="paragraph">
+    Integers can be considered either in themselves or as solutions to equations (Diophantine
+    geometry). Questions in number theory are often best understood through the study of
+    analytical objects (for example, the Riemann zeta function) that encode properties of the
+    integers, primes or other number-theoretic objects in some fashion (analytic number theory).
+    One may also study real numbers in relation to rational numbers, for example, as approximated
+    by the latter (Diophantine approximation).
+  </p>
+  <h2 class="subHeader">
+    Analytic number theory
+  </h2>
+  <p class="paragraph">
+    Analytic number theory may be defined as the study of the integers by means of tools from real
+    and complex analysis.In terms of its concerns, as the study within number theory of estimates
+    on size and density, as opposed to identities.
+  </p>
+  <div class="theorem">
+    <p class="paragraph">
+      Some of the examples of problems in analytic number theory: the prime number theorem, the
+      Goldbach conjecture (or the twin prime conjecture, or the Hardy–Littlewood conjectures), the
+      Waring problem and the Riemann hypothesis. Some of the most important tools of analytic
+      number theory are the circle method, sieve methods and L-functions (or, rather, the study of
+      their properties).
+    </p>
+  </div>
+  <h2 class="subHeader">
+    Diophantine geometry
+  </h2>
+  <p class="paragraph">
+    The central problem of Diophantine geometry is to determine when a Diophantine equation has
+    solutions, and if it does, how many. The approach taken is to think of the solutions of an
+    equation as a geometric object.
+  </p>
+  <p class="paragraph">
+    An equation in two variables defines a curve in the plane. More generally, an equation, or
+    system of equations, in two or more variables defines a curve, a surface or some other such
+    object in n-dimensional space. In Diophantine geometry, one asks whether there are any
+    rational points (points all of whose coordinates are rationals) or integral points (points all
+    of whose coordinates are integers) on the curve or surface. If there are any such points, the
+    next step is to ask how many there are and how they are distributed. A basic question in this
+    direction is if there are finitely or infinitely many rational points on a given curve (or
+    surface).
+  </p>
+  <figure>
+    <img class="logGraph"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/ECClines-3.svg/450px-ECClines-3.svg.png" />
+    <figcaption>
+      Two examples of an elliptic curve, that is, a curve of genus 1 having at least one rational
+      point. (Either graph can be seen as a slice of a torus in four-dimensional space.)
+    </figcaption>
+  </figure>
+  <div class="theorem">
+    <p class="paragraph">
+      In the Pythagorean equation \({\displaystyle x^{2}+y^{2}=1,}\) we would like to study its
+      rational solutions, that is, its solutions \((x,y)\) such that x and y are both rational.
+      This is the same as asking for all integer solutions to \(a^{2}+b^{2}=c^{2} \); any solution
+      to the latter equation gives us a solution \(x = a/c, y=b/c\) to the former. It is also the
+      same as asking for all points with rational coordinates on the curve described by \(x^2 +
+      y^2 = 1\). (This curve happens to be a circle of radius 1 around the origin.)
+    </p>
+  </div>
+  <h2 class="subHeader">
+    Probabilistic number theory
+  </h2>
+  <p class="paragraph">
+    Much of probabilistic number theory can be seen as an important special case of the study of
+    variables that are almost, but not quite, mutually independent. For example, the event that a
+    random integer between one and a million be divisible by two and the event that it be
+    divisible by three are almost independent, but not quite.
+  </p>
+  <p class="paragraph">
+    It is sometimes said that probabilistic combinatorics uses the fact that whatever happens with
+    probability greater than {\displaystyle 0}{\displaystyle 0} must happen sometimes; one may say
+    with equal justice that many applications of probabilistic number theory hinge on the fact
+    that whatever is unusual must be rare. If certain algebraic objects (say, rational or integer
+    solutions to certain equations) can be shown to be in the tail of certain sensibly defined
+    distributions, it follows that there must be few of them; this is a very concrete
+    non-probabilistic statement following from a probabilistic one.
+  </p>
+  <h2 class="subHeader">
+    Arithmetic combinatorics
+  </h2>
+  <p class="paragraph">
+    If we begin from a fairly "thick" infinite set \(A\), does it contain many elements in
+    arithmetic progression: \(a\), \({\displaystyle a+b,a+2b,a+3b,\ldots ,a+10b}\), say? Should it
+    be possible to write large integers as sums of elements of \(A\).
+  </p>
+  <div class="theorem">
+    <p class="paragraph">
+      These questions are characteristic of arithmetic combinatorics. This is a presently
+      coalescing field; it subsumes additive number theory (which concerns itself with certain
+      very specific sets \(A\) of arithmetic significance, such as the primes or the squares) and,
+      arguably, some of the geometry of numbers, together with some rapidly developing new
+      material. Its focus on issues of growth and distribution accounts in part for its developing
+      links with ergodic theory, finite group theory, model theory, and other fields. The term
+      additive combinatorics is also used; however, the sets \(A\) being studied need not be sets
+      of integers, but rather subsets of non-commutative groups, for which the multiplication
+      symbol, not the addition symbol, is traditionally used; they can also be subsets of rings,
+      in which case the growth of \(A+A\) and \(A.A\) may be compared.
+    </p>
+  </div>
+</body>
+<style>
+  body {
+    padding: 20px;
+    background-color: white;
+    margin: 0px;
+    font-family: sans-serif;
+  }
+
+  .header {
+    text-align: center;
+    color: rgb(180, 9, 152);
+    margin-bottom: 20px;
+  }
+
+  .subHeader {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: indigo;
+  }
+
+  .paragraph {
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  .logGraph {
+    height: 250px;
+    width: 100%;
+    max-width: 450px;
+  }
+
+  figcaption {
+    color: gray;
+  }
+
+  .note {
+    width: 90%;
+    max-height: 30vh;
+    border: 0.5px solid rgb(224, 224, 224);
+    overflow: scroll;
+    border-radius: 5px;
+    background: #fff;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+      0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+      0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+    padding: 10px;
+  }
+
+  .note-list {
+    width: 100%;
+  }
+
+  .notes {
+    margin: 0px;
+    padding-bottom: 8px;
+    color: rgb(17, 17, 248);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .theorem {
+    width: 90%;
+    display: block;
+    border: 1px solid rgb(245, 214, 131);
+    background-color: rgb(245, 214, 131);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0px;
+    color: black;
+    border-left: 5px solid red;
+  }
+
+  .result {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(32, 0, 75);
+  }
+
+  .complex_numbers {
+    width: 100%;
+    height: 300px;
+    overflow: scroll;
+    scroll-snap-align: center;
+    margin: 30px 0px;
+  }
+
+  .tree,
+  .tree ul,
+  .tree li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .tree {
+    margin: 0 0 1em;
+    text-align: center;
+  }
+
+  .tree,
+  .tree ul {
+    display: table;
+  }
+
+  .tree ul {
+    width: 100%;
+  }
+
+  .tree li {
+    display: table-cell;
+    padding: 0.5em 0;
+    vertical-align: top;
+  }
+
+  .tree li:before {
+    outline: solid 2px black;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .tree li:first-child:before {
+    left: 50%;
+  }
+
+  .tree li:last-child:before {
+    right: 50%;
+  }
+
+  .tree code,
+  .tree span {
+    border-radius: 0.4em;
+    display: inline-block;
+    margin: 0 0.2em 0.5em;
+    padding: 10px 20px;
+    position: relative;
+    font-size: 14px;
+    min-width: 100px;
+    max-width: 140px;
+    color: white;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+  }
+
+  .tree .example {
+    margin: 0px;
+    padding: 4px 0px;
+    font-size: 10px;
+    color: rgb(224, 224, 224);
+  }
+
+  .tree ul:before,
+  .tree code:before,
+  .tree span:before {
+    outline: solid 2px black;
+    content: '';
+    height: 0.48em;
+    left: 50%;
+    position: absolute;
+  }
+
+  .tree ul:before {
+    top: -0.5em;
+  }
+
+  .tree code:before,
+  .tree span:before {
+    top: -0.5em;
+  }
+
+  .tree>li {
+    margin-top: 0;
+  }
+
+  .tree>li:before,
+  .tree>li:after,
+  .tree>li>code:before,
+  .tree>li>span:before {
+    outline: none;
+  }
+
+  figure {
+    margin: 20px 0px;
+  }
+</style>
+
+</html>

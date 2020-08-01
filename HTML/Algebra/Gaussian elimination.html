@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaussian elimination</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      <b>Gaussian elimination</b>, also known as <b>row reduction</b>, is an
+      algorithm in linear algebra for solving a system of linear equations. It
+      is usually understood as a sequence of operations performed on the
+      corresponding matrix of coefficients.It is a method for solving matrix
+      equations of the form \(Ax = b\)
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        The process of row reduction makes use of elementary row operations, and
+        can be divided into two parts. The first part (sometimes called forward
+        elimination) reduces a given system to row echelon form, from which one
+        can tell whether there are no solutions, a unique solution, or
+        infinitely many solutions.
+      </p>
+    </div>
+    <h4>Row operations</h4>
+    <p class="paragraph">
+      There are three types of <b>elementary row operations</b> which may be
+      performed on the rows of a matrix:
+    </p>
+    <ul class="ul">
+      <li>Swap the positions of two rows.</li>
+      <li>Multiply a row by a non-zero scalar.</li>
+      <li>Add to one row a scalar multiple of another.</li>
+    </ul>
+    <h4>Echelon form</h4>
+    <p class="paragraph">
+      For each row in a matrix, if the row does not consist of only zeros, then
+      the leftmost nonzero entry is called the leading coefficient (or pivot) of
+      that row. So if two leading coefficients are in the same column, then a
+      row operation of type 3 could be used to make one of those coefficients
+      zero.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        Then by using the row swapping operation, one can always order the rows
+        so that for every non-zero row, the leading coefficient is to the right
+        of the leading coefficient of the row above. If this is the case, then
+        matrix is said to be in row echelon form. So the lower left part of the
+        matrix contains only zeros, and all of the zero rows are below the
+        non-zero rows. The word "echelon" is used here because one can roughly
+        think of the rows being ranked by their size, with the largest being at
+        the top and the smallest being at the bottom.
+      </p>
+    </div>
+    <figure>
+      <p class="paragraph" style="text-align: center;">
+        \({\displaystyle {\begin{bmatrix}0&\color {red}{\mathbf {2}
+        }&1&-1\\0&0&\color {red}{\mathbf {3} }&1\\0&0&0&0\end{bmatrix}}.}\)
+      </p>
+      <figcaption>
+        matrix is in row echelon form, and its leading coefficients are shown in
+        red
+      </figcaption>
+    </figure>
+    <h2 class="subHeader">
+      Applications
+    </h2>
+    <p class="paragraph">
+      Historically, the first application of the row reduction method is for
+      solving systems of linear equations. Here are some other important
+      applications of the algorithm.
+    </p>
+    <p class="paragraph">
+      <b>Computing determinants</b> To explain how Gaussian elimination allows
+      the computation of the determinant of a square matrix, we have to recall
+      how the elementary row operations change the determinant:
+    </p>
+    <ul class="ul">
+      <li>
+        Swapping two rows multiplies the determinant by −1
+      </li>
+      <li>
+        Multiplying a row by a nonzero scalar multiplies the determinant by the
+        same scalar
+      </li>
+      <li>
+        Adding to one row a scalar multiple of another does not change the
+        determinant.
+      </li>
+    </ul>
+    <p class="paragraph">
+      <b>Finding the inverse of a matrix:</b>
+      A variant of Gaussian elimination called Gauss–Jordan elimination can be
+      used for finding the inverse of a matrix, if it exists. If \(A\) is an n ×
+      n square matrix, then one can use row reduction to compute its inverse
+      matrix, if it exists. First, the n × n identity matrix is augmented to the
+      right of \(A\), forming an \(n × 2n\) block matrix \([A | I]\)
+    </p>
+    <p class="paragraph">
+      <b>Computing ranks and bases: </b>
+      The Gaussian elimination algorithm can be applied to any m × n matrix A.
+      In this way, for example, some 6 × 9 matrices can be transformed to a
+      matrix that has a row echelon form like <br /><br />
+      \({\displaystyle
+      T={\begin{bmatrix}a&*&*&*&*&*&*&*&*\\0&0&b&*&*&*&*&*&*\\0&0&0&c&*&*&*&*&*\\0&0&0&0&0&0&d&*&*\\0&0&0&0&0&0&0&0&e\\0&0&0&0&0&0&0&0&0\end{bmatrix}},}\)
+    </p>
+    <p class="paragraph">
+      where the stars are arbitrary entries, and a, b, c, d, e are nonzero
+      entries. This echelon matrix T contains a wealth of information about A:
+      the rank of A is 5, since there are 5 nonzero rows in T
+    </p>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

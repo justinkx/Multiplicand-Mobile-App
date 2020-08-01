@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inverse Functions And Differentiation</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      In mathematics, an <b>integral</b> assigns numbers to functions in a way
+      that can describe displacement, area, volume, and other concepts that
+      arise by combining infinitesimal data.The branch of mathematics in which
+      the notion of an integral, its properties and methods of calculation are
+      studied. Integral calculus is intimately related to differential calculus,
+      and together with it constitutes the foundation of mathematical analysis.
+      The origin of integral calculus goes back to the early period of
+      development of mathematics and it is related to the method of exhaustion
+      developed by the mathematicians of Ancient Greece
+    </p>
+    <figure>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Integral_example.svg/600px-Integral_example.svg.png"
+      />
+      <figcaption>
+        A definite integral of a function can be represented as the signed area
+        of the region bounded by its graph.
+      </figcaption>
+    </figure>
+    <div class="summary">
+      <p class="paragraph">
+        The fundamental concepts and theory of integral and differential
+        calculus, primarily the relationship between differentiation and
+        integration, as well as their application to the solution of applied
+        problems, were developed in the works of P. de Fermat, I. Newton and G.
+        Leibniz at the end of the 17th century. Their investigations were the
+        beginning of an intensive development of mathematical analysis. The
+        works of L. Euler, Jacob and Johann Bernoulli and J.L. Lagrange played
+        an essential role in its creation in the 18th century. In the 19th
+        century, in connection with the appearance of the notion of a limit,
+        integral calculus achieved a logically complete form (in the works of
+        A.L. Cauchy, B. Riemann and others). The development of the theory and
+        methods of integral calculus took place at the end of 19th century and
+        in the 20th century simultaneously with research into measure theory
+        (cf. Measure), which plays an essential role in integral calculus.
+      </p>
+    </div>
+    <p class="paragraph">
+      The indefinite integral of a given real-valued function on an interval on
+      the real axis is defined as the collection of all its primitives on that
+      interval, that is, functions whose derivatives are the given function. The
+      indefinite integral of a function f is denoted by \(\int f(x)dx\). If
+      \(F\) is some primitive of \(f\), then any other primitive of it has the
+      form \(F+C\), where \(C\) is an arbitrary constant; one therefore writes
+      <br />
+      \(\int f(x)dx=F(x)+C\)
+    </p>
+    <h2 class="subHeader">Properties</h2>
+    <ul class="ul">
+      <li>
+        <b>Sum/Difference:</b>
+        \(\int_{a}^{b}[f(x)\pm g(x)]\) \(=\) \(\int_{a}^{b}f(x)dx\) \(\pm\)
+        \(\int_{a}^{b}g(x)dx\)
+      </li>
+      <li>
+        <b>Constant multiple:</b> \(\int_{a}^{b}k.f(x)dx\) \(=\)
+        \(k.\int_{a}^{b}f(x)dx\)
+      </li>
+      <li>
+        <b>Reverse interval:</b> \(\displaystyle\int_a^b
+        f(x)dx=-\displaystyle\int_b^a f(x)dx\)
+      </li>
+      <li><b>Zero-length interval:</b> \(\int_{a}^{a}f(x)dx = 0\)</li>
+      <li>
+        <b>Adding intervals:</b> \(\displaystyle\int_a^b
+        f(x)dx+\displaystyle\int_b^c f(x)dx\) \(=\) \(\displaystyle\int_a^c
+        f(x)dx\)
+      </li>
+    </ul>
+    <h2 class="subHeader">
+      Fundamental theorem of calculus
+    </h2>
+    <p class="paragraph">
+      The fundamental theorem of calculus is the statement that differentiation
+      and integration are inverse operations: if a continuous function is first
+      integrated and then differentiated, the original function is retrieved. An
+      important consequence, sometimes called the second fundamental theorem of
+      calculus, allows one to compute integrals by using an antiderivative of
+      the function to be integrated.
+    </p>
+    <div class="theorem">
+      <h3>Proof:</h3>
+      <p class="paragraph">
+        Let f be a continuous real-valued function defined on a closed interval
+        \([a, b]\). Let F be the function defined, for all \(x\) in \([a, b]\),
+        by <br /><br />
+        \(F(x)=\int _{a}^{x}f(t)\,dt.\)
+      </p>
+      <p class="paragraph">
+        Then, \(F\) is continuous on \([a, b]\), differentiable on the open
+        interval \((a, b)\), and <br />
+        \(F'(x)=f(x)\) <br />
+        for all \(x\) in \((a, b)\).
+      </p>
+      <h4>Second fundamental theorem of calculus :</h4>
+      <p class="paragraph">
+        Let \(f\) be a real-valued function defined on a closed interval \([a,
+        b]\) that admits an antiderivative \(F\) on \([a, b]\). That is, \(f\)
+        and \(F\) are functions such that for all \(x\) in \([a, b]\),
+        <br /><br />
+        \(f(x)=F'(x).\) <br /><br />
+        If \(f\) is integrable on \([a, b]\) then <br /><br />
+        \(\int _{a}^{b}f(x)\,dx=F(b)-F(a).\)
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

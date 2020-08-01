@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vector space</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      A <b>vector space</b> (also called a <b>linear space</b>) is a collection
+      of objects called vectors, which may be added together and multiplied
+      ("scaled") by numbers, called scalars. Scalars are often taken to be real
+      numbers, but there are also vector spaces with scalar multiplication by
+      complex numbers, rational numbers, or generally any field.
+    </p>
+    <figure style="text-align: center;">
+      <img
+        style="width: 300px; height: 200px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Vector_add_scale.svg/400px-Vector_add_scale.svg.png"
+      />
+      <figcaption>
+        a vector v (blue) is added to another vector w (red, upper
+        illustration). Below, w is stretched by a factor of 2, yielding the sum
+        v + 2w.
+      </figcaption>
+    </figure>
+    <div class="theorem">
+      <p class="paragraph">
+        The first example of a vector space consists of arrows in a fixed plane,
+        starting at one fixed point. This is used in physics to describe forces
+        or velocities. Given any two such arrows, v and w, the parallelogram
+        spanned by these two arrows contains one diagonal arrow that starts at
+        the origin, too. This new arrow is called the sum of the two arrows and
+        is denoted v + w. In the special case of two arrows on the same line,
+        their sum is the arrow on this line whose length is the sum or the
+        difference of the lengths, depending on whether the arrows have the same
+        direction. Another operation that can be done with arrows is scaling:
+        given any positive real number a, the arrow that has the same direction
+        as v, but is dilated or shrunk by multiplying its length by a, is called
+        multiplication of v by a. It is denoted av. When a is negative, av is
+        defined as the arrow pointing in the opposite direction, instead.
+      </p>
+    </div>
+    <p class="paragraph">
+      A vector space over a field \(F\) is a set \(V\) together with two
+      operations that satisfy the eight axioms listed below. In the following,
+      \(V × V\)denotes the Cartesian product of V with itself, and \(→\) denotes
+      a mapping from one set to another.
+    </p>
+    <ul class="ul">
+      <li>
+        The first operation, called <b>vector addition</b> or simply addition
+        \(+\) : \(V × V → V,\) takes any two vectors v and w and assigns to them
+        a third vector which is commonly written as v + w, and called the sum of
+        these two vectors. (The resultant vector is also an element of the set
+        \(V\))
+      </li>
+      <li>
+        The second operation, called <b>scalar multiplication</b> : \(F × V →
+        V，\) takes any scalar a and any vector v and gives another vector av.
+        (Similarly, the vector av is an element of the set \(V\). Scalar
+        multiplication is not to be confused with the scalar product, also
+        called inner product or dot product, which is an additional structure
+        present on some specific, but not all vector spaces. Scalar
+        multiplication is a multiplication of a vector by a scalar; the other is
+        a multiplication of two vectors producing a scalar.)
+      </li>
+    </ul>
+    <p class="paragraph">
+      Elements of \(V\) are commonly called vectors. Elements of \(F\) are
+      commonly called scalars.
+    </p>
+    <h2 class="subHeader">
+      Subspaces
+    </h2>
+    <p class="paragraph">
+      Let \(V\) be a vector space, and let \(W\) be a subset of \(V\). If \(W\)
+      is a vector space with respect to the operations in \(V\), then \(W\) is
+      called a subspace of \(V\).
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        Let V be a vector space, with operations \(+\) and \(.\) and let W be a
+        subset of V. Then W is a subspace of V if and only if the following
+        conditions hold.
+      </p>
+      <ul class="ul">
+        <li>\(W\) is nonempty: The zero vector belongs to \(W\).</li>
+        <li>
+          Closure under \(+\): If \(u\) and \(v\) are any vectors in \(W\), then
+          \(u + v\) is in \(W\).
+        </li>
+        <li>
+          Closure under ·: If \(v\) is any vector in \(W\), and \(c\) is any
+          real number, then \(c · v\) is in \(W\).
+        </li>
+      </ul>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

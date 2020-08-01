@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polynomials</title>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+  <p class="paragraph">
+    A polynomial is an expression that can be built from constants and symbols called
+    indeterminates or variables by means of addition, multiplication and exponentiation to a
+    non-negative integer power. Two such expressions that may be transformed, one to the other, by
+    applying the usual properties of commutativity, associativity and distributivity of addition
+    and multiplication are considered as defining the same polynomial.
+  </p>
+  <div class="table">
+    <h3>Types Of Algebraic Equation</h3>
+    <table>
+      <tr>
+        <th>Types</th>
+        <th>Meaning</th>
+      </tr>
+      <tr>
+        <td>Monomial</td>
+        <td>
+          Expression which is having only one term is known as monomial <br />
+          Eg: \(5x, 3a, 12k ...\) etc
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Binomial
+        </td>
+        <td>
+          Expression which is having two terms is known as binomial. <br />
+          Eg: \(3x-2,4x^{2} - 5\)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Trinomial
+        </td>
+        <td>
+          Expression which is having three terms is known as trinomial. <br />
+          Eg: \(4x^{2}+ 7 x - 6 , 5y^{3}+ 2 y - 6\)
+        </td>
+      </tr>
+    </table>
+  </div>
+  <p class="paragraph">
+    Polynomial evaluation can be used to compute the remainder of polynomial division by a
+    polynomial of degree one, because the remainder of the division of \(f(x)\) by \((x - a)\) is
+    \(f(a)\).This is more efficient than the usual algorithm of division when the quotient is not
+    needed.
+  </p>
+  <div class="scroll">
+    <ul>
+      <li>A sum of polynomials is a polynomial</li>
+      <li>
+        A product of polynomials is a polynomial
+      </li>
+      <li>
+        A composition of two polynomials is a polynomial, which is obtained by substituting a
+        variable of the first polynomial by the second polynomial
+      </li>
+      <li>
+        The derivative of the polynomial \(a_nx^{n}+a_{n-1}x^{n-1}+....+a_2x^{2}+a_1x^{1}+a_0\) is
+        the polynomial \(na_nx^{n-1}+(n-1)a_{n-1}x^{n-2}+....+2a_2x+a1\). If the set of the
+        coefficients does not contain the integers (for example if the coefficients are integers
+        modulo some prime number p), then \(ka_k\) should be interpreted as the sum of \(a_k\)
+        with itself, k times.
+      </li>
+      <li>
+        A primitive integral or antiderivative of the polynomial
+        \(a_nx^{n}+a_{n-1}x^{n-1}+....+a_2x^{2}+a_1x^{1}+a_0\) is the polynomial
+        \(\frac{a_nx^{n+1}}{n+1}+\frac{a_{n-1}x^{n}}{n}+....+\frac{a_2x^{3}}{3}+\frac{a_1x^{2}}{2}+a_0x+c\)
+        where \(c\) is an arbitrary constant.
+      </li>
+    </ul>
+  </div>
+  <h2 class="subHeader">
+    Polynomial functions
+  </h2>
+  <p class="paragraph">
+    A polynomial function is a function that can be defined by evaluating a polynomial. More
+    precisely, a function f of one argument from a given domain is a polynomial function if there
+    exists a polynomial <br />
+    <b>\(a_nx^{n}+a_{n-1}x^{n-1}+....+a_2x^{2}+a_1x^{1}+a_0\)</b> <br />
+    that evaluates to \(f(x)\) for all \(x\) in the domain of \(f\).If the domain of this function
+    is also restricted to the reals, the resulting function maps reals to reals. <br />
+    Every polynomial function is continuous, smooth, and entire.
+  </p>
+  <h2 class="subHeader">Graphs</h2>
+  <figure>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Polynomialdeg2.svg/200px-Polynomialdeg2.svg.png" />
+    <figcaption>
+      Polynomial of degree 2: \(f(x) = x^{2} − x − 2 = (x + 1)(x − 2)\)
+    </figcaption>
+  </figure>
+  <figure>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Polynomialdeg3.svg/200px-Polynomialdeg3.svg.png" />
+    <figcaption>
+      Polynomial of degree 3: \(f(x) = \frac{x^{3}}{4} + \frac{3x^{2}}{4} − \frac{3x}{2} − 2 \)
+      \(= 1/4 (x + 4)(x + 1)(x − 2)\)
+    </figcaption>
+  </figure>
+  <figure>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Polynomialdeg4.svg/200px-Polynomialdeg4.svg.png" />
+    <figcaption>
+      Polynomial of degree 4: f(x) = 1/14 (x + 4)(x + 1)(x − 1)(x − 3) + 0.5
+    </figcaption>
+  </figure>
+</body>
+<style>
+  body {
+    padding: 20px;
+    background-color: white;
+    margin: 0px;
+    font-family: sans-serif;
+  }
+
+  .scroll {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  th {
+    text-align: center;
+  }
+
+  .header {
+    text-align: center;
+    color: rgb(180, 9, 152);
+    margin-bottom: 20px;
+  }
+
+  figcaption {
+    color: gray;
+    font-size: 12px;
+  }
+
+  .subHeader {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: indigo;
+  }
+
+  .paragraph {
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  .logGraph {
+    height: 250px;
+    width: 100%;
+    max-width: 450px;
+  }
+
+  figcaption {
+    color: gray;
+  }
+
+  .note {
+    width: 90%;
+    max-height: 30vh;
+    border: 0.5px solid rgb(224, 224, 224);
+    overflow: scroll;
+    border-radius: 5px;
+    background: #fff;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+      0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+      0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+    padding: 10px;
+  }
+
+  .note-list {
+    width: 100%;
+  }
+
+  .notes {
+    margin: 0px;
+    padding-bottom: 8px;
+    color: rgb(17, 17, 248);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .theorem {
+    width: 90%;
+    display: block;
+    border: 1px solid rgb(245, 214, 131);
+    background-color: rgb(245, 214, 131);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0px;
+    color: black;
+    border-left: 5px solid red;
+  }
+
+  .table {
+    margin: 5px;
+    max-width: 100%;
+    overflow: scroll;
+  }
+
+  .table table {
+    border-collapse: collapse;
+  }
+
+  .table td,
+  th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  .table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #ff00d4;
+    color: white;
+  }
+</style>
+
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factor and Reminder Theorem</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      In algebra, the <b>factor theorem</b> is a theorem linking factors and
+      zeros of a polynomial. It is a special case of the polynomial remainder
+      theorem.The factor theorem states that a polynomial \(f(x)\) has a factor
+      \((x-k)\) if and only if \(f(k)=0\) (i.e. \(k\) is a root)
+    </p>
+    <div class="summary">
+      The theorem is often used to help factorize polynomials without the use of
+      long division. Especially when combined with the rational root theorem,
+      this gives us a powerful tool to factor polynomials.
+    </div>
+    <p class="paragraph">
+      Since \(f(c)=0\) by the remainder theorem, we have \(f(x) = (x-c)h(x) + R
+      = (x-c)h(x)\). Hence, \(x-c\) is a factor of \(f(x)\)
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        <b>(Backward direction)</b> <br />
+        If \(x-c\) is a factor of \(f(x)\), then (by definition) the remainder
+        of \(f(x)\) upon division by \(x-c\) would be 0. By the remainder
+        theorem, this is equal to \(f(c)\). Hence, \(f(c)=0\). <br />
+        There are no restrictions on the constant cc. It could be a real number,
+        a complex number, or even a matrix!
+      </p>
+    </div>
+    <h2 class="subHeader">
+      Factorization of polynomials
+    </h2>
+    <p class="paragraph">
+      Two problems where the factor theorem is commonly applied are those of
+      factoring a polynomial and finding the roots of a polynomial equation; it
+      is a direct consequence of the theorem that these problems are essentially
+      equivalent.
+    </p>
+    <p class="paragraph">
+      The factor theorem is also used to remove known zeros from a polynomial
+      while leaving all unknown zeros intact, thus producing a lower degree
+      polynomial whose zeros may be easier to find. Abstractly, the method is as
+      follows
+    </p>
+    <ul class="ul">
+      <li>
+        "Guess" a zero \(a\) of the polynomial \(f\). (In general, this can be
+        very hard, but maths textbook problems that involve solving a polynomial
+        equation are often designed so that some roots are easy to discover.)
+      </li>
+      <li>
+        Use the factor theorem to conclude that \((x-a)\) is a factor of
+        \(f(x)\)
+      </li>
+      <li>
+        Compute the polynomial \(g(x) = f(x) \big/ (x-a)\) , for example using
+        polynomial long division or synthetic division
+      </li>
+      <li>
+        Conclude that any root \(x \neq a\) of \(f(x)=0\) is a root of
+        \(g(x)=0\). Since the polynomial degree of \(g\) is one less than that
+        of \(f\), it is "simpler" to find the remaining zeros by studying \(g\).
+      </li>
+    </ul>
+    <h2 class="subHeader">
+      Remainder Theorem
+    </h2>
+    <p class="paragraph">
+      For a <b>polynomial</b> \(f(x)\), the remainder of \(f(x)\) upon division
+      by \(x-c\) is \(f(c)\).
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        The polynomial remainder theorem follows from the theorem of Euclidean
+        division, which, given two polynomials \(f(x)\) (the dividend) and
+        \(g(x)\)) (the divisor), asserts the existence (and the uniqueness) of a
+        quotient \(Q(x)\) and a remainder \(R(x)\) such that : <br />
+        \({\displaystyle f(x)=Q(x)g(x)+R(x)\quad }\) and \(\quad R(x)=0\ {\text{
+        or }}\deg(R)<\deg(g).\)
+      </p>
+    </div>
+    <h3>Applications</h3>
+    <p class="paragraph">
+      The polynomial remainder theorem may be used to evaluate \(f(r)\) by
+      calculating the remainder, \(R\). Although polynomial long division is
+      more difficult than evaluating the function itself, synthetic division is
+      computationally easier. Thus, the function may be more "cheaply" evaluated
+      using synthetic division and the polynomial remainder theorem.
+    </p>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

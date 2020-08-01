@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction To Probability</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+    <p class="paragraph">
+        Probability is a measure of the likelihood of an event to occur. Many events cannot be predicted with total
+        certainty.
+        We can predict only the chance of an event to occur i.e. how likely they are to happen, using it. Probability
+        can range
+        in between 0 to 1, where 0 means the event to be an impossible one and 1 indicates a certain event.<br>
+
+    </p>
+    <p>
+        <b>The probability of
+            all the events in a sample space sums up to 1.</b>
+    </p>
+    <div class="theorem">
+        <p>
+            The probability formula is defined as the possibility of an event to happen is equal to the ratio of the
+            number of
+            favourable outcomes and the total number of outcomes.
+        </p>
+        <b>Probability of event to happen P(E) = Number of favourable outcomes/Total Number of outcomes</b>
+        <br>
+        <p>ie: \(P(A) = \frac{Number of Favourable outcome}{Total number of favourable outcomes}\)</p><br>
+    </div>
+    <h2 class="subHeader">
+        Types of Probability
+    </h2>
+    <ul>
+        <li><b>Theoretical Probability:</b>
+            It is based on the possible chances of something to happen. The theoretical probability is mainly based on
+            the reasoning
+            behind probability. For example, if a coin is tossed, the theoretical probability of getting head will be ½.
+        </li>
+        <li>
+            <b>Experimental Probability: </b>
+            It is based on the basis of the observations of an experiment. The experimental probability can be
+            calculated
+            based on
+            the number of possible outcomes by the total number of trials.<br> For example, if a coin is tossed 10 times
+            and
+            heads is
+            recorded 6 times then, the experimental probability for heads is 6/10 or, 3/5.
+        </li>
+        <li>
+            <b>Axiomatic Probability</b>
+            In axiomatic probability, a set of rules or axioms are set which applies to all types. These axioms are set
+            by
+            Kolmogorov and are known as Kolmogorov’s three axioms. With the axiomatic approach to probability, the
+            chances
+            of
+            occurrence or non-occurrence of the events can be quantified. The axiomatic probability lesson covers this
+            concept in
+            detail with Kolmogorov’s three rules (axioms) along with various examples.<br>
+
+            Conditional Probability is the likelihood of an event or outcome occurring based on the occurrence of a
+            previous
+            event
+            or outcome.
+        </li>
+    </ul>
+    <h2 class="subHeader">
+        Applications
+    </h2>
+    <div class="summary">
+        <p>
+            Probability theory is applied in everyday life in risk assessment and modeling. The insurance industry and
+            markets use
+            actuarial science to determine pricing and make trading decisions. Governments apply probabilistic methods
+            in
+            environmental regulation, entitlement analysis (Reliability theory of aging and longevity), and financial
+            regulation.
+        </p>
+        <p>
+            A good example of the use of probability theory in equity trading is the effect of the perceived probability
+            of any
+            widespread Middle East conflict on oil prices, which have ripple effects in the economy as a whole. An
+            assessment by a
+            commodity trader that a war is more likely can send that commodity's prices up or down, and signals other
+            traders of
+            that opinion. Accordingly, the probabilities are neither assessed independently nor necessarily very
+            rationally. The
+            theory of behavioral finance emerged to describe the effect of such groupthink on pricing, on policy, and on
+            peace and
+            conflict.[
+        </p>
+        <p>
+            In addition to financial assessment, probability can be used to analyze trends in biology (e.g. disease
+            spread) as well
+            as ecology (e.g. biological Punnett squares). As with finance, risk assessment can be used as a statistical
+            tool to
+            calculate the likelihood of undesirable events occurring and can assist with implementing protocols to avoid
+            encountering such circumstances. Probability is used to design games of chance so that casinos can make a
+            guaranteed
+            profit, yet provide payouts to players that are frequent enough to encourage continued play
+        </p>
+    </div>
+</body>
+<style>
+    body {
+        padding: 20px;
+        background-color: white;
+        margin: 0px;
+        font-family: sans-serif;
+    }
+
+    .header {
+        text-align: center;
+        color: rgb(180, 9, 152);
+        margin-bottom: 20px;
+    }
+
+    .subHeader {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: left;
+        color: indigo;
+    }
+
+    .paragraph {
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    .logGraph {
+        height: 250px;
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .note {
+        width: 90%;
+        max-height: 30vh;
+        border: 0.5px solid rgb(224, 224, 224);
+        overflow: scroll;
+        border-radius: 5px;
+        background: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+            0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+            0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+        padding: 10px;
+    }
+
+    .note-list {
+        width: 100%;
+    }
+
+    figcaption {
+        color: rgb(252, 52, 52);
+        font-size: 12px;
+    }
+
+    .notes {
+        margin: 0px;
+        padding-bottom: 8px;
+        color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+        width: 90%;
+        display: block;
+        border: 1px solid rgb(245, 214, 131);
+        background-color: rgb(245, 214, 131);
+        padding: 10px;
+        border-radius: 5px;
+        margin: 20px 0px;
+        color: black;
+        border-left: 5px solid red;
+    }
+
+    .result {
+        font-size: 16px;
+        font-weight: bold;
+        color: rgb(32, 0, 75);
+    }
+
+    .image {
+        max-width: 90vw;
+        max-height: 35vh;
+    }
+
+    .summary {
+        background-color: #58427c;
+        background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+        padding: 15px;
+        margin: 25px 0px;
+        border-radius: 6px;
+        border-left: 5px solid #ff5722;
+    }
+
+    .summary p {
+        color: white;
+    }
+</style>
+
+</html>

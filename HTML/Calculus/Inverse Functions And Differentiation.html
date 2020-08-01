@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inverse Functions And Differentiation</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      In mathematics, the inverse of a function \({\displaystyle y=f(x)\!}\) is
+      a function that, in some fashion, "undoes" the effect of \(f\) (see
+      inverse function for a formal and detailed definition). The inverse of
+      \(f\) is denoted as \(f^{-1}\), where \(f^{-1}(y)=x\!\) if and only if
+      \(f(x)=y\!\).
+    </p>
+    <p class="paragraph">
+      Their two derivatives, assuming they exist, are reciprocal, as the Leibniz
+      notation suggests; that is: <br /><br />
+      \({\frac {dx}{dy}}\,\cdot \,{\frac {dy}{dx}}=1.\)
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        The most important property of an <b>inverse function</b> is that it
+        undoes the action of a function, and vice versa. In function notation it
+        looks like this: \(f(f^{-1}(x))\) \(=\) \(f^{-1}(f(x)) = x\)
+      </p>
+      <p class="paragraph">
+        When dealing with trigonometric and exponential functions, we can't find
+        an angle in a right triangle from the lengths of its sides without an
+        inverse trig. function \(\sin^{-1}(x), cos^{-1}(x), ....\), and we can't
+        solve for a variable locked in an exponent unless we can take a log, the
+        inverse function of exponentiation.
+      </p>
+    </div>
+    <p class="paragraph">
+      This relation is obtained by differentiating the equation {\displaystyle
+      \(f^{-1}(y)=x\!\) in terms of x and applying the chain rule, yielding
+      that: <br />
+      \({\frac {dx}{dy}}\,\cdot \,{\frac {dy}{dx}}={\frac {dx}{dx}}\) <br />
+      considering that the derivative of x with respect to x is 1.
+    </p>
+    <figure>
+      <img
+        style="width: 300px; height: 350px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Umkehrregel_2.png/500px-Umkehrregel_2.png"
+      />
+      <figcaption>
+        \({\color {CornflowerBlue}{f'}}(x)={\frac {1}{{\color
+        {Salmon}{(f^{{-1}})^{,}}}({\color {Blue}{f}}(x))}}\)
+      </figcaption>
+    </figure>
+    <div class="theorem">
+      Writing explicitly the dependence of y on x, and the point at which the
+      differentiation takes place, the formula for the derivative of the inverse
+      becomes (in Lagrange's notation): \({\displaystyle
+      \left[f^{-1}\right]'(a)={\frac {1}{f'\left(f^{-1}(a)\right)}}}\)
+      <p class="paragraph">
+        This formula holds in general whenever \({\displaystyle f}\) is
+        continuous and injective on an interval I, with \({\displaystyle f}\)
+        being differentiable at \({\displaystyle f^{-1}(a)}\) (\({\displaystyle
+        \in I\!}\)) and where \({\displaystyle f'(f^{-1}(a))\neq 0\!}\). The
+        same formula is also equivalent to the expression : <br />
+        \({\displaystyle {\mathcal {D}}\left[f^{-1}\right]={\frac {1}{({\mathcal
+        {D}}f)\circ \left(f^{-1}\right)}},}\)
+      </p>
+    </div>
+    <h2 class="subHeader">
+      Additional properties
+    </h2>
+    <p class="paragraph">
+      Integrating this relationship gives : <br />
+      \({\displaystyle {f^{-1}}(x)=\int {\frac {1}{f'({f^{-1}}(x))}}\,{dx}+C.}\)
+    </p>
+    <p class="paragraph">
+      This is only useful if the integral exists. In particular we need
+      \(f'(x)\) to be non-zero across the range of integration.
+    </p>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>
