@@ -33,7 +33,8 @@ const DrawerItem = ({ category, themeValues, navigation }) => {
               <TouchableOpacity
                 onPress={() => {
                   navigation.navigate('ContentPage', {
-                    subCategory: item,
+                    title: item.topic,
+                    url: item.url,
                   });
                 }}
                 style={[

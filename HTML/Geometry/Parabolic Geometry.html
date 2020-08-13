@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parabolic Geometry</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      In differential geometry and the study of Lie groups, a
+      <b>parabolic geometry</b> is a homogeneous space G/P which is the quotient
+      of a semisimple Lie group G by a parabolic subgroup P. More generally, the
+      curved analogs of a <b>parabolic geometry</b> in this sense is also called
+      a <b>parabolic geometry</b>: any geometry that is modeled on such a space
+      by means of a Cartan connection.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        Parabolic geometries are Cartan geometries of type \((G,P)\), where
+        \(G\) is a semisimple Lie group and \(P⊂G\) is a parabolic subgroup. The
+        corresponding homogeneous spaces \(G/P\) are the so–called generalized
+        flag manifolds which are among the most important examples of
+        homogeneous spaces. Under the conditions of regularity and normality,
+        parabolic geometries always are equivalent to underlying structures.
+      </p>
+    </div>
+    <p class="paragraph">
+      Parabolic geometries include conformal geometry, projective geometry,
+      almost quaternionic structures, almost Grassmannian structures,
+      hypersurface type CR structures, systems of 2nd order ODEs, and various
+      bracket-generating distributions. An example of a Cartan geometry that is
+      not parabolic is Riemannian geometry.
+    </p>
+    <p class="paragraph">
+      <b
+        >A key application of parabolic Cartan geometry is to the construction
+        of curved generalizations of the BGG resolution</b
+      >
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        All parabolic geometries admit a fundamental curvature quantity called
+        harmonic curvature \(k^{H}\), which is a complete obstruction to
+        flatness. The Weyl tensor is the specific instance of \(k^{H}\) in
+        conformal geometry.
+      </p>
+    </div>
+    <figure>
+      <img
+        style="height: 250px;"
+        src="https://www.researchgate.net/profile/Rosli_Bakar/publication/277339130/figure/fig1/AS:294399465541639@1447201710354/The-parabolic-geometry.png"
+      />
+      <figcaption>Geometry of parabola</figcaption>
+    </figure>
+    <div class="summary">
+      <p class="paragraph">
+        The curved analog of projective space is a manifold in which the notion
+        of a geodesic makes sense, but for which there are no preferred
+        parametrizations on those geodesics. A projective connection is the
+        relevant Cartan connection that gives a means for describing a
+        projective geometry by gluing copies of the projective space to the
+        tangent spaces of the base manifold. Broadly speaking, projective
+        geometry refers to the study of manifolds with this kind of connection.
+      </p>
+      <p class="paragraph">
+        Another example is the conformal sphere. Topologically, it is the
+        n-sphere, but there is no notion of length defined on it, just of angle
+        between curves. Equivalently, this geometry is described as an
+        equivalence class of Riemannian metrics on the sphere (called a
+        conformal class). The group of transformations that preserve angles on
+        the sphere is the Lorentz group O(n+1,1), and so Sn = O(n+1,1)/P.
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

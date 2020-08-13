@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>N Dimensional Euclidean Geometry</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      Definition of n space. a point in Euclidean three space can be thought of
+      in any of three ways
+    </p>
+    <ol class="ul">
+      <li>
+        As the set of triples (x, y, z) where x, y, and z are real numbers;
+      </li>
+      <li>As the set of points in space</li>
+      <li>
+        As the set of directed line segments in space, based at the origin
+      </li>
+    </ol>
+    <p class="paragraph">
+      The first of these points of view is easily extended from 3 to any number
+      of dimensions. We define \(R_{n}\), where \(n\) is a positive integer
+      (possibly greater than 3), as the set of all ordered n-tuples \((x1, x2,
+      ….. xn)\), where the \(x_{i}\) are real numbers.
+    </p>
+    <div class="theorem">
+      In solid geometry, the analogue of the parallel axiom says that through
+      any point not on a plane, there passes exactly one plane that does not
+      meet the first plane. In four-dimensional geometry, the analogous axiom
+      states that through any point not lying on a hyperplane, there passes
+      exactly one hyperplane not meeting the first hyperplane.
+      <p class="paragraph">
+        In plane geometry, through a given point on a line there is a unique
+        perpendicular line. In solid geometry, through a given point on a line
+        there are many lines that meet it at a right angle, and these lines all
+        lie on a plane perpendicular to the given line through the point. In
+        four-dimensional geometry, the lines that meet a given line at a given
+        point at a right angle fill out an entire hyperplane.
+      </p>
+    </div>
+    <figure>
+      <img
+        src="data:image/png;base64,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"
+      />
+      <figcaption>N dimentional Eucldean Distance</figcaption>
+    </figure>
+    <p class="paragraph">
+      In solid geometry, through a point on a plane there passes exactly one
+      line perpendicular to the plane. In four-dimensional geometry, through a
+      point on a plane there are manv lines that meet the plane at a right
+      angle, and these lines fit together to form a plane perpendicular to the
+      first plane and meeting the plane at a single point.
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        Eventually the fundamental ideas of Gauss and the development of
+        higher-dimensional analytic geometry led to a beautiful general theory
+        in the dissertation of Bernhard Riemann, who conceived the notion of an
+        n-dimensional manifold with a metric, a rule for assigning lengths to
+        paths. The far-reaching effects of this generalization have changed the
+        way mathematicians view the nature of space, and they formed the
+        necessary background for the appearance of relativity physics.
+      </p>
+      <p class="paragraph">
+        Higher-dimensional analytic methods led some mathematicians to adopt a
+        purely formal approach to geometry, independent of the traditional ways
+        of visualizing geometric objects. But from another point of view, these
+        methods laid the groundwork for the use of computer graphics in
+        investigating objects in higher-dimensional space.
+      </p>
+    </div>
+    <div class="theorem">
+      <p class="paragraph">
+        If \(n\) is a positive integer, then an ordered \(n\)-tuples is called a
+        sequence of \(n\) real numbers and denoted by \((a_{1},a_{2},a_{3},
+        ...,a_{n})\). The set of all the ordered nn-tuples is called the
+        nn-space and it is denoted by \(R^{n}\)
+      </p>
+      <h3>Properties Of Vectors In \(R^{n}\)</h3>
+      <ul class="ul">
+        <li>\(u+v = v+u\)</li>
+        <li>\(u+(p+w) = (u+v)+w\)</li>
+        <li>\(u+0=0+u=0\)</li>
+        <li>u+(-u) = 0</li>
+        <li>\(k(mu) = (km)u\)</li>
+        <li>\(k(u+v) = ku+kv\)</li>
+        <li>\((k+m)u=ku+mu\)</li>
+      </ul>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

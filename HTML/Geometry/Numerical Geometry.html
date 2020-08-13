@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numerical Geometry</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      <b>Numerical Geometry</b> is a field of computational mathematics,
+      particularly computational algebraic geometry, which uses methods from
+      numerical analysis to study and manipulate the solutions of systems of
+      polynomial equations
+    </p>
+    <p class="paragraph">
+      The primary computational method used in numerical algebraic geometry is
+      homotopy continuation, in which a ​homotopy​ is formed between two
+      polynomial systems, and the isolated solutions (points) of one are
+      continued to the other. This is a specification of the more general method
+      of ​numerical continuation​.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        Let \(z\) represent the variables of the system. By abuse of notation,
+        and to facilitate the spectrum of ambient spaces over which one can
+        solve system, we do not use vector notation for \(z\). Similarly for the
+        polynomial systems \(f\) and \(g\).
+      </p>
+      <p class="paragraph">
+        Current canonical notation calls the start system \(g\), and the target
+        system, i.e., the system to solve, \(f\). A very common homotopy, the
+        straight-line homotopy, between \(f\) and \(g\) is :
+      </p>
+      <p class="paragraph">
+        \({\displaystyle H(z,t)=(1-t)f(z)+tg(z).}\)
+      </p>
+    </div>
+    <p class="paragraph">
+      Regardless of the choice of start and target times, the \(H\) ought to be
+      formulated such that \({\displaystyle H(z,t_{\text{start}})=g(z)}\) and
+      \({\displaystyle H(z,t_{\text{end}})=f(z)}{\displaystyle
+      H(z,t_{\text{end}})=f(z)}\)
+    </p>
+    <figure>
+      <img src="https://www3.nd.edu/~jhauenst/Workshop2016/continuation.png" />
+    </figure>
+    <div class="summary">
+      <p class="paragraph">
+        In Numerical Algebraic Geometry we apply and integrate homotopy
+        continuation methods to describe solution components of polynomial
+        systems. In particular, our algorithms extend beyond just finding
+        isolated solutions to also find all positive dimensional solution sets
+        of polynomial systems and to decompose these into irreducible
+        components. These methods can be considered as symbolic-numeric, or
+        perhaps rather as numeric-symbolic, since numerical methods are applied
+        to find integer results, such as the dimension and degree of solution
+        components, and via interpolation, to produce symbolic results in the
+        form of equations describing the irreducible components
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

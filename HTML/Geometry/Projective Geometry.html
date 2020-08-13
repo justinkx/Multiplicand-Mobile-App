@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projective Geometry</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      <b>Projective geometry</b> is a topic in mathematics. It is the study of
+      geometric properties that are invariant with respect to projective
+      transformations. This means that, compared to elementary geometry,
+      <b>Projective geometry</b> has a different setting, projective space, and
+      a selective set of basic geometric concepts.
+    </p>
+    <p class="paragraph">
+      Properties meaningful for projective geometry are respected by this new
+      idea of transformation, which is more radical in its effects than can be
+      expressed by a transformation matrix and translations.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        Projective geometry is an elementary non-metrical form of geometry,
+        meaning that it is not based on a concept of distance. In two dimensions
+        it begins with the study of configurations of points and lines. That
+        there is indeed some geometric interest in this sparse setting was first
+        established by Desargues and others in their exploration of the
+        principles of perspective art.
+      </p>
+      <figure>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/9/96/Theoreme_fondamental_geometrie_projective.PNG"
+        />
+        <figcaption>The Fundamental Theory of Projective Geometry</figcaption>
+      </figure>
+      <p class="paragraph">
+        Projective geometry can also be seen as a geometry of constructions with
+        a straight-edge alone.Since projective geometry excludes compass
+        constructions, there are no circles, no angles, no measurements, no
+        parallels, and no concept of intermediacy.It was realised that the
+        theorems that do apply to projective geometry are simpler statements.
+      </p>
+      <p class="paragraph">
+        Projective geometry is less restrictive than either Euclidean geometry
+        or affine geometry. It is an intrinsically non-metrical geometry,
+        meaning that facts are independent of any metric structure. Under the
+        projective transformations, the incidence structure and the relation of
+        projective harmonic conjugates are preserved.
+      </p>
+    </div>
+    <p class="paragraph">
+      Projective geometry is less restrictive than either Euclidean geometry or
+      affine geometry. It is an intrinsically non-metrical geometry, meaning
+      that facts are independent of any metric structure. Under the projective
+      transformations, the incidence structure and the relation of projective
+      harmonic conjugates are preserved. A projective range is the
+      one-dimensional foundation. Projective geometry formalizes one of the
+      central principles of perspective art: that parallel lines meet at
+      infinity, and therefore are drawn that way.
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        In essence, a projective geometry may be thought of as an extension of
+        Euclidean geometry in which the "direction" of each line is subsumed
+        within the line as an extra "point", and in which a "horizon" of
+        directions corresponding to coplanar lines is regarded as a "line".
+        Thus, two parallel lines meet on a horizon line by virtue of their
+        incorporating the same direction.
+      </p>
+    </div>
+    <h2 class="subHeader">
+      Axioms of projective geometry
+    </h2>
+    <p class="paragraph">
+      Any given geometry may be deduced from an appropriate set of axioms.
+      Projective geometries are characterised by the "elliptic parallel" axiom,
+      that any two planes always meet in just one line, or in the plane, any two
+      lines always meet in just one point.
+    </p>
+    <h3>Whitehead's axioms</h3>
+    <p class="paragraph">
+      These axioms are based on Whitehead, "The Axioms of Projective Geometry".
+      There are two types, points and lines, and one "incidence" relation
+      between points and lines. The three axioms are:
+    </p>
+    <ul class="ul">
+      <li>G1: Every line contains at least 3 points</li>
+      <li>G2: Every two distinct points, A and B, lie on a unique line, AB.</li>
+      <li>
+        G3: If lines AB and CD intersect, then so do lines AC and BD (where it
+        is assumed that A and D are distinct from B and C).
+      </li>
+    </ul>
+    <h3>Additional axioms</h3>
+    <p class="paragraph">
+      One can add further axioms restricting the dimension or the coordinate
+      ring. For example, Coxeter's Projective Geometry, references Veblen in the
+      three axioms above, together with a further 5 axioms that make the
+      dimension 3 and the coordinate ring a commutative field of characteristic
+      not 2.
+    </p>
+    <h3>Axioms using a ternary relation</h3>
+    <p class="paragraph">
+      One can pursue axiomatization by postulating a ternary relation, [ABC] to
+      denote when three points (not all necessarily distinct) are collinear. An
+      axiomatization may be written down in terms of this relation as well:
+    </p>
+    <ul class="ul">
+      <li>C0: [ABA]</li>
+      <li>
+        C1: If A and B are two points such that [ABC] and [ABD] then [BDC]
+      </li>
+      <li>
+        C2: If A and B are two points then there is a third point C such that
+        [ABC]
+      </li>
+      <li>
+        C3: If A and C are two points, B and D also, with [BCE], [ADE] but not
+        [ABE] then there is a point F such that [ACF] and [BDF].
+      </li>
+    </ul>
+    <h3>Axioms for projective planes</h3>
+    <p class="paragraph">
+      In incidence geometry, most authors give a treatment that embraces the
+      Fano plane \(PG(2, 2)\) as the smallest finite projective plane. An axiom
+      system that achieves this is as follows:
+    </p>
+    <ul class="ul">
+      <li>(P1) Any two distinct points lie on a unique line.</li>
+      <li>(P2) Any two distinct lines meet in a unique point.</li>
+      <li>
+        (P3) There exist at least four points of which no three are collinear
+      </li>
+    </ul>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

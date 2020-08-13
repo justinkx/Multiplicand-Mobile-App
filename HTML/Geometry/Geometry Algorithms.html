@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Algorithms</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      <b>Geometry Algorithms</b> is a branch of ​computer science​ devoted to
+      the study of algorithms which can be stated in terms of ​geometry​.. Some
+      purely geometrical problems arise out of the study of computational
+      geometric ​algorithms​, and such problems are also considered to be part
+      of computational geometry. While modern computational geometry is a recent
+      development, it is one of the oldest fields of computing with history
+      stretching back to antiquity
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        Computer graphics, robot motion planning, computer games, simulations,
+        geographic information systems, and CAD/CAM systems all make use of
+        geometric algorithms to perform various tasks. TThese include plane
+        sweep, randomized incremental construction, and multi-level data
+        structures; geometric concepts include Voronoi diagrams and Delaunay
+        triangulations, arrangements, and duality.These techniques to solve a
+        variety of problems: convex-hull computation, line-segment intersection,
+        polygon triangulation, low-dimensional linear programming, range
+        searching, and point location are some examples.
+      </p>
+    </div>
+    <p class="paragraph">
+      The primary goal of research in combinatorial computational geometry is to
+      develop efficient algorithms and data structures for solving problems
+      stated in terms of basic geometrical objects: points, line segments,
+      polygons, polyhedra, etc.
+    </p>
+    <p class="paragraph">
+      <b
+        >Given n points in the plane, find the two with the smallest distance
+        from each other.</b
+      >
+    </p>
+    <h2 class="subHeader">
+      Problem classes
+    </h2>
+    <p class="paragraph">
+      The core problems in computational geometry may be classified in different
+      ways, according to various criteria. The following general classes may be
+      distinguished.
+    </p>
+    <h3>Static problems</h3>
+    <p class="paragraph">
+      In the problems of this category, some input is given and the
+      corresponding output needs to be constructed or found. Some fundamental
+      problems of this type are:
+    </p>
+    <ul class="ul">
+      <li>Convex Hull</li>
+      <li>Line Segment Intersection</li>
+      <li>Delaunay triangulation</li>
+      <li>Voronoi diagram</li>
+      <li>Closest pair of points</li>
+      <li>Largest empty circle</li>
+      <li>Euclidean shortest path</li>
+      <li>Polygon triangulation</li>
+    </ul>
+    <h3>Geometric query problems</h3>
+    <p class="paragraph">
+      In geometric query problems, commonly known as geometric search problems,
+      the input consists of two parts: the search space part and the query part,
+      which varies over the problem instances. The search space typically needs
+      to be preprocessed, in a way that multiple queries can be answered
+      efficiently.
+    </p>
+    <ul class="ul">
+      <li>Range searching</li>
+      <li>Point location</li>
+      <li>Nearest neighbor</li>
+      <li>Ray tracing</li>
+    </ul>
+    <h3>Dynamic problems</h3>
+    <p class="paragraph">
+      Algorithms for problems of this type typically involve dynamic data
+      structures. Any of the computational geometric problems may be converted
+      into a dynamic one, at the cost of increased processing time.
+    </p>
+    <p class="paragraph">
+      The computational complexity for this class of problems is estimated by:
+    </p>
+    <ul class="ul">
+      <li>
+        The time and space required to construct the data structure to be
+        searched in
+      </li>
+      <li>
+        The time and space to modify the searched data structure after an
+        incremental change in the search space
+      </li>
+      <li>The time (and sometimes an extra space) to answer a query.</li>
+    </ul>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

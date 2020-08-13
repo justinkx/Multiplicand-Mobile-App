@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3 Dimensional Euclidean Geometry</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      In physics and mathematics, a sequence of n numbers can be understood as a
+      location in n-dimensional space. When n = 3, the set of all such locations
+      is called <b>Three-dimensional Euclidean</b> space
+    </p>
+    <figure>
+      <img
+        style="width: 320px; height: 350px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Coord_planes_color.svg/600px-Coord_planes_color.svg.png"
+      />
+      <figcaption>
+        A representation of a three-dimensional Cartesian coordinate system with
+        the x-axis pointing towards the observer.
+      </figcaption>
+    </figure>
+    <h2 class="subHeader">
+      Coordinate systems
+    </h2>
+    <p class="paragraph">
+      Cartesian geometry describes every point in three-dimensional space by
+      means of three coordinates.Three coordinate axes are given, each
+      perpendicular to the other two at the origin, the point at which they
+      cross.They are usually labeled x, y, and z. Relative to these axes, the
+      position of any point in three-dimensional space is given by an ordered
+      triple of real numbers, each number giving the distance of that point from
+      the origin measured along the given axis, which is equal to the distance
+      of that point from the plane determined by the other two axes
+    </p>
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+      "
+    >
+      <figure style="width: 45%;">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Coord_XYZ.svg/240px-Coord_XYZ.svg.png"
+        />
+        <figcaption>
+          Cartesian coordinate system
+        </figcaption>
+      </figure>
+      <figure style="width: 45%;">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Cylindrical_Coordinates.svg/240px-Cylindrical_Coordinates.svg.png"
+        />
+        <figcaption>
+          Cylindrical coordinate system
+        </figcaption>
+      </figure>
+      <figure style="width: 45%;">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Spherical_Coordinates_%28Colatitude%2C_Longitude%29.svg/240px-Spherical_Coordinates_%28Colatitude%2C_Longitude%29.svg.png"
+        />
+        <figcaption>
+          Spherical coordinate system
+        </figcaption>
+      </figure>
+    </div>
+    <h2 class="subHeader">
+      Lines and planes
+    </h2>
+    <p class="paragraph">
+      Two distinct points always determine a (straight) line. Three distinct
+      points are either collinear or determine a unique plane. On the other
+      hand, four distinct points can either be collinear, coplanar, or determine
+      the entire space.
+    </p>
+    <p class="paragraph">
+      Two distinct lines can either intersect, be parallel or be skew. Two
+      parallel lines, or two intersecting lines, lie in a unique plane, so skew
+      lines are lines that do not meet and do not lie in a common plane.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        Two distinct planes can either meet in a common line or are parallel
+        (i.e., do not meet). Three distinct planes, no pair of which are
+        parallel, can either meet in a common line, meet in a unique common
+        point, or have no point in common.<br /><br />
+        In the last case, the three lines of intersection of each pair of planes
+        are mutually parallel. A line can lie in a given plane, intersect that
+        plane in a unique point, or be parallel to the plane. In the last case,
+        there will be lines in the plane that are parallel to the given line.
+      </p>
+      <p class="paragraph">
+        A hyperplane is a subspace of one dimension less than the dimension of
+        the full space. The hyperplanes of a three-dimensional space are the
+        two-dimensional subspaces, that is, the planes.<br /><br />
+        In terms of Cartesian coordinates, the points of a hyperplane satisfy a
+        single linear equation, so planes in this 3-space are described by
+        linear equations. A line can be described by a pair of independent
+        linear equations—each representing a plane having this line as a common
+        intersection.
+      </p>
+    </div>
+    <h2 class="subHeader">
+      Spheres and balls
+    </h2>
+    <p class="paragraph">
+      A sphere in 3-space (also called a 2-sphere because it is a 2-dimensional
+      object) consists of the set of all points in 3-space at a fixed distance r
+      from a central point P. The solid enclosed by the sphere is called a ball
+      (or, more precisely a 3-ball). The volume of the ball is given by:
+      <br /><br />
+      \(V = \frac{4}{3}\pi r^{3}.\)
+    </p>
+    <figure style="height: 320px;">
+      <img
+        style="width: 320px; height: 320px;"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_wireframe_10deg_6r.svg/440px-Sphere_wireframe_10deg_6r.svg.png"
+      />
+    </figure>
+    <div class="summary">
+      <h3>Dot product, angle, and length</h3>
+      <p class="paragraph">
+        The dot product of two vectors \(A = [A1, A2, A3]\) and \(B = [B1, B2,
+        B3]\) is defined as : <br /><br />
+        \({\displaystyle \mathbf {A} \cdot \mathbf {B} }\)
+        \(=A_{1}B_{1}+A_{2}B_{2}+A_{3}B_{3}.\)
+      </p>
+      <p class="paragraph">
+        The magnitude of a vector \(A\) is denoted by \(||A||\). The dot product
+        of a vector \(A = [A1, A2, A3]\) with itself is <br /><br />
+        \({\displaystyle \mathbf {A} \cdot \mathbf {A} =}\) \(\|\mathbf {A}
+        \|^{2}=A_{1}^{2}+A_{2}^{2}+A_{3}^{2},\) <br />
+        which gives \({\displaystyle \|\mathbf {A} \|={\sqrt {\mathbf {A} \cdot
+        \mathbf {A} }}=}\) \({\sqrt {A_{1}^{2}+A_{2}^{2}+A_{3}^{2}}}\)
+      </p>
+      <p class="paragraph">
+        Without reference to the components of the vectors, the dot product of
+        two non-zero Euclidean vectors \(A \) and \( B\) is given by
+        <br /><br />
+        \(\mathbf {A} \cdot \mathbf {B} =\|\mathbf {A} \|\,\|\mathbf {B} \|\cos
+        \theta ,\) <br /><br />where \(θ\) is the angle between \(A\) and \(B\).
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>

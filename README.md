@@ -5,7 +5,7 @@
 [![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://badge.fury.io/gh/tterb%2FHyde)[![Github All Releases](https://img.shields.io/github/downloads/justinkx/Multiplicand-Mobile-App/total.svg?style=flat)]()[![Issues](https://img.shields.io/github/issues-raw/justinkx/Multiplicand-Mobile-App.svg?maxAge=25000)](https://github.com/justinkx/Multiplicand-Mobile-App/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/justinkx/Multiplicand-Mobile-App.svg?style=flat)]()
 [![NPM Version](https://img.shields.io/npm/v/npm.svg?style=flat)]()[![GitHub last commit](https://img.shields.io/github/last-commit/justinkx/Multiplicand-Mobile-App.svg?style=flat)]()
 
-<img src="https://user-images.githubusercontent.com/28846043/89096657-f4755580-d3f5-11ea-8d02-95e4707be568.png" width="250">
+<img src="https://user-images.githubusercontent.com/28846043/90178996-6c665700-ddca-11ea-96d2-7b2e8dff3ba6.gif" width="270px" height="500px">
 
 ---
 

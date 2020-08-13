@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Integral Geometry</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <p class="paragraph">
+      In mathematics, <b>Integral geometry</b> is the theory of measures on a
+      geometrical space invariant under the symmetry group of that space. In
+      more recent times, the meaning has been broadened to include a view of
+      invariant (or equivariant) transformations from the space of functions on
+      one geometrical space to the space of functions on another geometrical
+      space. Such transformations often take the form of integral transforms
+      such as the Radon transform and its generalizations.
+    </p>
+    <div class="theorem">
+      <p class="paragraph">
+        The theory of invariant measures (with respect to continuous groups of
+        transformations of a space onto itself) on sets consisting of
+        submanifolds of the space (for example, lines, planes, geodesics, convex
+        surfaces, etc.; in other words, manifolds preserving their type under
+        the transformations in question). Integral geometry has been constructed
+        for various spaces, primarily Euclidean, projective and homogeneous
+        spaces.
+      </p>
+      <p>
+        <b
+          >Integral geometry is concerned with the introduction of invariant
+          measures, their relationships and their geometric applications. It
+          arose in connection with refinements of statements of problems in
+          geometric probabilities.</b
+        >
+      </p>
+    </div>
+    <p class="paragraph">
+      In order to introduce an invariant measure one tries to begin with a
+      function depending on the coordinates of the space under consideration
+      whose integral over some region of the space is not changed under any
+      continuous coordinate transformation belonging to a specified Lie group.
+      This requires finding an integral invariant of the Lie group. The latter
+      can be found as a solution to the system of partial differential equations
+      <br /><br />
+      \(\sum_{1}^{n}\frac{\partial }{\partial x_i}[\varepsilon _{h}^{i}F(x)]\)
+      \(= 0\), \(h = -1, ... r\)
+    </p>
+    <p class="paragraph">
+      Where \(F(x)\) is the required integral invariant \(x\) is a point of the
+      space (having dimension \(n)\), \(\varepsilon _{h}^{i}\) are the
+      coefficients of the infinitesimal transformation of the group, and \(r\)
+      is the number of parameters of the transformation. Of great significance
+      in integral geometry are measurable Lie groups, that is, groups that admit
+      one and only one invariant (up to a constant factor). In particular,
+      simple transitive groups are of this type.
+    </p>
+    <div class="summary">
+      <p class="paragraph">
+        In integral geometry on the Euclidean plane \(E^2\) one usually
+        considers only one type of continuous transformation, namely, the group
+        of motions (without reflections). For a set of points, the integral
+        invariant is the unit, for a set of lines it is again the unit if one
+        selects for the parameters of the lines the parameters \(p\) and \(\phi
+        \) 0f its normal equation.The measure of a set of straight lines
+        intersecting two convex figures (ovals) is equal to the difference of
+        the lengths of the crossed common tangent lines of the oval and the
+        outer common tangent lines. Outer common tangent lines Crossed common
+        tangent lines
+      </p>
+      <figure>
+        <img
+          src="https://www.encyclopediaofmath.org/legacyimages/common_img/i051470a.gif"
+        />
+      </figure>
+      <p class="paragraph">
+        The measure of the set of straight lines dividing two ovals is equal to
+        the length of the crossed common tangent lines minus the sum of the
+        lengths of the contours of the ovals
+      </p>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 20px;
+      background-color: white;
+      margin: 0px;
+      font-family: sans-serif;
+    }
+
+    figcaption {
+      color: black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+
+    .ul {
+      color: black;
+    }
+
+    .ul > li {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+      color: rgb(180, 9, 152);
+      margin-bottom: 20px;
+    }
+
+    .subHeader {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: indigo;
+    }
+
+    .paragraph {
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .logGraph {
+      height: 250px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    figure {
+      margin: 30px 0px;
+    }
+
+    figcaption {
+      color: gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      width: 90%;
+      max-height: 30vh;
+      border: 0.5px solid rgb(224, 224, 224);
+      overflow: scroll;
+      border-radius: 5px;
+      background: #fff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+        0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+        0 20px 1px -9px rgba(0, 0, 0, 0.15);
+
+      padding: 10px;
+    }
+
+    .note-list {
+      width: 100%;
+    }
+
+    .notes {
+      margin: 0px;
+      padding-bottom: 8px;
+      color: rgb(17, 17, 248);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    .summary {
+      background-color: #58427c;
+      background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
+      padding: 15px;
+      margin: 25px 0px;
+      border-radius: 6px;
+      border-left: 6px solid #fd02be;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .theorem {
+      width: 90%;
+      display: block;
+      border: 1px solid rgb(245, 214, 131);
+      background-color: rgb(245, 214, 131);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0px;
+      color: black;
+      border-left: 5px solid red;
+    }
+
+    .result {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(32, 0, 75);
+    }
+  </style>
+</html>
